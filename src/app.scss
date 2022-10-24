@@ -10,7 +10,7 @@ body {
     height: calc(100vh - 70px);
     // background-color: lightgoldenrodyellow ;
     position: relative;
-    top: 70px;
+    // top: 70px;
     scroll-behavior: smooth;
     //Scroll Snap
     scroll-snap-type: y mandatory;
@@ -21,11 +21,15 @@ body {
       display: none;
     }
 
+    // background-image: url(https://images.unsplash.com/photo-1598112152963-535bfc3596f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
     //for all component
 
     > * {
       width: 100 vw;
-      height: calc(100vh - 70px);
+      // height: calc(100vh - 70px);
       scroll-snap-align: start;
     }
   }

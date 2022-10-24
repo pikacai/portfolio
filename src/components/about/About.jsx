@@ -4,13 +4,13 @@ import mypicture from "./haha.JPG";
 
 export default function About() {
   return (
-    <div className="split leftabout">
-      <div class="centered">
+    <div className="split">
+      <div className="leftabout">
         <img src={mypicture}></img>
       </div>
 
-      <div className="split rightabout">
-        <div class="textlocation">
+      <div className="rightabout">
+        <div className="textlocation">
           <h2>Hi. I am Pika</h2>
           <p>📍Buffalo, NY</p>
           <p>🎓Computer Science </p>

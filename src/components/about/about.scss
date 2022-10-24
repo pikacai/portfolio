@@ -2,42 +2,74 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
 
 .split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f4f7f6;
+  padding-bottom: 10%;
+  row-gap: 30px;
+  padding: 7%;
+  .leftabout {
+    width: 50%;
+    margin: 5px;
+    // padding-top: 10%;
+  }
+  .rightabout {
+    width: 50%;
+    margin-left: 25px;
+    // margin: 5px;
+    // padding: 2%;
+    // .textlocation {
+    //   // margin: 30px;
+    //   padding-top: 10%;
+    // }
+  }
 }
 
-.leftabout {
-  left: 0;
-}
+// .leftabout {
+//   // height: 800px;
+//   // width: 200px;
+//   background-size: cover;
 
-.rightabout {
-  // text-align: left;
-  right: 5%;
-}
+//   flex: 50%;
+//   // background-repeat: no-repeat;
+//   // width: 100%;
+// }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.textlocation {
-  margin: 30px;
-  padding: 10%;
-}
+// .leftabout .rightabout {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // width: 50%;
+//   flex: 50%;
+// }
 
-.centered img {
-  width: 200%;
-  // border-radius: 50%;
-}
+// .centered {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// .centered img {
+//   width: 200%;
+//   // border-radius: 50%;
+// }
 p {
   font-family: "Hind Madurai", sans-serif;
 }
 h2 {
   font-family: "PT Sans Caption", sans-serif;
+}
+@media screen and (min-width: 900px) {
+  .split {
+    flex-direction: row;
+    height: 100vh;
+  }
+  // .leftabout,
+  // .rightabout {
+  //   display: flex;
+  //   // width: 50%;
+  //   // height: auto;
+  // }
 }

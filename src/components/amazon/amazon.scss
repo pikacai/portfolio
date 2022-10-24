@@ -27,6 +27,7 @@
 }
 p {
   font-family: "Raleway", sans-serif;
+  color: #333;
 }
 h2 {
   font-family: "Raleway", sans-serif;
@@ -63,4 +64,38 @@ x .ustory {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .column {
+    float: left;
+
+    /* Should be removed. Only for demonstration */
+  }
+
+  .left,
+  .right {
+    width: 10%;
+  }
+
+  .middle {
+    width: 80%;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .below {
+    margin: 10px 10px;
+    // overflow-y: hidden; /* Hide vertical scrollbar */
+    // overflow-x: hidden; /* Hide horizontal scrollbar */
+    .messagepic {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
 }

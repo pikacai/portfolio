@@ -1,16 +1,9 @@
-// .intro{
-//     background-color: aquamarine;
-// }
-// video {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap");
-img {
+
+.background-image {
+  background-size: cover;
+  // background-repeat: no-repeat;
   width: 100%;
-  // height: auto;
-  object-fit: cover;
 }
 .myh1 {
   font-size: 90px;
@@ -22,16 +15,38 @@ img {
 }
 
 .xiaop {
-  color: black;
-  padding: 10px 0;
-  font-size: 20px;
+  color: rgb(99, 99, 99);
+  padding: 2px 0;
+  font-size: 18px;
   font-family: "Raleway", sans-serif;
 }
 
 .content {
   position: absolute;
   width: 100%;
-  height: 100%;
+  // height: 100vh;
   text-align: center;
-  top: 30%;
+  font-size: 100px;
+  // line-height: 102px;
+  top: 0%;
+}
+
+// from github main page
+@media (max-width: 900px) {
+  .content {
+    font-size: 8px !important;
+    // line-height: 52px !important;
+    // letter-spacing: -0.03em !important;
+  }
+  .myh1 {
+    font-size: 40px;
+    padding: 5px 0;
+  }
+
+  .myh2 {
+    font-size: 30px;
+  }
+  .xiaop {
+    font-size: 10px;
+  }
 }

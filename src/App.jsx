@@ -6,6 +6,7 @@ import MetLife from "./components/metLife/MetLife";
 import Amazon from "./components/amazon/Amazon";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/about/About";
+import "@fontsource/chivo";
 
 //App.js is for put the component
 function App() {

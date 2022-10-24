@@ -32,30 +32,49 @@ export default function MetLife() {
         {/* <div class="column middle"> */}
         <h2>🚀Brief</h2>
         <p>
-          Innovation project that creates high tech experience to improve
-          onboarding experience remotely in MetLife.
+          MetLife innovation project that creates high tech experience to
+          improve<b> onboarding experience</b> remotely in MetLife.
         </p>
         <br />
         <br />
         <h2>🧗🏽‍♂️Problem</h2>
         <p>
-          “88% of employees believe that their company could improve when it
-          comes to onboarding new employees” and “ A great onboarding experience
-          ensure 69% of employees stick with a company for three years” The
-          onboarding buddy program gives new employees confidence. (metlife.com)
+          As a MetLife Intern, I've noticed that{" "}
+          <b>
+            {" "}
+            relationships with colleagues are harder to build while remote
+            working.
+          </b>
+          <br />
+          <br />
+          <h2>📰Research</h2>
+          New research by employee engagement and culture app, Totem, claims
+          that 54% of workers feel it has been harder to build relationships
+          with colleagues while working from home.
+          <br />
+          <br />
+          Based on the
+          <i> MetLife Onboarding Survey</i> result, “88% of employees believe
+          that their company could improve when it comes to onboarding new
+          employees” and “ A great onboarding experience ensure 69% of employees
+          stick with a company for three years” (metlife.com)
+          <br />
+          <br />
           Currently, MetLife offers numerous different platforms that new hires
           use to connect such as yammer, teams, and outlook. While these
           platforms do open gates to networking a new hire may not know where to
-          start. These applications do not and networking within MetLife which
-          may stray new hires away from having a good onboarding experience.
+          start. These applications do not have networking forms within MetLife
+          which may stray new hires away from having a good onboarding
+          experience.
         </p>
         <br />
         <br />
         <h2>🐐Design Goal: Connect Empower Inspire</h2>
         <p>
-          1. Consolidates all networking forms into one place.
+          1. Consolidates <b>all networking forms</b>(Message, Club, Event,
+          Blog, Calendar) into<b> one </b>place.
           <br />
-          2. Creates high tech experience to improve remote onboarding
+          2. Creates <b>high tech experience</b> to improve remote onboarding
           experience.
         </p>
         <h3>Feature 1: Club</h3>
@@ -63,9 +82,9 @@ export default function MetLife() {
           <b>
             <i>Strengthens Relations Between New Hires</i>
           </b>
-          <br /> As college students. we have met most of our friends through
-          clubs, so we recognized first hand the impact clubs make on the first
-          few months of being in a new environment.
+          <br /> As college students, we have met most of our same habits
+          friends through clubs, so we recognized first hand the impact clubs
+          make on the first few months of being in a new environment.
         </p>
         <img className="metLifepic" src={blog}></img>
         <h3>Feature 2: Blog</h3>
@@ -94,15 +113,18 @@ export default function MetLife() {
         <h2>🍡Visual Design Focus</h2>
         <p>
           MetConnect is a high touch tech experience that places a focus on
-          connection and inclusion with the workplace. By allowing new hires to
-          connect in areas where they share interests, we are forging a
-          workforce that is not only passionate about work but about each other.
-          Instead of us being disconnected while helping our customer.
-          MetConnect ensures that we are working together. Most employees go
-          into work everyday knowing that the company cares for them, but it
-          would be even better if they knew that their coworkers also cared for
-          them. Metconnect motivates new hires to create strong bonds through
-          shared experiences and open communication.
+          <b> connection and inclusion </b> with the workplace. By allowing new
+          hires to connect in areas where they share interests, we are forging a
+          workforce that is not only passionate about work, but it is also about
+          each other. Instead of us being disconnected while helping our
+          customer. MetConnect ensures that we are working together. Most
+          employees go into work everyday knowing that the company cares for
+          them, but it would be even better if they knew that their coworkers
+          also cared for them.{" "}
+          <b>
+            Metconnect motivates new hires to create strong bonds through shared
+            experiences and open communication.
+          </b>
         </p>
         <br />
         <br />

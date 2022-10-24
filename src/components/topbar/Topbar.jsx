@@ -5,34 +5,32 @@ import { Link } from "react-router-dom";
 
 export default function Topbar() {
   return (
-    <div className="topbar">
-      <div className="wrapper">
-        <div className="left">
-          <Link to="/" className="myName">
-            Pika Cai
-          </Link>
-        </div>
-        <div className="right">
-          <ul>
-            <li>
-              <a href="#intro">Work</a>
-            </li>
-            <li>
-              <a href={resume}>Resume</a>
-            </li>
-            <li>
-              <Link to="/about" target="_blank">
-                About
-              </Link>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/senhuangcai/">
-                <img className="icon" src={linkedln}></img>
-              </a>
-            </li>
-          </ul>
-        </div>
+    <nav>
+      <div className="logo">
+        <Link to="/" className="myName">
+          <h1>Pika Cai</h1>{" "}
+        </Link>
       </div>
-    </div>
+      <ul className="nav-links">
+        <li>
+          <Link to="/" target="_blank">
+            Projects
+          </Link>
+        </li>
+        <li>
+          <a href={resume}>Resume</a>
+        </li>
+        <li>
+          <Link to="/about" target="_blank">
+            About Me
+          </Link>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/senhuangcai/">
+            <img className="icon" src={linkedln}></img>
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 }
