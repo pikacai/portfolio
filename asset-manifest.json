@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.dcf5c426.css",
+    "main.js": "/portfolio/static/js/main.79c71897.js",
+    "static/media/Group 250.png": "/portfolio/static/media/Group 250.d08390d15979f06e4308.png",
+    "static/media/paper.jpg": "/portfolio/static/media/paper.75534a1fe8a438659e59.jpg",
+    "static/media/haha.JPG": "/portfolio/static/media/haha.f52b815700e61fca4197.JPG",
+    "static/media/metlifeGB.png": "/portfolio/static/media/metlifeGB.f5c96da16886f8055a1d.png",
+    "static/media/1.gif": "/portfolio/static/media/1.57d3f906444fccfa71c5.gif",
+    "static/media/persona1.png": "/portfolio/static/media/persona1.783639631e22c5a2f006.png",
+    "static/media/moodboard.png": "/portfolio/static/media/moodboard.103be7fca84c32f77f7a.png",
+    "static/media/flowchart.png": "/portfolio/static/media/flowchart.66141cb806807a75892c.png",
+    "static/media/2.gif": "/portfolio/static/media/2.939c0210785026e9dc07.gif",
+    "static/media/persona2.png": "/portfolio/static/media/persona2.5541a3403b61a4ec72a5.png",
+    "static/media/journeyMapping.png": "/portfolio/static/media/journeyMapping.aee1c7f9e9285c33c12d.png",
+    "static/media/amazonBackground.png": "/portfolio/static/media/amazonBackground.6099a3d8b16acf5fd11b.png",
+    "static/media/Past Purshcase.png": "/portfolio/static/media/Past Purshcase.8c67435518fb6fb3ee27.png",
+    "static/media/colorPalette.png": "/portfolio/static/media/colorPalette.a7c737d7bfed2cad9bea.png",
+    "static/media/CAsis.png": "/portfolio/static/media/CAsis.b7ec1d73b9b23a8a0146.png",
+    "static/media/CAsis2.png": "/portfolio/static/media/CAsis2.e6d08a58fd2459b12222.png",
+    "static/media/styleGuide.png": "/portfolio/static/media/styleGuide.c947c26309e08305e803.png",
+    "static/media/metlifelogo1.png": "/portfolio/static/media/metlifelogo1.6eaa003db0c849c76e6b.png",
+    "static/media/Cai_Senhuang_Resume.pdf": "/portfolio/static/media/Cai_Senhuang_Resume.b5d0db0270712ac622a5.pdf",
+    "static/media/Quick Add.png": "/portfolio/static/media/Quick Add.a16807dbf15595100ec3.png",
+    "static/media/userStory.png": "/portfolio/static/media/userStory.0ea821b1477e40524ab0.png",
+    "static/media/chivo-all-400-normal.woff": "/portfolio/static/media/chivo-all-400-normal.b9eef1c884cf7cad850a.woff",
+    "static/media/new-linkedin-logo-white-black-png.png": "/portfolio/static/media/new-linkedin-logo-white-black-png.ba884e1f9ad4362348c1.png",
+    "static/media/amazonlogo1.png": "/portfolio/static/media/amazonlogo1.73c53fe14549245608a5.png",
+    "static/media/chivo-latin-400-normal.woff2": "/portfolio/static/media/chivo-latin-400-normal.4306fdbd6bacd5f1447b.woff2",
+    "static/media/chivo-latin-ext-400-normal.woff2": "/portfolio/static/media/chivo-latin-ext-400-normal.ada503d5ef6ceae3f4ea.woff2",
+    "index.html": "/portfolio/index.html",
+    "main.dcf5c426.css.map": "/portfolio/static/css/main.dcf5c426.css.map",
+    "main.79c71897.js.map": "/portfolio/static/js/main.79c71897.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dcf5c426.css",
+    "static/js/main.79c71897.js"
+  ]
+}
