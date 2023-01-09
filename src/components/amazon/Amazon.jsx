@@ -46,38 +46,23 @@ export default function Amazon() {
         {/* <div class="column middle"> */}
 
         <h2>Overview</h2>
-        <p>
-          Amazon Fresh offers low prices on everyday items plus free same-day
-          delivery and pickup in select locations for Prime members. It
-          introduces new ways to make grocery shopping more convenient. The
-          redesign of Amazon Fresh was centered around providing an easier way
-          for Fresh users to access products that they wish to procure by
-          limiting the number of clicks they need to go through. The redesign
-          aims to solve this by providing shortcuts and easier navigation
-          options for users, this eliminates inconvenient scrolls and page
-          navigation. To help customers manage their shopping lists and better
-          navigate their aisles. We created a way for customers to be able to
-          select frequent cart items and advertise sale items to a line with the
-          ease of accessibility.
-        </p>
+        <p>Amazon Fresh offers low prices on everyday items plus free same-day delivery and pickup in select locations for Prime members. It introduces new ways to make grocery shopping more convenient.</p>
+        <p>The redesign of Amazon Fresh was centered around providing an easier way for Fresh customers to access products that they wish to buy by reducing friction. This redesign provides shortcuts and easier navigation options.</p>
+        <p>As a result, customers are now able to select from either a frequent or advertised section in line with their interests.</p>
         <br />
         <hr />
         <br />
 
         <h2>Goals</h2>
         <p>
-          User Goal:The users want to make their experience instant by
-          navigating certain parts of the site and finding items with ease.{" "}
-          <br />
-          User Achieve:That means they need to be able to order and reorder
-          those items with minimal clicks. <br />
-          Business Goal: The business goal is to increase amazon prime users to
-          utilize Amazon Fresh and minimize the use of competitive online
-          grocery web apps. <br />
-          Product Goals: At the same time, the product goal is to accelerate
-          online presence and business growth by providing convenient service
-          and expanding the visibility of product selection and sale items
-          quickly.
+        User Goal<br />
+        Having an instant experience by easily navigating to certain parts of the site to find items.<br /><br />
+        User Achieves<br />
+        Ability to order and reorder selections with minimal clicks.<br /><br />
+        Business Goal<br />
+        Increase the amount of Amazon Prime using Amazon Fresh and minimizing their use of other competitive online grocery web apps.<br /><br />
+        Product Goals<br />
+        Accelerate online presence and business growth by providing a convenient service that expands the visibility of product selection to sell items quickly.<br />
         </p>
         <br />
         <hr />
@@ -106,9 +91,9 @@ export default function Amazon() {
         </div>
         <hr />
         <h4>Behavioral Analysis</h4>
-        <p>"E-commerce to account for 20% of U.S. grocery market by 2026"</p>
+        <p>"E-commerce to account for 20% of U.S. grocery market by 2026" - Supermarket News</p>
         <p>
-          rom <i>Top Advantages of Online Grocery Shopping Advantages</i>, 53%
+          From <i>Top Advantages of Online Grocery Shopping Advantages</i>, 53%
           users reflect Saves time and 17% users reflect that it can keep stored
           shopping list and reorder from it.
         </p>
@@ -120,9 +105,9 @@ export default function Amazon() {
           We conducted user research by distributing an online survey to Amazon
           gocery users which vary from daily active users to infrequent users.
           <br />
-          Number of Survey: 30
+          Number of Surveys: 30
           <br />
-          Number of Interview: 4
+          Number of Interviews: 4
         </p>
         <hr />
         <h4>Personas</h4>
@@ -130,7 +115,7 @@ export default function Amazon() {
           Going further through the research, 2 personas were developed based on
           a sample of 30 amazon gocery users. Each persona has different
           characters, needs, and frustrations. These personas will be useful to
-          improve the user experience. Say hi 👋 to each persona:
+          improve the user experience. Say 👋 to each persona:
         </p>
         <div className="bigsize">
           <img src={ps1}></img>
@@ -144,41 +129,29 @@ export default function Amazon() {
         <hr />
         <h4>User Stories</h4>
         <p>
-          The high priorities fall into repurchasing past orders easily as well
-          as finding ways to save money through sales. our medium category deals
-          with frustration with scrolling, our user wants easy access to food
-          categories.
+        The high priority looks into repurchasing past orders easily as well as finding ways to save money through sales.<br />
+        The medium priority deals with frustration with scrolling, since users wants fast and easy access to food categories.
         </p>
         <div class="smallsize">
           <img src={us}></img>
         </div>
         <h4>Flowchart</h4>
         <p>
-          The flowchart displays an issue touched by our user in the user story.
-          Amazon's current past purchase includes steps that become frustrating
-          to users. we attempt to fix this by limiting the steps needed to
-          reorder items which amazons competitors have already implemented{" "}
+          The flowchart displays an issue brought up by users in the user story. Amazon's "past purchase" list requires additional steps to access that becomes frustrating for users. We attempt to fix this by limiting the steps needed to reorder items which Amazon's competitors have already implemented.
         </p>
         <img src={fc}></img>
         {/* <h4>Survey and interview</h4> */}
         <h2>Visual Design</h2>
         <h4>Moodboard</h4>
         <p>
-          Since amazon fresh is an online grocery store, we felt inspired by
-          nature hence why our approach touched on the color green and some
-          shades of it. our users also use the app as a means to find meals and
-          shop which is why we figured that the end goal of shopping is to
-          prepare meals that bring smiles and joy. these are the inspiration we
-          believe can help redesign the app and satisfy users.
+          Since amazon fresh is an online grocery store, we felt inspired to use a nature theme (hence the color green and smiles). The end goal of shopping is to prepare meals that bring smiles and joy.
         </p>
         <div class="costco">
           <img src={md}></img>
         </div>
         <h4>Typography, Scale, and Color</h4>
         <p>
-          Our color pattern was is meant to e a connection to nature, although
-          included here, we decided not to utilize it in our final product as it
-          was not an issue during our research and discovery.
+        Our color pattern is meant to connect to nature. Although included here, we decided not to utilize it in our final product as it was not an issue during our research and discovery.
         </p>
         <div class="costco">
           <img src={color}></img>
@@ -199,10 +172,7 @@ export default function Amazon() {
         </p>
         <img src={lp}></img>
         <p>
-          Improving upon the results of the mid-fidelity testing, the design of
-          the high-fidelity was as follows. the cart issue was removed to
-          alleviate confusion, also through our research sales recommendations
-          based on their orders which is implemented in the past purchases tab.
+          Improving upon the results of the mid-fidelity testing, the design of the high-fidelity was as follows. The cart issue was removed to alleviate confusion. Through our research, sales recommendations based on previous orders may be useful so it is included.
         </p>
         <img src={mp}></img>
         <h4>Testing</h4>
@@ -231,14 +201,13 @@ export default function Amazon() {
         </p>
         <br />
         <br />
-        <h2>🤔Reflection</h2>
+        <h2>Reflection</h2>
         <p>
           This was my first ever UX project! It was amazing experience to walk
           through an entire UX process. I've learned:{" "}
         </p>
         <p>
-          Not process-driven. Always consider the UX process by order. UX
-          process is not a team eqaully spliting the work without order. It is
+          Not process-driven. Always consider the UX process by order. It is
           always always research first!!!
         </p>
       </div>

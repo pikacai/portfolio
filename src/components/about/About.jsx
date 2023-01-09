@@ -29,8 +29,8 @@ export default function About() {
             💯I hope to use my design to help people to have a healthier and
             easier life. <br />
             <br />
-            🚀When I am not designing, I love learning new skills in linkedin
-            learning.
+            🚀When I am not designing, I love learning new skills in LinkedIn
+            Learning.
             <br />
           </p>
           {/* <p> */}

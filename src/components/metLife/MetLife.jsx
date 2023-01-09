@@ -32,8 +32,8 @@ export default function MetLife() {
         {/* <div class="column middle"> */}
         <h2>🚀Brief</h2>
         <p>
-          MetLife innovation project that creates high tech experience to
-          improve<b> onboarding experience</b> remotely in MetLife.
+          Innovation project that creates a high tech experience to
+          improve new hire's<b> onboarding experience</b> remotely in MetLife.
         </p>
         <br />
         <br />
@@ -56,8 +56,8 @@ export default function MetLife() {
           Based on the
           <i> MetLife Onboarding Survey</i> result, “88% of employees believe
           that their company could improve when it comes to onboarding new
-          employees” and “ A great onboarding experience ensure 69% of employees
-          stick with a company for three years” (metlife.com)
+          employees” and “A great onboarding experience ensure 69% of employees
+          stick with a company for three years” (metlife.com).
           <br />
           <br />
           Currently, MetLife offers numerous different platforms that new hires
@@ -71,7 +71,7 @@ export default function MetLife() {
         <br />
         <h2>🐐Design Goal: Connect Empower Inspire</h2>
         <p>
-          1. Consolidates <b>all networking forms</b>(Message, Club, Event,
+          1. &nbsp;Consolidates <b>all networking forms</b>(Message, Club, Event,
           Blog, Calendar) into<b> one </b>place.
           <br />
           2. Creates <b>high tech experience</b> to improve remote onboarding
@@ -82,8 +82,8 @@ export default function MetLife() {
           <b>
             <i>Strengthens Relations Between New Hires</i>
           </b>
-          <br /> As college students, we have met most of our same habits
-          friends through clubs, so we recognized first hand the impact clubs
+          <br /> As college students, we have met most of
+          friends through clubs. We recognize the impact thar clubs
           make on the first few months of being in a new environment.
         </p>
         <img className="metLifepic" src={blog}></img>
@@ -130,9 +130,9 @@ export default function MetLife() {
         <br />
         <h2>🤔Reflection</h2>
         <p>
-          I learned two main lessons. 1. For creating and user experience, we
-          need to always base on research and what others truly need, not just
-          what we need. 2. It is important to be caring teammates, so we can be
+          I learned two main lessons. 1. When creating user experiences, we
+          need to center our decisions based on research and what others truly need, not just
+          what we need. 2. It is important to be caring with teammates, so we can be
           happy to work on the project together as a team.{" "}
         </p>
         {/* </div> */}
