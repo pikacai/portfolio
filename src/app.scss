@@ -1,15 +1,16 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
 .app {
-  height: 100vh;
+  // height: 10vh;
 
   .sections {
     width: 100%;
-    height: calc(100vh - 70px);
+    // height: calc(100vh - 70px);
     // background-color: lightgoldenrodyellow ;
-    position: relative;
+    // position: relative;
     // top: 70px;
     scroll-behavior: smooth;
     //Scroll Snap
@@ -28,7 +29,6 @@ body {
     //for all component
 
     > * {
-      width: 100 vw;
       // height: calc(100vh - 70px);
       scroll-snap-align: start;
     }

@@ -1,5 +1,5 @@
 import Topbar from "./components/topbar/Topbar";
-import Intro from "./components/intro/Intro";
+import Home from "./components/home/Home";
 import "./app.scss";
 import CaseStudy from "./components/casestudy/CaseStudy";
 import MetLife from "./components/metLife/MetLife";
@@ -15,7 +15,7 @@ function App() {
       <>
         <Topbar />
         <div className="sections">
-          <Intro />
+          <Home />
           <CaseStudy />
         </div>
       </>
