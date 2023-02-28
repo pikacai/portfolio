@@ -31,24 +31,24 @@ const Hamoc = () => {
           <div className="divider">
             <div className="dividerLeft">
               <div>
-                <h3 className='sectionHeading'>My Role</h3>
+                <h3 className="sectionHeading">My Role</h3>
                 <div>Lead UX/UI Designer</div>
               </div>
 
               <div>
-                <h3 className='sectionHeading'>The Team</h3>
+                <h3 className="sectionHeading">The Team</h3>
                 <div>HAMOC UX Team</div>
               </div>
             </div>
 
             <div className="dividerRight">
               <div>
-                <h3 className='sectionHeading'>Timeline</h3>
+                <h3 className="sectionHeading">Timeline</h3>
                 <div>5 months</div>
               </div>
 
               <div>
-                <h3 className='sectionHeading'>Tools Used</h3>
+                <h3 className="sectionHeading">Tools Used</h3>
                 <div className="logos">
                   <img className="logo" src={figma} alt="figma" />
                   <img className="logo" src={zoom} alt="zoom" />
@@ -63,23 +63,25 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Background</h3>
-            <div className='sectionText'>
-              The Haitian American Museum of Chicago was established in 2012 by co-founder, Elsie Hernandez. Its mission is to create an
+            <h3 className="sectionHeading">Background</h3>
+            <div className="sectionText">
+              The Haitian American Museum of Chicago was established in 2012 by
+              co-founder, Elsie Hernandez. Its mission is to create an
               institution that holds programs and exhibits that will contribute
               to the rich multicultural tapestry that is Chicago, by showcasing
-              Haiti’s rich culture, art, and history. Despite
-              their venerable reputation for excellent arts programming and work
-              in the community, they have struggled to grow, constrained by
-              limited resources. The Haitian American
-              Museum of Chicago's 10th Anniversary milestone aligned with a
-              major expansion of their web presence. After consulting with them, we were able to identify two goals for HAMOC. They are discussed below.
+              Haiti’s rich culture, art, and history. Despite their venerable
+              reputation for excellent arts programming and work in the
+              community, they have struggled to grow, constrained by limited
+              resources. The Haitian American Museum of Chicago's 10th
+              Anniversary milestone aligned with a major expansion of their web
+              presence. After consulting with them, we were able to identify two
+              goals for HAMOC. They are discussed below.
             </div>
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Problem</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">Problem</h3>
+            <div className="sectionText">
               How might we restructure the Haitian American Museum of Chicago’s
               (HAMOC) website in order to increase engagement and funding
               opportunities?
@@ -87,20 +89,21 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Goal</h3>
-            <div className='sectionText'>
-                1. We tackled their website to optimize its impact, focusing on its
-                ability to bring in new revenue both directly and indirectly.
-                <br></br>
-                2.We designed for sustainability, so that the site could be maintained
-                and adapted easily, future proofed to grow alongside HAMOC, and allow changes to be
-                implemented both immediately and incrementally.
+            <h3 className="sectionHeading">Goal</h3>
+            <div className="sectionText">
+              ✔️ We tackled their website to optimize its impact, focusing on
+              its ability to bring in new revenue both directly and indirectly.
+              <br></br>
+              ✔️ We designed for sustainability, so that the site could be
+              maintained and adapted easily, future proofed to grow alongside
+              HAMOC, and allow changes to be implemented both immediately and
+              incrementally.
             </div>
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Research</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">Research</h3>
+            <div className="sectionText">
               We began by conducting behavioral research methods to measure what
               users actually do, providing quantitative data about how users
               actually interact with the product or service in question. After
@@ -113,8 +116,8 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Affinity Maps Findings</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">Affinity Maps Findings</h3>
+            <div className="sectionText">
               81% of visitors support a museum and it’s mission by visiting. 43%
               of users visit a museum 1-3 times a year. 38% of users find that
               the website experience influences their likelihood of visiting.
@@ -122,7 +125,7 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Competitive Analysis</h3>
+            <h3 className="sectionHeading">Competitive Analysis</h3>
             <div className="solutionImageContainer">
               <img
                 className="bigger"
@@ -134,8 +137,8 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Persona</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">Persona</h3>
+            <div className="sectionText">
               Based on the interviews and research findings, to get a better
               gauge of the mindset, challenges, motivations and journey of our
               users, we created two personas. Each persona has different
@@ -150,8 +153,8 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>User Stories</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">User Stories</h3>
+            <div className="sectionText">
               We develop our user stories base on the combination of research
               and user feedback to prioritize design decisions and ensure that
               redesign is meeting the needs of its target users.
@@ -167,8 +170,8 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>User Flowchart</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">User Flowchart</h3>
+            <div className="sectionText">
               We carefully considered each step new and returning users would
               have to go through in order to accomplish all their goals when
               browsing through the Haitian American Museum of Chicago’s website.
@@ -179,8 +182,8 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>The Solution</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">The Solution</h3>
+            <div className="sectionText">
               After combining all our research thus far, we knew what to narrow
               down and which features would be the most crucial components in
               helping our users navigate the platform.
@@ -191,8 +194,8 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Wireframes</h3>
-            <div className='sectionText'>
+            <h3 className="sectionHeading">Wireframes</h3>
+            <div className="sectionText">
               From here we were able to create our low-mid fidelity and figure
               out how to best organize the content and lay out the website.
               <div className="solutionImageContainer">
@@ -202,7 +205,7 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Brand & Style</h3>
+            <h3 className="sectionHeading">Brand & Style</h3>
             <div className="solutionImageContainer">
               <img
                 className="bigger"
@@ -214,25 +217,25 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className='sectionHeading'>Before & After Homepage</h3>
+            <h3 className="sectionHeading">Before & After Homepage</h3>
             <div className="solutionImageContainer">
               <img className="bigger" src={beforeafter} alt="beforeafter" />
             </div>
           </div>
 
           <div>
-            <h3 className='sectionHeading'>The Final Design</h3>
+            <h3 className="sectionHeading">The Final Design</h3>
 
             <div className="lastRowContainer">
               <div className="lastRow">
                 <div className="lastDivider">
                   <div className="dividerLeft">
                     <div>
-                      <h3 className='sectionHeading'>
+                      <h3 className="sectionHeading">
                         Locate visitor information , purchase tickets, and
                         schedule a tour
                       </h3>
-                      <div className='sectionText'>
+                      <div className="sectionText">
                         Consolidating all visitor information together by
                         grouping these tasks/information together, it allows
                         guests to efficiently plan their visit ahead of time.
@@ -262,8 +265,10 @@ const Hamoc = () => {
 
                   <div className="dividerRight">
                     <div>
-                      <h3 className='sectionHeading'>Preview featured art & artists</h3>
-                      <div className='sectionText'>
+                      <h3 className="sectionHeading">
+                        Preview featured art & artists
+                      </h3>
+                      <div className="sectionText">
                         Providing Featured Art & Artists page allows users to
                         preview titles, descriptions, and date range of the
                         exhibits and collections being offered. Online museum
@@ -280,11 +285,11 @@ const Hamoc = () => {
                 <div className="lastDivider">
                   <div className="dividerLeft">
                     <div>
-                      <h3 className='sectionHeading'>
+                      <h3 className="sectionHeading">
                         Locate visitor information , purchase tickets, and
                         schedule a tour
                       </h3>
-                      <div className='sectionText'>
+                      <div className="sectionText">
                         Consolidating all visitor information together by
                         grouping these tasks/information together, it allows
                         guests to efficiently plan their visit ahead of time.
@@ -314,8 +319,10 @@ const Hamoc = () => {
 
                   <div className="dividerRight">
                     <div>
-                      <h3 className='sectionHeading'>Preview featured art & artists</h3>
-                      <div className='sectionText'>
+                      <h3 className="sectionHeading">
+                        Preview featured art & artists
+                      </h3>
+                      <div className="sectionText">
                         Providing Featured Art & Artists page allows users to
                         preview titles, descriptions, and date range of the
                         exhibits and collections being offered. Online museum
@@ -332,18 +339,26 @@ const Hamoc = () => {
             </div>
           </div>
 
-          <button className="button-28" onClick={ () => window.location.href = 'https://www.figma.com/proto/1pM8s87cHV56XwaqeHXRj7/HAMOC---Clickable-Prototype?node-id=237%3A3500&scaling=min-zoom&page-id=237%3A1315&starting-point-node-id=237%3A3500&hide-ui=1'}>See Prototype</button>
+          <button
+            className="button-28"
+            onClick={() =>
+              (window.location.href =
+                "https://www.figma.com/proto/1pM8s87cHV56XwaqeHXRj7/HAMOC---Clickable-Prototype?node-id=237%3A3500&scaling=min-zoom&page-id=237%3A1315&starting-point-node-id=237%3A3500&hide-ui=1")
+            }
+          >
+            See Prototype
+          </button>
 
           <div>
-            <h3 className='sectionHeading'>Next Step</h3>
-            <p className='sectionText'>
+            <h3 className="sectionHeading">Next Step</h3>
+            <p className="sectionText">
               Next Steps - Currently working on implementing the UX changes with
               HAMOC developers, creating a plan to execute it in stages.
             </p>
           </div>
           <div>
-            <h3 className='sectionHeading'>Conclusion</h3>
-            <p className='sectionText'>
+            <h3 className="sectionHeading">Conclusion</h3>
+            <p className="sectionText">
               This project allowed me to gain valuable experience and develop my
               skills in a real-world setting. Collaborating with a diverse team
               and working closely with a client presented its own unique set of
