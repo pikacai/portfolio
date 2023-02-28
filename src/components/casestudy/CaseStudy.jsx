@@ -2,10 +2,12 @@ import React from "react";
 import "./casestudy.scss";
 import amazonlogo from "./amazonlogo1.png";
 import metlifelogo from "./metlifelogo1.png";
+import hamocCover from "../hamoc/cover.svg"
 import { Link } from "react-router-dom";
 
 export default function CaseStudy() {
   return (
+    <>
     <div class="split-screen">
       <div class="hleft">
         <div class="card">
@@ -31,5 +33,20 @@ export default function CaseStudy() {
         </div>
       </div>
     </div>
+
+    <div className="split-screen">
+      <div class="hleft">
+        <div class="card">
+          <Link to="hamoc" target="_blank">
+            <img className="casepic" src={hamocCover}></img>
+            <h3 className="titletext">Amazon</h3>
+            <p className="smalltext">
+              Amazon Fresh Redesigned: Save and More Time to Enjoy.
+            </p>
+          </Link>
+        </div>
+      </div>
+    </div>
+    </>
   );
 }

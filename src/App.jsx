@@ -7,6 +7,7 @@ import Amazon from "./components/amazon/Amazon";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/about/About";
 import "@fontsource/chivo";
+import Hamoc from "./components/hamoc/Hamoc";
 
 //App.js is for put the component
 function App() {
@@ -44,6 +45,17 @@ function App() {
     );
   };
 
+  const hamocpage = () => {
+    return (
+      <>
+        <Topbar />
+        <div>
+          <Hamoc />
+        </div>
+      </>
+    );
+  };
+
   const aboutpage = () => {
     return (
       <>
@@ -62,6 +74,7 @@ function App() {
         <Route path="/metlife" element={metlifepage()} />
         <Route path="/amazon" element={amazonpage()} />
         <Route path="/about" element={aboutpage()} />
+        <Route path="/hamoc" element={hamocpage()} />
       </Routes>
 
       {/* <MetLife/> */}

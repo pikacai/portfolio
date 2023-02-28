@@ -1,0 +1,92 @@
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px 0px 90px 0px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    gap: 60px;
+}
+
+.bigger {
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 150%;
+    // transition: all 1s ease;
+}
+
+.bigger:hover {
+    // transform: scale(1.02);
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dividerLeft {
+    flex: 50%;
+}
+
+.dividerRight {
+    flex: 50%;
+}
+
+.logos {
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.logo {
+    width: 10%;
+}
+
+.solutionImageContainer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.solutionImage {
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 80%;
+}
+
+.lastRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150%;
+    gap: 40px;
+    column-gap: 40px;
+}
+
+.lastDivider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.lastRowContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastRowBigger {
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
