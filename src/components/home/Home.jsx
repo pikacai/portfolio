@@ -6,7 +6,7 @@ export default function Home() {
       <h1 className="nameHeading">
         <span className="waving">Pika</span> Cai
       </h1>
-      <p>
+      <p className="textHeading">
         Enabling the human factor in the products we use <br />
         UX/UI Design | UX Research | Product Designer
       </p>
