@@ -61,7 +61,7 @@ const Outcome = () => {
                     <div className='googlePhoneDividerArrow' alt=""></div>
 
                     <div style={{ paddingBottom: 90}}>
-                        <Phone image={video1} color="#2DA94E"/>
+                        <Phone image={video1} color="red"/>
                     </div>
                 </div>
 
