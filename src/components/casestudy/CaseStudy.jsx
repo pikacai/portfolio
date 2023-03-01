@@ -17,7 +17,7 @@ export default function CaseStudy() {
   return (
     <div className='caseStudySectionContainer'>
       <div className='caseStudySection'>
-        {/* <Card
+        <Card
           companyLogo = {googleLogo}
           companyProduct = {'Google Maps'}
           image = {googleImage}
@@ -28,7 +28,7 @@ export default function CaseStudy() {
             color: 'black'
           }}
           link = {'google'}
-        /> */}
+        />
 
         <Card
           companyLogo = {hamocLogo}

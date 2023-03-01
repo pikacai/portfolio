@@ -6,6 +6,9 @@
 .googleSection {
     margin-top: 50px;
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .googleSectionInner {
@@ -98,4 +101,13 @@
     display: flex;
     flex-direction: column; 
     gap: 20px;
+}
+
+.googleOutComeContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.googleOutComeContainerInner {
+    width: 70%;
 }
