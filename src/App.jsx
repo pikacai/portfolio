@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import About from "./components/about/About";
 import "@fontsource/chivo";
 import Hamoc from "./components/hamoc/Hamoc";
+import Google from "./components/google/Google";
 
 //App.js is for put the component
 function App() {
@@ -67,6 +68,17 @@ function App() {
     );
   };
 
+  const googlepage = () => {
+    return (
+      <>
+        <Topbar />
+        <div>
+          <Google />
+        </div>
+      </>
+    );
+  };
+
   return (
     <div className="app">
       <Routes>
@@ -75,6 +87,7 @@ function App() {
         <Route path="/amazon" element={amazonpage()} />
         <Route path="/about" element={aboutpage()} />
         <Route path="/hamoc" element={hamocpage()} />
+        <Route path="/google" element={googlepage()} />
       </Routes>
 
       {/* <MetLife/> */}

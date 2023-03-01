@@ -1,0 +1,60 @@
+.cardLink {
+    text-decoration: none;
+}
+
+.card {
+    margin: 100px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 30px;
+    color: white;
+    transition: all .1s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.cardCompanyLogo {
+    width: 60px;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 40px 0px 40px;
+}
+
+.cardBodyLeft {
+    padding: 60px 0px 60px 0px;
+    flex: 40%;
+}
+
+.cardTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xxx-large;
+    font-weight: bolder;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.cardDescription {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.cardBodyRight {
+    max-height: 400px;
+    max-width: 490px;
+    flex: 50%;
+}
