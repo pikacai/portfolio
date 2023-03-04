@@ -4,6 +4,14 @@ import googleImage from "../google/image.svg";
 
 import Overview from './overview/Overview';
 import Outcome from './outcome/Outcome';
+import UserSurvey from './userSurvey/UserSurvey';
+import BehavioralAnalysis from './behavioralAnalysis/BehavioralAnalysis';
+import CompetitiveAnalysis from './competitiveAnalysis/CompetitiveAnalysis';
+import UserStories from './userStories/UserStories';
+import Personas from './personas/Personas'
+import JourneyMapping from './journeyMapping/JourneyMapping';
+import FinalPrototype from './finalPrototype/FinalPrototype';
+import ProjectLearnings from './projectLearnings/ProjectLearnings';
 
 import Phone from './phones/Phone';
 
@@ -28,10 +36,21 @@ const Google = () => {
             />
 
             <div className="googleSectionContainer">
-                <div className="googleSection">    
+                <div className="googleSection"> 
+                    {/* // .googleGreen = color: '#2DA94E';
+                    //.googleBlue = color: '#4285F3'; 
+                    //.googleRed = color: '#EA4435';
+                    //.googleYellow = color: '#FABD03';    */}
                     <Overview />
                     <Outcome />
-                    
+                    <UserSurvey />
+                    <BehavioralAnalysis />
+                    <CompetitiveAnalysis />
+                    <UserStories />
+                    <Personas />
+                    <JourneyMapping />
+                    <FinalPrototype />
+                    <ProjectLearnings />
                 </div>
             </div>
 

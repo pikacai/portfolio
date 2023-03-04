@@ -4,7 +4,7 @@ import overview from './overview.svg'
 const Overview = () => {
     return (
         <div>
-            <Title title='Overview' color='red'/>
+            <Title title='Overview' color='#EA4435'/>
 
             <div className='googleSectionInner'>
                 <div className="googleDivider">

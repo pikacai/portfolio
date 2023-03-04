@@ -35,6 +35,7 @@
 
 .googleHeadingTitle {
     margin: 0;
+    z-index: 1000;
 }
 
 .googleTextCenter {
@@ -78,8 +79,8 @@
 
 .googlePhone {
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.03), 0px 24px 34px rgba(0, 0, 0, 0.09), 0px 3px 34px rgba(0, 0, 0, 0.15);    border-radius: 30px;
-    width: 300px;
-    height: 620px;
+    width: 230px;
+    height: 480px;
     padding: 5px;
     background-color: white;
     z-index: 2000;
@@ -89,6 +90,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .googlePhoneDividerArrow {
@@ -110,4 +112,25 @@
 
 .googleOutComeContainerInner {
     width: 70%;
+}
+
+.googleYoutubeVideo {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.googleGreen {
+    color: '#2DA94E';
+}
+
+.googleBlue {
+    color: '#4285F3'; 
+}
+
+.googleRed {
+    color: '#EA4435';
+}
+
+.googleYellow {
+    color: '#FABD03';
 }

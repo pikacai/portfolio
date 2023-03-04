@@ -12,6 +12,8 @@ import Google from "./components/google/Google";
 
 //App.js is for put the component
 function App() {
+  const images = document.querySelectorAll("img");
+  console.log('images', images);
   const homepage = () => {
     return (
       <>

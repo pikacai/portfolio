@@ -1,5 +1,8 @@
 import Phone from '../phones/Phone';
 import video1 from '../phones/video1.gif';
+import photo1 from '../phones/photo1.svg';
+import photo2 from '../phones/photo2.svg';
+import video2 from '../phones/video2.gif';
 import pinkArrowRight from './pinkArrowRight.svg';
 import blueArrowLeft from './blueArrowLeft.svg';
 import greenArrowRight from './greenArrowRight.svg';
@@ -33,13 +36,13 @@ const Outcome = () => {
                     <img className='googlePhoneDividerArrow'src={blueArrowLeft} alt="arrow1" />
 
                     <div style={{ paddingBottom: 90}}>
-                        <Phone image={video1} color="#2DA94E"/>
+                        <Phone image={photo1} color="#4285F3 "/>
                     </div>
                 </div>
 
                 <div className='googlePhoneDivider'>
                     <div style={{ paddingBottom: 90}}>
-                        <Phone image={video1} color="#2DA94E"/>
+                        <Phone image={photo2} color="#EA4435"/>
                     </div>
 
                     <img className='googlePhoneDividerArrow'src={greenArrowRight} alt="arrow1" />
@@ -61,7 +64,7 @@ const Outcome = () => {
                     <div className='googlePhoneDividerArrow' alt=""></div>
 
                     <div style={{ paddingBottom: 90}}>
-                        <Phone image={video1} color="red"/>
+                        <Phone image={video2} color="#FABD03"/>
                     </div>
                 </div>
 
