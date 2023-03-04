@@ -80,8 +80,8 @@ const Hamoc = () => {
           </div>
 
           <div>
-            <h3 className="sectionHeading">Problem</h3>
-            <div className="sectionText">
+            <div className="hamocProblemStatement">
+              <span className='hamocProblemStatementQuote'>❝</span>
               How might we restructure the Haitian American Museum of Chicago’s
               (HAMOC) website in order to increase engagement and funding
               opportunities?
