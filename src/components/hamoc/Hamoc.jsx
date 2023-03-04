@@ -81,10 +81,17 @@ const Hamoc = () => {
 
           <div>
             <div className="hamocProblemStatement">
-              <span className='hamocProblemStatementQuote'>❝</span>
+              <span className="hamocProblemStatementQuote">❝</span>
               How might we restructure the Haitian American Museum of Chicago’s
-              (HAMOC) website in order to increase engagement and funding
-              opportunities?
+              (HAMOC) website in order to{" "}
+              <span className="hamocProblemStatementHighLight">
+                increase engagement
+              </span>{" "}
+              and{" "}
+              <span className="hamocProblemStatementHighLight">
+                funding opportunities
+              </span>
+              ?
             </div>
           </div>
 
