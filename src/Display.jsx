@@ -13,11 +13,11 @@ import { useState, useEffect } from 'react';
 
 function Display(props) {
 
-  const [requestsFulfilled, setRequestsFulfilled] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    window.addEventListener("load", () => { setRequestsFulfilled(true); } );
-    return () => window.removeEventListener("load", () => { setRequestsFulfilled(true); });
+    window.addEventListener("load", () => { setIsLoading(false); } );
+    return () => window.removeEventListener("load", () => { setIsLoading(false); });
   }, []);
 
   const homepage = () => {
@@ -96,7 +96,7 @@ function Display(props) {
     '/google': googlepage
   }
 
-  return ( requestsFulfilled ? <div>{pages[props.page]()}</div> : <div></div> );
+  return ( !isLoading ? <div>{pages[props.page]()}</div> : <div></div> );
 
 }
 
