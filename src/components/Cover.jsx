@@ -18,7 +18,7 @@ const Cover = (props) => {
                     <div>{props.companyProduct}</div>
                 </div>
 
-                <div className='coverBody'>
+                <div className='coverBody' style = {{ flexDirection: props.reverse ? "row-reverse" : "row", gap: props.reverse ? '40px' : '0px' }}>
                     <div className='coverBodyLeft'>
                         <h2 className='coverTitle'>{props.title}</h2>
                         <div className='coverDescription'>{props.description}</div>

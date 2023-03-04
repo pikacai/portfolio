@@ -19,9 +19,7 @@ export default function CaseStudy() {
     <div className="caseStudySectionContainer">
       <div className="caseStudySection">
         <Fade children={
-          
           <>
-          
               <Card
               companyLogo={googleLogo}
               companyProduct={"Google Maps"}
@@ -83,10 +81,7 @@ export default function CaseStudy() {
               }}
               link={"amazon"}
             />
-          
-          
-          </>
-
+      </>
 
         }/>
       </div>

@@ -33,6 +33,7 @@ const Google = () => {
                     background: 'linear-gradient(360deg, #E1EDFD 4.11%, #FAFAFA 52.25%)',
                     color: 'black'
                 }}
+                reverse={true}
             />
 
             <div className="googleSectionContainer">
