@@ -1,95 +1,18 @@
-import Topbar from "./components/topbar/Topbar";
-import Home from "./components/home/Home";
-import "./app.scss";
-import CaseStudy from "./components/casestudy/CaseStudy";
-import MetLife from "./components/metLife/MetLife";
-import Amazon from "./components/amazon/Amazon";
 import { Route, Routes } from "react-router-dom";
-import About from "./components/about/About";
-import "@fontsource/chivo";
-import Hamoc from "./components/hamoc/Hamoc";
-import Google from "./components/google/Google";
+import Display from "./Display";
+import "./app.scss";
 
 //App.js is for put the component
 function App() {
-  const images = document.querySelectorAll("img");
-  console.log('images', images);
-  const homepage = () => {
-    return (
-      <>
-        <Topbar />
-        <div className="sections">
-          <Home />
-          <CaseStudy />
-        </div>
-      </>
-    );
-  };
-
-  const metlifepage = () => {
-    return (
-      <>
-        <Topbar />
-        <div>
-          <MetLife />
-        </div>
-      </>
-    );
-  };
-
-  const amazonpage = () => {
-    return (
-      <>
-        <Topbar />
-        <div>
-          <Amazon />
-        </div>
-      </>
-    );
-  };
-
-  const hamocpage = () => {
-    return (
-      <>
-        <Topbar />
-        <div>
-          <Hamoc />
-        </div>
-      </>
-    );
-  };
-
-  const aboutpage = () => {
-    return (
-      <>
-        <Topbar />
-        <div>
-          <About />
-        </div>
-      </>
-    );
-  };
-
-  const googlepage = () => {
-    return (
-      <>
-        <Topbar />
-        <div>
-          <Google />
-        </div>
-      </>
-    );
-  };
-
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={homepage()} />
-        <Route path="/metlife" element={metlifepage()} />
-        <Route path="/amazon" element={amazonpage()} />
-        <Route path="/about" element={aboutpage()} />
-        <Route path="/hamoc" element={hamocpage()} />
-        <Route path="/google" element={googlepage()} />
+        <Route path="/" element={ <Display page='/'/> }/>
+        <Route path="/metlife" element={ <Display page='/metlife'/> } />
+        <Route path="/amazon" element={ <Display page='/amazon'/> } />
+        <Route path="/about" element={ <Display page='/about'/> } />
+        <Route path="/hamoc" element={ <Display page='/hamoc'/> } />
+        <Route path="/google" element={ <Display page='/google'/> } />
       </Routes>
 
       {/* <MetLife/> */}
