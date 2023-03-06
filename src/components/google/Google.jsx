@@ -10,6 +10,7 @@ import CompetitiveAnalysis from './competitiveAnalysis/CompetitiveAnalysis';
 import UserStories from './userStories/UserStories';
 import Personas from './personas/Personas'
 import JourneyMapping from './journeyMapping/JourneyMapping';
+import Sketches from './sketches/Sketches';
 import FinalPrototype from './finalPrototype/FinalPrototype';
 import ProjectLearnings from './projectLearnings/ProjectLearnings';
 
@@ -50,6 +51,7 @@ const Google = () => {
                     <UserStories />
                     <Personas />
                     <JourneyMapping />
+                    <Sketches />
                     <FinalPrototype />
                     <ProjectLearnings />
                 </div>

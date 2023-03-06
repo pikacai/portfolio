@@ -12,12 +12,14 @@ import metlifeLogo from "../metLife/logo.svg";
 import metlifeImage from "../metLife/image.svg";
 import Card from "../Card";
 import Fade from "../Fade";
+import FadeContainer from "../FadeContainer";
 import "./caseStudy.scss";
 
 export default function CaseStudy() {
   return (
     <div className="caseStudySectionContainer">
       <div className="caseStudySection">
+        {/* <FadeContainer children={<><div>Section1</div><div>Section2</div></>} /> */}
         <Fade children={
           <>
               <Card

@@ -12,12 +12,12 @@ import Google from "./components/google/Google";
 import { useState, useEffect } from 'react';
 
 function Display(props) {
-  const [isLoading, setIsLoading] = useState(true);
-  console.log('loading content outside', 'isLoading', isLoading);
+  const [isLoading, setIsLoading] = useState(false);
+  // console.log('loading content outside', 'isLoading', isLoading);
 
   useEffect(() => {
-    window.addEventListener("load", () => { console.log('loading content'); setIsLoading(false); } );
-    return () => { window.removeEventListener("load", () => { setIsLoading(false); }); };
+    // window.addEventListener("load", () => { console.log('loading content'); setIsLoading(false); } );
+    // return () => { window.removeEventListener("load", () => { setIsLoading(false); }); };
   }, []);
 
   const homepage = () => {
