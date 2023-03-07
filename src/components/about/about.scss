@@ -2,21 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
 
 .split {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #f4f7f6;
-  padding-bottom: 10%;
-  row-gap: 30px;
   padding: 7%;
   .leftabout {
-    width: 50%;
-    margin: 5px;
     // padding-top: 10%;
   }
   .rightabout {
-    width: 50%;
-    margin-left: 25px;
+
     // margin: 5px;
     // padding: 2%;
     // .textlocation {
@@ -72,4 +63,18 @@ h2 {
   //   // width: 50%;
   //   // height: auto;
   // }
+}
+
+.aboutImage {
+  height: 60vh;
+  width: auto;
+}
+
+.aboutLineContainer {
+  display: flex;
+  align-items: center;
+}
+
+.aboutEmoji {
+  font-size: 3rem;
 }

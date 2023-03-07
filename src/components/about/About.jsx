@@ -1,17 +1,20 @@
 import React from "react";
 import "./about.scss";
-import mypicture from "./haha.JPG";
+import mypicture from "./about.svg";
+import Line from "./Line";
 
 export default function About() {
   return (
     <div className="split">
-      <div className="leftabout">
-        <img src={mypicture}></img>
+      <img src={mypicture} alt='mypicture'/>
+      {/* <div className="leftabout">
+        <img className='aboutImage'src={mypicture}></img>
       </div>
 
       <div className="rightabout">
         <div className="textlocation">
           <h2>Hi. I am Pika</h2>
+          <Line emoji='📍' text='Buffalo, NY'/>
           <p>📍Buffalo, NY</p>
           <p>🎓Computer Science </p>
           <p>💖 Procreate, research, psychology, accessibility, health life</p>
@@ -33,12 +36,8 @@ export default function About() {
             Learning.
             <br />
           </p>
-          {/* <p> */}
-          {/* For more work inquiries, or to grab a coffee do email me at
-            senhuang.cai9h@gmail.com ☕️✨ Thank you for reading! 🧠
-          </p> */}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
