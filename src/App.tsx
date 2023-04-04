@@ -5,6 +5,8 @@ import OldGoogle from './components/old/google/Google';
 import OldHamoc from './components/old/hamoc/Hamoc';
 import OldMetLife from './components/old/metLife/MetLife';
 
+import './App.scss';
+
 // This component is used to render components at the "<Outlet/>".
 // This is so every page has a navbar
 function Pages() {
