@@ -18,13 +18,13 @@ const Google = () => {
             
             <div className='w-[20vw] overflow-hidden'><img className='h-full animate-showTop -translate-y-[100%]' src={googleMapsLogo} alt="Google Maps Logo" /></div>
             
-            <div className='overflow-hidden'>
+            {/* <div className='overflow-hidden'>
               <div className='flex p-16 justify-center gap-x-8 animate-showBottom translate-y-[100%]'>
                 <Review img={person1} name='Yilong Ma' review='Automatic rerouting is not safe. Please remove this feature!'/>
                 <Review img={person2} name='Yilong Ma' review='Automatic rerouting is not safe. Please remove this feature!'/>
                 <Review img={person3} name='Yilong Ma' review='Automatic rerouting is not safe. Please remove this feature!'/>
               </div>
-            </div>
+            </div> */}
               
             <div className='overflow-hidden'><h1 className='p-2 text-center text-6xl md:text-8xl font-semibold animate-showTop translate-y-[100%]'>Improving on-road usage.</h1></div>
           </div>

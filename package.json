@@ -1,5 +1,5 @@
 {
-  "homepage": "https://B-o-s-s-e-s.github.io/portfolio",
+  "homepage": "https://b-o-s-s-e-s.github.io/portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tailwind": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

@@ -16,7 +16,7 @@ const Hamoc = () => {
             <div className='w-[90%] flex flex-col justify-center items-center animate-scaleFromZero'>
                 <img className='w-[30vw]' src={hamocLogo} alt="HAMOC Logo" />
                 <div className='w-[85%]'><Macbook screen={updatedHomePage} /></div>
-                <div className='overflow-hidden'><h1 className='p-2 text-8xl font-semibold'>Reimaginging web presence.</h1></div>
+                <div className='overflow-hidden'><h1 className='p-2 text-8xl text-center font-semibold'>Reimaginging web presence.</h1></div>
             </div>
         </div>
     );

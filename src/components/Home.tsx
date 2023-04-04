@@ -76,7 +76,7 @@ function App() {
       </Link>
 
       {/* About */}
-      <div className={`relative h-screen w-screen flex justify-center items-center bg-cover`} style={{backgroundImage: `url(${highSierra})`}}>
+      {/* <div className={`relative h-screen w-screen flex justify-center items-center bg-cover`} style={{backgroundImage: `url(${highSierra})`}}>
         <div className='flex justify-center items-center h-[90vh] md:w-[80vw] rounded-md bg-white backdrop-blur-3xl bg-opacity-[0.65] border border-gray-400'>
 
           <div className='flex flex-col justify-center items-center w-3/4 md:w-1/2 gap-y-7'>
@@ -84,16 +84,17 @@ function App() {
 
             <h1 className='text-6xl text-center font-semibold'>Pika Cai</h1>
             
-            <div className='text-xl text-center text-slate-500'>Remember it's Pikachu without the "chu"</div>
+            <div className='text-xl text-center text-slate-500'>Remember it's Pikachu without the "chu"</div> */}
 
             {/* <div className='flex w-full gap-x-5'>
               <button className={`flex flex-auto items-center justify-center w-full rounded-lg text-lg md:text-xl px-5 py-2.5 font-medium dark:bg-blue-100 dark:hover:bg-blue-200 dark:focus:ring-blue-300 text-blue-600 transition-transform active:scale-[.98] disabled:opacity-70 disabled:dark:bg-blue-600`}>Like my portfolio</button>
               <button className={`flex flex-auto items-center justify-center w-full rounded-lg text-lg md:text-xl px-5 py-2.5 font-medium dark:bg-blue-100 dark:hover:bg-blue-200 dark:focus:ring-blue-300 text-blue-600 transition-transform active:scale-[.98] disabled:opacity-70 disabled:dark:bg-blue-600`}>Send me a message</button>
             </div> */}
-          </div>
+          {/* </div> */}
 
-        </div>
-      </div>
+        {/* // </div> */}
+      {/* </div> */}
+      
     </div>
   )
 }
