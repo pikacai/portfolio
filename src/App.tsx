@@ -27,7 +27,7 @@ function App() {
       <Route path='/' element={ <Pages/> } >
         <Route path='/' element={ <Home/> } />
         <Route path='/googleold' element={ <OldGoogle /> } />
-        <Route path='/google' element={ <GoogleContent /> } />
+        <Route path='/google' element={ <OldGoogle /> } />
         <Route path='/hamoc' element={ <OldHamoc/> } />
         <Route path='/metlife' element={ <OldMetLife/> } />
       </Route>
