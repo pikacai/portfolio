@@ -1,9 +1,12 @@
 import Title from '../Title';
 import personas from './personas.svg';
+import Define from './Define.svg';
 
 const Personas = () => {
     return (
         <div>
+            <img src={Define} alt="Define" />
+
             <Title title='Personas' color={'#FABD03'}/>
             
             <div className='googleSectionInner'>

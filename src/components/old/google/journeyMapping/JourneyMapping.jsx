@@ -1,5 +1,5 @@
 import Title from '../Title';
-import journeyMapping from './journeyMapping.svg';
+import journeyMapping from './JourneyMapping.svg';
 
 const JourneyMapping = () => {
     return (

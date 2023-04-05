@@ -5,6 +5,8 @@ import OldGoogle from './components/old/google/Google';
 import OldHamoc from './components/old/hamoc/Hamoc';
 import OldMetLife from './components/old/metLife/MetLife';
 
+import GoogleContent from "./components/google/GoogleContent";
+
 import './App.scss';
 
 // This component is used to render components at the "<Outlet/>".
@@ -24,7 +26,8 @@ function App() {
      <Routes>
       <Route path='/' element={ <Pages/> } >
         <Route path='/' element={ <Home/> } />
-        <Route path='/google' element={ <OldGoogle/> } />
+        <Route path='/googleold' element={ <OldGoogle /> } />
+        <Route path='/google' element={ <GoogleContent /> } />
         <Route path='/hamoc' element={ <OldHamoc/> } />
         <Route path='/metlife' element={ <OldMetLife/> } />
       </Route>

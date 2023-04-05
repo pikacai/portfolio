@@ -5,7 +5,9 @@ const UserStories = () => {
     return (
         <div>
             <Title title='User Stories' color='#4285F3'/>
-            <img src={userStories} alt="userStories" />
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <img src={userStories} alt="userStories" />
+            </div>
 
         </div>
     );
