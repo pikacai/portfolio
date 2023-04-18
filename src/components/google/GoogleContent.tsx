@@ -1,30 +1,44 @@
-import Google from './Google';
-import googleMapsBackground from './googleMapsBackground.png';
-import ProjectTypeCard from './assets/ProjectTypeCard.svg';
-import RoleCard from './assets/RoleCard.svg';
-import TimelineCard from './assets/TimelineCard.svg';
-import ToolsUsedCard from './assets/ToolsUsedCard.svg';
+import SplashScreen from "../SplashScreen";
+
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 
 const GoogleContent = () => {
+    const outcomes = [
+        'Introduces saftey features',
+        'Introduces saftey features',
+        'Introduces saftey features',
+    ]
     return (
         <div>
-            <div className='relative h-screen w-screen flex flex-col justify-center items-center bg-cover overflow-x-hidden' style={{backgroundImage: `url(${googleMapsBackground})`}}>
-                <div className='h-screen w-screen flex flex-col items-center justify-center' style={{ background: 'linear-gradient(0deg, white, rgb(255 255 255 / 70%))'}}>
-                    <Google />
-                    <div className='mt-6'>
-                        <div>This case study examines common complaintsof on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.</div>
-                    </div>
+            <SplashScreen
+                productIcon='/portfolio/src/assets/googleMapsIcon.svg'
+                companyLogo='/portfolio/src/assets/google.png'
+                animation='animate-splashScreenGoogle'
+            />
+            
+            <div className='h-screen w-screen flex flex-col justify-center items-center gap-y-8'>
+                <h1 className='text-4xl md:text-6xl font-semibold'>Improving on-road usage</h1>
+                
+                <div className='flex flex-col gap-y-4'>
+                    {
+                        outcomes.map( (entry, index) => 
+                            <div className='flex items-center gap-x-4' key={index}>
+                                <div className='bg-green-500 rounded-full p-1 text-white flex justify-center items-center'>
+                                    <CheckRoundedIcon fontSize='small'/>
+                                </div>
+                                <div>{entry}</div>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
 
-            {/* <div className='flex justify-center gap-x-6'>
-                <img className='w-[15%]' src={ProjectTypeCard} alt='ProjectTypeCard'/>    
-                <img className='w-[15%]' src={RoleCard} alt='RoleCard'/>
-                <img className='w-[15%]' src={TimelineCard} alt='TimelineCard'/>
-                <img className='w-[15%]' src={ToolsUsedCard} alt='ToolsUsedCard'/>
-            </div> */}
 
+            <div className='h-screen w-screen flex justify-center items-center'>
+                <div className='aspect-[9/19.5] h-2/3 border-black border-2 rounded-3xl'>
 
+                </div>
+            </div>
         </div>
     );
 }

@@ -12,7 +12,11 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // When clicking on a link, it will scroll up
     window.scrollTo(0, 0);
+
+    // When going back or refreshing the page, it scrolls up
+    window.history.scrollRestoration = 'manual';
   }, [pathname]);
 
   return null;
@@ -23,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
       <ScrollToTop/>
-      <App />
+      <App/>
     </HashRouter>
   </React.StrictMode>,
 )
