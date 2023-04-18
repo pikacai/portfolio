@@ -1,9 +1,13 @@
 import Title from '../Title'
 import userStory from './userStory.svg'
+import Research from './Research.svg';
+
 
 const UserSurvey = () => {
     return (
         <div>
+            <img src={Research} alt="hi" />
+
             <Title title='User Survey' color='#FABD03'/>
 
             <div className='googleSectionInner'>

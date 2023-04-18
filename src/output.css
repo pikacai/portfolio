@@ -633,10 +633,6 @@ video {
   width: 100vw;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .flex-auto {
   flex: 1 1 auto;
 }
