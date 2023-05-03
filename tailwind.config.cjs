@@ -59,6 +59,11 @@ module.exports = {
           '20%': { 'background-color': '#0487ce', transform: 'translateY(0%)' },
           '80%': { 'background-color': '#0487ce', transform: 'translateY(0%)' },
           '90%': { 'background-color': '#FFFFFF', transform: 'translateY(100%)' },
+        },
+        blob: {
+          '0%': { 'border-radius': '24% 76% 35% 65% / 27% 36% 64% 73%' },
+          '100%': { 'border-radius': '24% 76% 35% 65% / 27% 36% 64% 73%' },
+          '25%': { 'border-radius': '76% 24% 33% 67% / 68% 55% 45% 32%' }
         }
       },
       animation: {
@@ -72,7 +77,8 @@ module.exports = {
         'fadeIn': 'fadeIn 1s ease-in-out forwards',
         'splashScreenGoogle': 'splashScreenGoogle 1s ease-out forwards',
         'splashScreenHamoc': 'splashScreenHamoc 1s ease-out forwards',
-        'splashScreenMetlife': 'splashScreenMetlife 1s ease-out forwards'
+        'splashScreenMetlife': 'splashScreenMetlife 1s ease-out forwards',
+        'blob': 'blob 10s ease-in-out infinite;'
       }
     },
   },

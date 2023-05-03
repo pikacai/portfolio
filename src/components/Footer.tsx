@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Footer() {
   return (
-    <div className='w-screen flex flex-col items-center gap-y-6'>
+    <div className='w-screen flex flex-col items-center gap-y-6 mt-32 mb-32'>
       <div className='flex gap-x-4 items-center'>
         <a href="https://www.linkedin.com/in/senhuangcai/"><LinkedInIcon fontSize='large' className='text-slate-400 hover:text-blue-600 transition duration-500 ease-in-out'/></a>
         <a href="https://github.com/B-o-s-s-e-s"><GitHubIcon fontSize='large' className='text-slate-400 hover:text-black transition duration-500 ease-in-out'/></a>

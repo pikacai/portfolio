@@ -19,14 +19,14 @@ function Home() {
       visuals: ['report.gif'],
       link: 'google'
     },
-    {
-      product: 'The Haitian American Musuem Website',
-      type: 'Case Study',
-      date: '2022',
-      description: 'Improving on-road usage. This case study examines common complaints of on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.',
-      visuals: ['redesign.png'],
-      link: 'hamoc'
-    },
+    // {
+    //   product: 'The Haitian American Musuem Website',
+    //   type: 'Case Study',
+    //   date: '2022',
+    //   description: 'Improving on-road usage. This case study examines common complaints of on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.',
+    //   visuals: ['redesign.png'],
+    //   link: 'hamoc'
+    // },
     {
       product: 'MetConnect',
       type: 'Case Study',
