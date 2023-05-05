@@ -1,11 +1,15 @@
 import Experience from "./Experience";
 
+import report from '../../assets/report.gif';
+import redesign from '../../assets/hamoc/redesign.png'
+import metconnect from '../../assets/metconnect.png';
+
 interface ExperienceType {
   product: string,
   type: string,
   date: string, 
   description: string, 
-  visuals: string[]
+  visuals: Record<string, string>[]
   link: string
 }
 
@@ -15,24 +19,33 @@ function Home() {
       product: 'Google Maps',
       type: 'Case Study',
       date: '2022-2023',
-      description: 'Improving on-road usage. This case study examines common complaints of on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.',
-      visuals: ['report.gif'],
+      description: "This study investigates typical issues that users encounter when using Google Maps while driving, and proposes prototypes that could enhance the app's functionality. Through the analysis of other mapping apps such as Apple Maps and Waze, this study identifies features that could be adapted and integrated into Google Maps to improve the overall user experience.",
+      visuals: [{
+        img: report,
+        alt: 'Mockup of Google Maps on a phone.'
+      }],
       link: 'google'
     },
-    // {
-    //   product: 'The Haitian American Musuem Website',
-    //   type: 'Case Study',
-    //   date: '2022',
-    //   description: 'Improving on-road usage. This case study examines common complaints of on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.',
-    //   visuals: ['redesign.png'],
-    //   link: 'hamoc'
-    // },
+    {
+      product: 'The Haitian American Musuem Website',
+      type: 'Case Study',
+      date: '2022',
+      description: 'Improving on-road usage. This case study examines common complaints of on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.',
+      visuals: [{
+        img: redesign,
+        alt: 'Design of The Haitian American Musuem Website with annotations.'
+      }],
+      link: 'hamoc'
+    },
     {
       product: 'MetConnect',
-      type: 'Case Study',
+      type: 'Product',
       date: '2023',
-      description: 'Improving on-road usage. This case study examines common complaints of on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.',
-      visuals: ['metconnect.png'],
+      description: "MetConnect is a technology platform designed to promote connection and inclusivity in the workplace. By enabling new hires to connect over shared interests, we aim to cultivate a workforce that is not only dedicated to their work but also to each other. At MetConnect, we believe that when employees feel valued and supported by their peers, they are more likely to succeed and thrive in their roles.",
+      visuals: [{
+          img: metconnect,
+          alt: 'A profile page on MetConnect as viewed on an iPad.'
+      }],
       link: 'metlife'
     }
   ];
