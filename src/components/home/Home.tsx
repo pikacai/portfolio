@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import macbook from "../../assets/macbook.png";
 import ipad from "../../assets/ipad.png";
 import iphone from "../../assets/iphone.png";
+import iphone2 from "../../assets/iphone2.png";
 import amazon from "../../assets/amazon.png";
 import googlecrm from "../../assets/googlecrm.png";
 import { Link } from "react-router-dom";
