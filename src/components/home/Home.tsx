@@ -23,6 +23,9 @@ interface ExperienceType {
   height: string;
   classified?: boolean;
   underConstruction?: boolean;
+  backgroundColor: string;
+  tagColor: string;
+  tags: string[];
 }
 
 function Home() {
@@ -147,7 +150,7 @@ function Home() {
           img: (
             <>
               <img className="h-full" src={iphone} alt="" />
-              <img className="h-full" src={iphone} alt="" />
+              <img className="h-full" src={iphone2} alt="" />
             </>
             // <div className={'h-full'}>
             //   <img
@@ -174,6 +177,9 @@ function Home() {
       height: "h-[80vh]",
       role: "UX Designer",
       underConstruction: true,
+      backgroundColor: "bg-red-50",
+      tagColor: "bg-red-100",
+      tags: ["UX Design"],
     },
     {
       company: "The Haitian American Musuem",
@@ -201,6 +207,9 @@ function Home() {
       height: "min-h-[80vh]",
       role: "Product Manager",
       underConstruction: true,
+      backgroundColor: "bg-purple-50",
+      tagColor: "bg-purple-100",
+      tags: ["UX Design", "Case Study"],
     },
     {
       company: "MetLife",
@@ -228,6 +237,9 @@ function Home() {
       height: "min-h-[80vh]",
       role: "UX Designer",
       underConstruction: true,
+      backgroundColor: "bg-blue-50",
+      tagColor: "bg-blue-100",
+      tags: ["UX Design", "Internship"],
     },
   ];
 
@@ -275,12 +287,14 @@ function Home() {
         {experience.map((entry, index) => (
           <Link
             to={entry.link}
-            className={`bg-white gap-y-4 flex items-center shadow-md transition-all relative
+            className={`bg-white flex items-center shadow-md transition-all relative group
               rounded-none lg:rounded-md
               flex-col
               ${entry.height} lg:h-[80vh]
               w-full lg:w-[45vw]
               border border-white lg:border-gray-200 lg:hover:border-gray-400
+              hover:opacity-75
+              hover:-translate-y-3
               `}
             // className={`bg-white gap-y-8 gap-x-2 rounded-md shadow-sm flex items-center
             //   flex-col
@@ -293,39 +307,34 @@ function Home() {
               <label className="absolute top-6 right-6 text-xs lg:text-sm rounded-full bg-red-100 py-1 px-2 hover:cursor-auto">
                 ⛔️ Details Confidential
               </label>
-            )}
-
-            {entry.underConstruction && (
-              <label className="absolute top-6 right-6 text-xs lg:text-sm rounded-full bg-yellow-200 py-1 px-2 hover:cursor-auto">
-                🛠 Under Construction
-              </label>
             )} */}
 
-            <div className="flex flex-col gap-y-4 px-16 pt-16 w-full">
+            {/* <label className="absolute top-6 right-6 text-xs lg:text-sm rounded-full bg-yellow-200 py-1 px-2 hover:cursor-auto">
+                🛠 Under Construction
+              </label> */}
+
+            <div className="flex flex-col gap-y-4 pt-16 px-4 lg:px-16 lg:pt-16 w-full">
               <h1 className="text-base lg:text-lg font-medium">
                 {entry.company + " • " + entry.role}
               </h1>
               <h2 className="text-2xl lg:text-5xl font-medium">
                 {entry.product}
               </h2>
-              <h3 className="text-sm lg:text-lg font-medium">
+              <h3 className="text-sm lg:text-lg font-medium text-slate-600">
                 {entry.description}
               </h3>
-              <div>
-                {entry.results.map((entry_, index_) => (
-                  <p
-                    className="font-medium flex items-center text-slate-400 gap-x-2"
-                    key={index_}
-                  >
-                    <span className="bg-green-500 rounded-full text-white h-3 w-3 flex items-center justify-center text-xs p-2">
-                      &#x2713;
-                    </span>
+              <div className="flex gap-2">
+                {entry.tags.map((entry_, index_) => (
+                  <span key={index_} className={`top-6 right-6 text-xs lg:text-sm rounded-full py-1 px-2 hover:cursor-auto ${entry.tagColor}`}>
                     {entry_}
-                  </p>
+                  </span>
                 ))}
               </div>
+              {/* <span className="w-fit top-6 right-6 text-xs lg:text-sm rounded-full bg-yellow-200 py-1 px-2 hover:cursor-auto">
+                {entry.role}
+              </span> */}
             </div>
-            <div className="flex-1 min-h-0 w-full flex justify-center items-center gap-8 p-4">
+            <div className="flex-1 min-h-0 w-full flex justify-center items-center gap-8 p-4 scale-95 group-hover:scale-[1.02] transition-all">
               {entry.visuals[0].img}
             </div>
           </Link>
