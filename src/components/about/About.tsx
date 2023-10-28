@@ -10,6 +10,11 @@ import metlifeLogo from './metlifeLogo.png';
 import queensCollege from './queensCollege.png';
 import google from './google.png';
 
+import ux from '../../assets/certifications/UX.pdf';
+import swe from '../../assets/certifications/SWE.pdf';
+import ibm from '../../assets/certifications/IBM.pdf';
+import codepath from '../../assets/certifications/CodePath.pdf';
+
  
 function About () {
 
@@ -38,13 +43,35 @@ function About () {
         }
     ];
 
+    const certifications = [
+        {
+            to: ux,
+            label: 'UX Microcredential Program'
+        },
+        {
+            to: swe,
+            label: 'The City University of New York Software Engineering: Web Development Career Track Boot Camp'
+        },
+        {
+            to: ibm,
+            label: 'IBM Software Engineering Summer Program'
+        },
+        {
+            to: codepath,
+            label: 'CodePath Tech Fellow Society'
+        },
+    ]
+
     return (
+
         <div>
             <div className='h-screen flex justify-center items-center'>
                 <div className='text-3xl md:text-5xl lg:text-7xl font-semibold text-center animate-showTopFadeIn'>
-                    <h1>Product Designer with over 3 years experience developing compelling case studies.</h1>
-                    <h1>Background in painting and</h1>
-                    <h1>frontend development.</h1>
+                    <h1>
+                        <span className='text-blue-600'>Product Designer </span>
+                        with over&nbsp;
+                        <span className='underline underline-offset-8'>3 years experience </span>
+                        developing compelling case studies.</h1>
                 </div>
             </div>
 
@@ -88,6 +115,21 @@ function About () {
                     <div className='text-slate-400'>Products I've worked on</div>
                 </div>
             </div>
+
+            <div className='h-screen flex justify-center items-center'>
+            <ul className='flex flex-col gap-10 items-center'>
+                <div className='animate-showTopFadeIn flex flex-col gap-y-8'>
+                    <h1 className='text-3xl md:text-5xl lg:text-7xl font-semibold text-center '>Certifications</h1>
+                    <div className='flex flex-col gap-y-4 text-center'>
+                        {
+                            certifications.map( (entry, index) => (
+                                <li className='underline underline-offset-4 text-blue-500'><a href={entry.to}>{entry.label}</a></li>
+                                ))
+                        }
+                    </div>
+                </div>
+            </ul>
+        </div>
         </div>
     );
 }

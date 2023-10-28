@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import About from "./components/about/About";
 import HamocContent from "./components/hamoc/HamocContent";
 import MetlifeContent from "./components/metlife/MetlifeContent";
+import Secret from "./components/secret/Secret";
+import Iphone from "./Iphone";
+import Resume from "./components/Resume";
 
 // This component is used to render components at the "<Outlet/>".
 // This is so every page has a navbar
@@ -37,6 +40,9 @@ function App() {
         <Route path='/metlife' element={ <MetlifeContent/> } />
         <Route path='/hamocold' element={ <OldHamoc/> } />
         <Route path='/about' element={ <About/> } />
+        <Route path='/secret' element={ <Secret/> } />
+        <Route path='/iphone' element={ <Iphone/> } />
+        <Route path='/resume' element={ <Resume/> } />
       </Route>
      </Routes>
     </>
