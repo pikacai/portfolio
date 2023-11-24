@@ -15,6 +15,11 @@ import MetlifeContent from "./components/metlife/MetlifeContent";
 import Secret from "./components/secret/Secret";
 import Iphone from "./Iphone";
 import Resume from "./components/Resume";
+import HomeOld from "./components/Homeold";
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 // This component is used to render components at the "<Outlet/>".
 // This is so every page has a navbar
@@ -34,6 +39,7 @@ function App() {
      <Routes>
       <Route path='/' element={ <Pages/> } >
         <Route path='/' element={ <Home/> } />
+        <Route path='/old' element={ <HomeOld/> } />
         <Route path='/googleold' element={ <OldGoogle /> } />
         <Route path='/google' element={ <GoogleContent /> } />
         <Route path='/hamoc' element={ <HamocContent/> } />

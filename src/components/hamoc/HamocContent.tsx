@@ -74,7 +74,7 @@ function HamocContent () {
                 </div>
             </div>
 
-            <div className='h-screen w-screen flex flex-col justify-center items-center'>
+            <div className='h-[50vh] w-screen flex flex-col justify-center items-center'>
                 <div className='w-1/2 flex flex-col gap-y-4'>
                     <h1 className='text-xl'>Preview</h1>
                     <h2 className='text-3xl md:text-6xl font-semibold'>Visualize new designs.</h2>

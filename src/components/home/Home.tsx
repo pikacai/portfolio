@@ -26,6 +26,7 @@ interface ExperienceType {
   backgroundColor: string;
   tagColor: string;
   tags: string[];
+  emoji?: any,
 }
 
 function Home() {
@@ -180,6 +181,7 @@ function Home() {
       backgroundColor: "bg-red-50",
       tagColor: "bg-red-100",
       tags: ["UX Design"],
+      emoji: '🚀',
     },
     {
       company: "The Haitian American Musuem",
@@ -210,6 +212,7 @@ function Home() {
       backgroundColor: "bg-purple-50",
       tagColor: "bg-purple-100",
       tags: ["UX Design", "Case Study"],
+      emoji: '🛠',
     },
     {
       company: "MetLife",
@@ -240,8 +243,19 @@ function Home() {
       backgroundColor: "bg-blue-50",
       tagColor: "bg-blue-100",
       tags: ["UX Design", "Internship"],
+      emoji: '📌',
     },
   ];
+
+  const selectedProjects = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    window.scroll({
+      top: selectedProjects?.current?.offsetTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 
   return (
     <div>
@@ -276,14 +290,14 @@ function Home() {
           </p>
         </div>
 
-        <div className="absolute w-auto bottom-20 animate-bounce text-xs lg:text-base">
+        <div className="absolute w-auto bottom-20 animate-bounce text-xs lg:text-base hover:cursor-pointer" onClick={handleScroll}>
           Selected Projects &#8595;
         </div>
       </div>
 
       <div className="bg-gradient-to-b from-white to-slate-100 h-36"></div>
 
-      <div className="min-h-screen w-screen py-32 flex flex-wrap gap-8 justify-center items-center bg-slate-100">
+      <div ref={selectedProjects} className="min-h-screen w-screen py-32 flex flex-wrap gap-8 justify-center items-center bg-slate-100">
         {experience.map((entry, index) => (
           <Link
             to={entry.link}
@@ -320,8 +334,8 @@ function Home() {
               <h2 className="text-2xl lg:text-5xl font-medium">
                 {entry.product}
               </h2>
-              <h3 className="text-sm lg:text-lg font-medium text-slate-600">
-                {entry.description}
+              <h3 className="text-sm lg:text-lg font-medium text-slate-500">
+                {entry.description + entry.emoji}
               </h3>
               <div className="flex gap-2">
                 {entry.tags.map((entry_, index_) => (

@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
+
 // From https://v5.reactrouter.com/web/guides/scroll-restoration
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -22,6 +23,18 @@ export default function ScrollToTop() {
   return null;
 }
 // From https://v5.reactrouter.com/web/guides/scroll-restoration
+
+
+// function IntersectionObserver() {
+//   const options = { threshold: 0.9 };
+//   const observer = new IntersectionObserver( (entries: IntersectionObserverEntry[]) => {
+//     entries.forEach( (entry) => {
+//       console.log('hi');
+//     });
+//   })
+
+
+// }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

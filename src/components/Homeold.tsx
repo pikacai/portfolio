@@ -14,7 +14,7 @@ import Google from './google/Google';
 import Hamoc from './hamoc/Hamoc';
 import Metlife from './metlife/Metlife';
 
-function App() {
+function HomeOld() {
   // Used to show the intros for each case study. This is because each animation plays as soon as it is rendered
   const [google, setGoogle] = useState(false);
   const [hamoc, setHamoc] = useState(false);
@@ -99,4 +99,4 @@ function App() {
   )
 }
 
-export default App
+export default HomeOld
