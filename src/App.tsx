@@ -17,6 +17,7 @@ import Iphone from "./Iphone";
 import Resume from "./components/Resume";
 import HomeOld from "./components/Homeold";
 import smoothscroll from 'smoothscroll-polyfill';
+import Intoxiblock from "./components/intoxiblock/Intoxiblock";
 
 // kick off the polyfill!
 smoothscroll.polyfill();
@@ -49,6 +50,7 @@ function App() {
         <Route path='/secret' element={ <Secret/> } />
         <Route path='/iphone' element={ <Iphone/> } />
         <Route path='/resume' element={ <Resume/> } />
+        <Route path='/intoxiblock' element={ <Intoxiblock/> } />
       </Route>
      </Routes>
     </>

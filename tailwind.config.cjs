@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        praise: ['Praise', 'cursive'],
+      },
       keyframes: {
         slideFromTop : {
           '0%': { transform: 'translateY(-100%)' },

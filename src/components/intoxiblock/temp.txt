@@ -1,0 +1,36 @@
+// if (active === index) {
+            //   return (
+            //     <img
+            //       key={index}
+            //       src={entry}
+            //       className="w-[250px] h-auto transition-all scale-110"
+            //       alt=""
+            //     />
+            //   );
+            // } else {
+            //   return (
+            //     <img
+            //       key={index}
+            //       src={entry}
+            //       className="w-[250px] h-auto transition-all brightness-[.3] hover:brightness-100 hover:scale-110"
+            //       alt=""
+            //     />
+            //   );
+            // }
+            // if (index === 1) {
+            //   return (
+            //     <img
+            //       src={entry}
+            //       className="w-[250px] h-auto scale-110"
+            //       alt=""
+            //     />
+            //   );
+            // } else {
+            //   return (
+            //     <img
+            //       src={phone}
+            //       className="w-[250px] h-auto opacity-30"
+            //       alt=""
+            //     />
+            //   );
+            // }

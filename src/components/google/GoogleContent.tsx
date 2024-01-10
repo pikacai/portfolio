@@ -203,7 +203,7 @@ const GoogleContent = () => {
 
       <div className="min-h-screen p-16 w-screen flex justify-around items-center bg-[#141E26]">
         <div className="w-4/5 flex flex-col gap-y-16 md:flex-row md:gap-y-0 justify-center items-center">
-          <div className="flex flex-1 flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 w-[40%]">
             <h1 className="text-xl text-white">Research</h1>
             <div>
               <h2 className="text-3xl md:text-6xl text-white font-semibold">
@@ -218,9 +218,9 @@ const GoogleContent = () => {
             </h3>
           </div>
 
-          <div className="flex-1">
+          <div className="w-[60%]">
             <ImageDetail
-              src={ <img src={survey} className="bg-white rounded-lg p-8 max-h-[90vh]"/>}
+              src={ <img src={survey} className="bg-white rounded-lg p-8 max-h-[90vh] w-full h-fit"/>}
             />
           </div>
         </div>

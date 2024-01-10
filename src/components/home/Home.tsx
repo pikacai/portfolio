@@ -7,6 +7,8 @@ import amazon from "../../assets/amazon.png";
 import googlecrm from "../../assets/googlecrm.png";
 import { Link } from "react-router-dom";
 
+import intoxiblock from "../../assets/intoxiblock/intoxiblock.svg";
+
 interface Image {
   img: JSX.Element;
   alt: string;
@@ -114,6 +116,37 @@ function Home() {
 
   // Used to render the projects
   const experience: ExperienceType[] = [
+    {
+      company: "Safe and Sober Journey with BAC Testing",
+      product: "IntoxiBlock",
+      description:
+        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
+      visuals: [
+        {
+          img: (
+            <img
+              className="max-h-full max-w-full object-scale-down"
+              src={intoxiblock}
+              alt=""
+            />
+          ),
+          alt: "A profile page on MetConnect as viewed on an iPad.",
+        },
+      ],
+      link: "intoxiblock",
+      results: [
+        "30% boost in employee engagement.",
+        "20% increase in knowledge sharing.",
+        "35% improvement in project collaboration.",
+      ],
+      height: "min-h-[80vh]",
+      role: "UX Designer",
+      underConstruction: true,
+      backgroundColor: "bg-blue-50",
+      tagColor: "bg-blue-100",
+      tags: ["UX Design", "Internship"],
+      emoji: '📌',
+    },
     // {
     //   company: "Google",
     //   product: "Google CRM",
@@ -244,7 +277,7 @@ function Home() {
       tagColor: "bg-blue-100",
       tags: ["UX Design", "Internship"],
       emoji: '📌',
-    },
+    }
   ];
 
   const selectedProjects = useRef<HTMLDivElement>(null);
@@ -334,16 +367,16 @@ function Home() {
               <h2 className="text-2xl lg:text-5xl font-medium">
                 {entry.product}
               </h2>
-              <h3 className="text-sm lg:text-lg font-medium text-slate-500">
+              {/* <h3 className="text-sm lg:text-lg font-medium text-slate-500">
                 {entry.description + entry.emoji}
-              </h3>
-              <div className="flex gap-2">
+              </h3> */}
+              {/* <div className="flex gap-2">
                 {entry.tags.map((entry_, index_) => (
                   <span key={index_} className={`top-6 right-6 text-xs lg:text-sm rounded-full py-1 px-2 hover:cursor-auto ${entry.tagColor}`}>
                     {entry_}
                   </span>
                 ))}
-              </div>
+              </div> */}
               {/* <span className="w-fit top-6 right-6 text-xs lg:text-sm rounded-full bg-yellow-200 py-1 px-2 hover:cursor-auto">
                 {entry.role}
               </span> */}
