@@ -4,10 +4,10 @@ interface Props {
   src: string;
   className?: string;
   alt?: string;
-  fadeIn?: boolean;
+  removeFadeIn?: boolean;
 }
 
-function LazyImage({ src, className, alt, fadeIn }: Props) {
+function LazyImage({ src, className, alt, removeFadeIn }: Props) {
   const [intersected, setIntersected] = useState<boolean>(false);
   const ref = useRef(null);
   let observer: IntersectionObserver;
@@ -23,19 +23,27 @@ function LazyImage({ src, className, alt, fadeIn }: Props) {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              //@ts-ignore
-              entry.target.style.transform = "translateY(200px)";
-
-              setTimeout(() => {
+              if (!removeFadeIn) {
                 //@ts-ignore
-                entry.target.style.opacity = "100";
-                //@ts-ignore
-                entry.target.style.transform = "translateY(0)";
-
+                entry.target.style.transform = "translateY(200px)";
+  
+                setTimeout(() => {
+                  //@ts-ignore
+                  entry.target.style.opacity = "100";
+                  //@ts-ignore
+                  entry.target.style.transform = "translateY(0)";
+  
+                  setIntersected(true);
+                  // @ts-ignore
+                  observer.unobserve(ref.current);
+                }, 200);
+              }
+              else {
                 setIntersected(true);
                 // @ts-ignore
                 observer.unobserve(ref.current);
-              }, 200);
+              }
+
             }
           });
         },

@@ -24,6 +24,7 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 
 // Images
 import affinityDiagram from "../../assets/intoxiblock/affinityDiagram.png";
+import affinityMapping from "../../assets/intoxiblock/affinityMapping.mp4";
 import solutionSpace from "../../assets/intoxiblock/solutionSpace.png";
 import multipleReports from "../../assets/intoxiblock/multipleReports.png";
 import locationSharing from "../../assets/intoxiblock/locationSharing.png";
@@ -166,13 +167,13 @@ function Intoxiblock() {
         }}
       >
         <div className="text-white text-center flex flex-col gap-y-4">
-          <h1 className="text-7xl font-medium">IntoxiBlock</h1>
+          <h1 className="text-6xl font-medium">IntoxiBlock</h1>
           <h2 className="text-lg">Safe and sober journeys</h2>
-          <h3 className="text-xl px-4 py-2 bg-yellow-500 rounded-full font-semibold flex justify-center items-center gap-x-1">
-            <span className="text-3xl">🥇</span> Awarded Best Design
+          <h3 className="text-lg px-4 py-2 bg-yellow-500 rounded-full font-semibold flex justify-center items-center gap-x-1">
+            <span className="text-lg">🥇</span> Awarded Best Design
           </h3>
         </div>
-        <div className="flex gap-8 justify-center items-baseline h-3/5">
+        <div className="flex gap-8 justify-center items-baseline h-3/4">
           {/* // // Resolution requirement: 864 × 1728 or 365 x 732 */}
           {phones.map((entry, index) =>
             entry.map((entry_, index_) => (
@@ -413,12 +414,6 @@ function Intoxiblock() {
       />
 
       <CenteredContentWider
-        content={
-          <h1 className="text-4xl font-semibold pb-10">Affinity Diagram</h1>
-        }
-      />
-
-      <CenteredContentWider
         removePadding
         content={
           <h1 className="text-4xl font-semibold pb-10">
@@ -429,34 +424,34 @@ function Intoxiblock() {
 
       <CenteredContentWider
         content={
-          <div className="pt-10 flex flex-wrap gap-24 justify-center">
+          <div className="pt-10 flex flex-wrap gap-10 justify-center xl:justify-between">
             <div className="flex flex-col justify-center items-center w-[11rem]">
-              <div className="p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
-                <FavoriteIcon style={{ width: "5rem", height: "5rem" }} />
+              <div className="p-8 lg:p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
+                <FavoriteIcon style={{ width: "4rem", height: "4rem" }} />
               </div>
               <p className="text-md text-center pt-8">
                 Tracking of Loved Ones & Safety Concerns
               </p>
             </div>
             <div className="flex flex-col justify-center items-center w-[11rem]">
-              <div className="p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
-                <BuildIcon style={{ width: "5rem", height: "5rem" }} />
+              <div className="p-8 lg:p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
+                <BuildIcon style={{ width: "4rem", height: "4rem" }} />
               </div>
               <p className="text-md text-center pt-8">
                 Demand for Portable BAC Testing Tool
               </p>
             </div>
             <div className="flex flex-col justify-center items-center w-[11rem]">
-              <div className="p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
-                <LocalBarIcon style={{ width: "5rem", height: "5rem" }} />
+              <div className="p-8 lg:p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
+                <LocalBarIcon style={{ width: "4rem", height: "4rem" }} />
               </div>
               <p className="text-md text-center pt-8">
                 Concerns over Drugging & Impaired Decisions
               </p>
             </div>
             <div className="flex flex-col justify-center items-center w-[11rem]">
-              <div className="p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
-                <DirectionsCarIcon style={{ width: "5rem", height: "5rem" }} />
+              <div className="p-8 lg:p-10 bg-blue-50 rounded-full justify-center items-center w-fit">
+                <DirectionsCarIcon style={{ width: "4rem", height: "4rem" }} />
               </div>
               <p className="text-md text-center pt-8">
                 Need for Accessible Transportation
@@ -470,7 +465,6 @@ function Intoxiblock() {
         Design
       </h1>
       <CenteredContentWider
-        removePadding
         content={
           <>
             <h1 className="text-4xl font-semibold pb-10">Solution space</h1>
@@ -494,6 +488,7 @@ function Intoxiblock() {
                 solution space limitations.
               </p>
             </p>
+            <LazyImage src={solutionSpace} className="mt-10" />
           </>
         }
       />
@@ -501,7 +496,12 @@ function Intoxiblock() {
       <CenteredContentWider
         content={
           <>
-            <LazyImage src={solutionSpace} className="mt-10" />
+            <h1 className="text-4xl font-semibold pb-10">
+              Paper Prototype Demo
+            </h1>
+            <video autoPlay loop muted className="w-full mt-4">
+              <source src={affinityMapping} type="video/mp4" />
+            </video>
           </>
         }
       />
@@ -598,7 +598,12 @@ function Intoxiblock() {
         content={
           <div className="flex flex-wrap gap-8 justify-center">
             {screens.map((entry, index) => (
-              <LazyImage src={entry} key={index} className="w-1/4 h-auto" />
+              <LazyImage
+                removeFadeIn
+                src={entry}
+                key={index}
+                className="w-1/4 h-auto"
+              />
             ))}
           </div>
         }

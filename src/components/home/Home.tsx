@@ -7,7 +7,10 @@ import amazon from "../../assets/amazon.png";
 import googlecrm from "../../assets/googlecrm.png";
 import { Link } from "react-router-dom";
 
-import intoxiblock from "../../assets/intoxiblock/intoxiblock.svg";
+import intoxiblock from "../../assets/intoxiblock/intoxiblock.png";
+import google from "../../assets/google2/google.png";
+
+
 
 interface Image {
   img: JSX.Element;
@@ -116,6 +119,37 @@ function Home() {
 
   // Used to render the projects
   const experience: ExperienceType[] = [
+    {
+      company: "Google",
+      product: "Google Cloud",
+      description:
+        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
+      visuals: [
+        {
+          img: (
+            <img
+              className="max-h-full max-w-full object-scale-down"
+              src={google}
+              alt=""
+            />
+          ),
+          alt: "A profile page on MetConnect as viewed on an iPad.",
+        },
+      ],
+      link: "google2",
+      results: [
+        "30% boost in employee engagement.",
+        "20% increase in knowledge sharing.",
+        "35% improvement in project collaboration.",
+      ],
+      height: "min-h-[80vh]",
+      role: "UX Designer",
+      underConstruction: true,
+      backgroundColor: "bg-blue-50",
+      tagColor: "bg-blue-100",
+      tags: ["UX Design", "Internship"],
+      emoji: '📌',
+    },
     {
       company: "Safe and Sober Journey with BAC Testing",
       product: "IntoxiBlock",
