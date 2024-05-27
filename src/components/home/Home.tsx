@@ -7,10 +7,17 @@ import amazon from "../../assets/amazon.png";
 import googlecrm from "../../assets/googlecrm.png";
 import { Link } from "react-router-dom";
 
+// Hair prank
+import hair from "../../assets/hair.png";
+
 import intoxiblock from "../../assets/intoxiblock/intoxiblock.png";
-import google from "../../assets/google2/google.png";
+// import google from "../../assets/google2/google.png";
+import googleCloudGif from "../../assets/googleCloudGif.gif";
+// import googleCloudGif from "../../assets/googleCloudGif3.gif";
+import googleMapsGif from "../../assets/googleMapsGif.gif";
 
-
+import metlifeGif from "../../assets/metlifeGif.gif";
+import intoxiblockGif from "../../assets/intoxiblockGif.gif";
 
 interface Image {
   img: JSX.Element;
@@ -31,7 +38,7 @@ interface ExperienceType {
   backgroundColor: string;
   tagColor: string;
   tags: string[];
-  emoji?: any,
+  emoji?: any;
 }
 
 function Home() {
@@ -118,55 +125,15 @@ function Home() {
   }, []);
 
   // Used to render the projects
-  const experience: ExperienceType[] = [
-    {
-      company: "Google",
-      product: "Google Cloud",
-      description:
-        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
-      visuals: [
-        {
-          img: (
-            <img
-              className="max-h-full max-w-full object-scale-down"
-              src={google}
-              alt=""
-            />
-          ),
-          alt: "A profile page on MetConnect as viewed on an iPad.",
-        },
-      ],
-      link: "google2",
-      results: [
-        "30% boost in employee engagement.",
-        "20% increase in knowledge sharing.",
-        "35% improvement in project collaboration.",
-      ],
-      height: "min-h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-blue-50",
-      tagColor: "bg-blue-100",
-      tags: ["UX Design", "Internship"],
-      emoji: '📌',
-    },
+  const experience = [
     {
       company: "Safe and Sober Journey with BAC Testing",
       product: "IntoxiBlock",
+      type: "project",
       description:
-        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
-      visuals: [
-        {
-          img: (
-            <img
-              className="max-h-full max-w-full object-scale-down"
-              src={intoxiblock}
-              alt=""
-            />
-          ),
-          alt: "A profile page on MetConnect as viewed on an iPad.",
-        },
-      ],
+        "Proposing an app to ensure peoples safe return home after social events involving alcohol consumption.",
+      image: intoxiblockGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "intoxiblock",
       results: [
         "30% boost in employee engagement.",
@@ -179,63 +146,38 @@ function Home() {
       backgroundColor: "bg-blue-50",
       tagColor: "bg-blue-100",
       tags: ["UX Design", "Internship"],
-      emoji: '📌',
+      emoji: "📌",
     },
-    // {
-    //   company: "Google",
-    //   product: "Google CRM",
-    //   description:
-    //     "Conducting user research to enhance Google's CRM system for improved usability and customer satisfaction.",
-    //   visuals: [
-    //     {
-    //       img: (
-    //         <img
-    //           className="max-h-full max-w-full object-scale-down"
-    //           src={googlecrm}
-    //           alt=""
-    //         />
-    //       ),
-    //       alt: "Mockup of Google Maps on a phone.",
-    //     },
-    //   ],
-    //   link: "google",
-    //   results: [
-    //     "10% increase in CRM user engagement.",
-    //     "5% reduction in CRM support requests.",
-    //     "15% rise in user satisfaction with CRM functionality.",
-    //   ],
-    //   height: "h-[80vh]",
-    //   classified: true,
-    //   role: "Product Design Intern",
-    // },
+    {
+      company: "Google",
+      product: "Google Cloud",
+      type: "project",
+      description:
+        "Designed alongside Google UX Designers and Researchers to test and validate design concepts and hypotheses of a Google AI-powered CRM application.",
+      image: googleCloudGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
+      link: "google2",
+      results: [
+        "30% boost in employee engagement.",
+        "20% increase in knowledge sharing.",
+        "35% improvement in project collaboration.",
+      ],
+      height: "min-h-[80vh]",
+      role: "UX Designer",
+      underConstruction: true,
+      backgroundColor: "bg-blue-50",
+      tagColor: "bg-blue-100",
+      tags: ["UX Design", "Internship"],
+      emoji: "📌",
+    },
     {
       company: "Google",
       product: "Google Maps",
+      type: "project",
       description:
         "Enhancing Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
-      visuals: [
-        {
-          img: (
-            <>
-              <img className="h-full" src={iphone} alt="" />
-              <img className="h-full" src={iphone2} alt="" />
-            </>
-            // <div className={'h-full'}>
-            //   <img
-            //     className=""
-            //     src={iphone}
-            //     alt=""
-            //   />
-            //   <img
-            //     className=""
-            //     src={iphone}
-            //     alt=""
-            //   />
-            // </div>
-          ),
-          alt: "Mockup of Google Maps on a phone.",
-        },
-      ],
+      image: googleMapsGif,
+      alt: "",
       link: "google",
       results: [
         "20% faster route planning and navigation.",
@@ -248,56 +190,16 @@ function Home() {
       backgroundColor: "bg-red-50",
       tagColor: "bg-red-100",
       tags: ["UX Design"],
-      emoji: '🚀',
-    },
-    {
-      company: "The Haitian American Musuem",
-      product: "Website Redesign",
-      description:
-        "Revamping a museum website for an enhanced visitor experience and improved accessibility.",
-      visuals: [
-        {
-          img: (
-            <img
-              className="max-h-full max-w-full object-scale-down"
-              src={ipad}
-              alt=""
-            />
-          ),
-          alt: "Design of The Haitian American Musuem Website with annotations.",
-        },
-      ],
-      link: "hamoc",
-      results: [
-        "20% rise in website user engagement.",
-        "15% reduction in bounce rate.",
-        "25% growth in virtual tour participation.",
-      ],
-      height: "min-h-[80vh]",
-      role: "Product Manager",
-      underConstruction: true,
-      backgroundColor: "bg-purple-50",
-      tagColor: "bg-purple-100",
-      tags: ["UX Design", "Case Study"],
-      emoji: '🛠',
+      emoji: "🚀",
     },
     {
       company: "MetLife",
       product: "MetConnect",
+      type: "internship",
       description:
         "Designing a corporate social network prototype for efficient internal communication and collaboration.",
-      visuals: [
-        {
-          img: (
-            <img
-              className="max-h-full max-w-full object-scale-down"
-              src={macbook}
-              alt=""
-            />
-          ),
-          alt: "A profile page on MetConnect as viewed on an iPad.",
-        },
-      ],
+      image: metlifeGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "metlife",
       results: [
         "30% boost in employee engagement.",
@@ -310,8 +212,8 @@ function Home() {
       backgroundColor: "bg-blue-50",
       tagColor: "bg-blue-100",
       tags: ["UX Design", "Internship"],
-      emoji: '📌',
-    }
+      emoji: "📌",
+    },
   ];
 
   const selectedProjects = useRef<HTMLDivElement>(null);
@@ -320,12 +222,17 @@ function Home() {
     window.scroll({
       top: selectedProjects?.current?.offsetTop,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-  }
+  };
 
   return (
     <div>
+      {/* Fake hair prank */}
+      <div className="fixed top-56 right-56 scale-90 opacity-30">
+        <img src={hair} alt="" className="" />
+      </div>
+
       <div className="h-screen w-screen flex justify-center items-center relative">
         <div>
           <h1 className="text-4xl lg:text-6xl font-medium flex gap-5">
@@ -357,69 +264,51 @@ function Home() {
           </p>
         </div>
 
-        <div className="absolute w-auto bottom-20 animate-bounce text-xs lg:text-base hover:cursor-pointer" onClick={handleScroll}>
-          Selected Projects &#8595;
+        <div
+          className="absolute w-auto bottom-20 animate-bounce text-xs lg:text-base hover:cursor-pointer"
+          onClick={handleScroll}
+        >
+          Selected Work &#8595;
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-white to-slate-100 h-36"></div>
+      <div className="bg-gradient-to-b from-white to-slate-100 h-60"></div>
 
-      <div ref={selectedProjects} className="min-h-screen w-screen py-32 flex flex-wrap gap-8 justify-center items-center bg-slate-100">
-        {experience.map((entry, index) => (
-          <Link
-            to={entry.link}
-            className={`bg-white flex items-center shadow-md transition-all relative group
-              rounded-none lg:rounded-md
-              flex-col
-              ${entry.height} lg:h-[80vh]
-              w-full lg:w-[45vw]
-              border border-white lg:border-gray-200 lg:hover:border-gray-400
-              hover:opacity-75
-              hover:-translate-y-3
-              `}
-            // className={`bg-white gap-y-8 gap-x-2 rounded-md shadow-sm flex items-center
-            //   flex-col
-            //   ${entry.height} lg:h-[80vh]
-            //   w-full lg:w-[45vw]
-            // `}
-            key={index}
-          >
-            {/* {entry.classified && (
-              <label className="absolute top-6 right-6 text-xs lg:text-sm rounded-full bg-red-100 py-1 px-2 hover:cursor-auto">
-                ⛔️ Details Confidential
-              </label>
-            )} */}
+      <div ref={selectedProjects}>
+        <h1 className="text-4xl pt-24 font-semibold text-center bg-slate-100">
+          Selected Work
+        </h1>
 
-            {/* <label className="absolute top-6 right-6 text-xs lg:text-sm rounded-full bg-yellow-200 py-1 px-2 hover:cursor-auto">
-                🛠 Under Construction
-              </label> */}
-
-            <div className="flex flex-col gap-y-4 pt-16 px-4 lg:px-16 lg:pt-16 w-full">
-              <h1 className="text-base lg:text-lg font-medium">
-                {entry.company + " • " + entry.role}
-              </h1>
-              <h2 className="text-2xl lg:text-5xl font-medium">
-                {entry.product}
-              </h2>
-              {/* <h3 className="text-sm lg:text-lg font-medium text-slate-500">
-                {entry.description + entry.emoji}
-              </h3> */}
-              {/* <div className="flex gap-2">
-                {entry.tags.map((entry_, index_) => (
-                  <span key={index_} className={`top-6 right-6 text-xs lg:text-sm rounded-full py-1 px-2 hover:cursor-auto ${entry.tagColor}`}>
-                    {entry_}
-                  </span>
-                ))}
-              </div> */}
-              {/* <span className="w-fit top-6 right-6 text-xs lg:text-sm rounded-full bg-yellow-200 py-1 px-2 hover:cursor-auto">
-                {entry.role}
-              </span> */}
-            </div>
-            <div className="flex-1 min-h-0 w-full flex justify-center items-center gap-8 p-4 scale-95 group-hover:scale-[1.02] transition-all">
-              {entry.visuals[0].img}
-            </div>
-          </Link>
-        ))}
+        <div className="flex flex-wrap py-24 pb-24 bg-slate-100 justify-center gap-24">
+          {experience.map((entry, index) => (
+            <Link
+              to={entry.link}
+              className="
+          lg:w-[550px] lg:h-[500px] 
+          md:w-[450px] md:h-[400px]
+          w-[330px] h-[280px]
+          border border-1 bg-white rounded-xl
+          hover:shadow-2xl
+          hover:cursor-pointer
+          transition-all
+          hover:underline hover:opacity-50
+          "
+            >
+              <img
+                key={index}
+                src={entry.image}
+                className="h-2/3 w-full p-8 object-scale-down"
+              />
+              <div className="p-8 border-t">
+                <h1 className="text-sm font-semibold pb-2 tracking-wider">
+                  {entry.product.toUpperCase() + " | "}
+                  <span className="text-xs">{entry.type.toUpperCase()}</span>
+                </h1>
+                <h1 className="">{entry.description}</h1>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
 
       <div className="bg-gradient-to-b from-slate-100 to-white h-36"></div>

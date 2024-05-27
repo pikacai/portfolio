@@ -3,11 +3,23 @@ import { Link, useLocation } from "react-router-dom";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Experience from "./home/Experience";
 
-import report from "../assets/report.gif";
-import redesign from "../assets/hamoc/redesign.png";
-import metconnect from "../assets/metconnect.png";
+import macbook from "../assets/macbook.png";
+import ipad from "../assets/ipad.png";
+import iphone from "../assets/iphone.png";
+import iphone2 from "../assets/iphone2.png";
+import amazon from "../assets/amazon.png";
+import googlecrm from "../assets/googlecrm.png";
+
+import intoxiblock from "../assets/intoxiblock/intoxiblock.png";
+import google from "../assets/google2/google.png";
+
+import googleCloudGif from "../assets/googleCloudGif.gif";
+// import googleCloudGif from "../../assets/googleCloudGif3.gif";
+import googleMapsGif from "../assets/googleMapsGif.gif";
+
+import metlifeGif from "../assets/metlifeGif.gif";
+import intoxiblockGif from "../assets/intoxiblockGif.gif";
 
 interface ExperienceType {
   product: string;
@@ -19,79 +31,138 @@ interface ExperienceType {
 }
 
 function Footer() {
-  const experience: ExperienceType[] = [
+  // Used to render the projects
+
+  let experience = [
     {
+      company: "Google",
+      product: "Google Cloud",
+      description:
+        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
+      image: googleCloudGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
+      link: "google2",
+      results: [
+        "30% boost in employee engagement.",
+        "20% increase in knowledge sharing.",
+        "35% improvement in project collaboration.",
+      ],
+      height: "min-h-[80vh]",
+      role: "UX Designer",
+      underConstruction: true,
+      backgroundColor: "bg-blue-50",
+      tagColor: "bg-blue-100",
+      tags: ["UX Design", "Internship"],
+      emoji: "📌",
+    },
+    {
+      company: "Safe and Sober Journey with BAC Testing",
+      product: "IntoxiBlock",
+      description:
+        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
+      image: intoxiblockGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
+      link: "intoxiblock",
+      results: [
+        "30% boost in employee engagement.",
+        "20% increase in knowledge sharing.",
+        "35% improvement in project collaboration.",
+      ],
+      height: "min-h-[80vh]",
+      role: "UX Designer",
+      underConstruction: true,
+      backgroundColor: "bg-blue-50",
+      tagColor: "bg-blue-100",
+      tags: ["UX Design", "Internship"],
+      emoji: "📌",
+    },
+    {
+      company: "Google",
       product: "Google Maps",
-      type: "Case Study",
-      date: "2022-2023",
       description:
-        "This study investigates typical issues that users encounter when using Google Maps while driving, and proposes prototypes that could enhance the app's functionality. Through the analysis of other mapping apps such as Apple Maps and Waze, this study identifies features that could be adapted and integrated into Google Maps to improve the overall user experience.",
-      visuals: {
-        img: report,
-        alt: "Mockup of Google Maps on a phone.",
-      },
+        "Enhancing Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
+      image: googleMapsGif,
+      alt: "",
       link: "google",
+      results: [
+        "20% faster route planning and navigation.",
+        "15% increase in user satisfaction ratings.",
+        "30% rise in daily active users.",
+      ],
+      height: "h-[80vh]",
+      role: "UX Designer",
+      underConstruction: true,
+      backgroundColor: "bg-red-50",
+      tagColor: "bg-red-100",
+      tags: ["UX Design"],
+      emoji: "🚀",
     },
     {
-      product: "The Haitian American Musuem Website",
-      type: "Case Study",
-      date: "2022",
-      description:
-        "Improving on-road usage. This case study examines common complaints of on road usage for Google Maps. I investigate how Apple Maps, Waze, and others use featuresthat can be improved for Google Maps.",
-      visuals: {
-        img: redesign,
-        alt: "Design of The Haitian American Musuem Website with annotations.",
-      },
-      link: "hamoc",
-    },
-    {
+      company: "MetLife",
       product: "MetConnect",
-      type: "Product",
-      date: "2023",
       description:
-        "MetConnect is a technology platform designed to promote connection and inclusivity in the workplace. By enabling new hires to connect over shared interests, we aim to cultivate a workforce that is not only dedicated to their work but also to each other. At MetConnect, we believe that when employees feel valued and supported by their peers, they are more likely to succeed and thrive in their roles.",
-      visuals: {
-        img: metconnect,
-        alt: "A profile page on MetConnect as viewed on an iPad.",
-      },
+        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
+      image: metlifeGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "metlife",
+      results: [
+        "30% boost in employee engagement.",
+        "20% increase in knowledge sharing.",
+        "35% improvement in project collaboration.",
+      ],
+      height: "min-h-[80vh]",
+      role: "UX Designer",
+      underConstruction: true,
+      backgroundColor: "bg-blue-50",
+      tagColor: "bg-blue-100",
+      tags: ["UX Design", "Internship"],
+      emoji: "📌",
     },
   ];
 
   const { pathname } = useLocation();
+  experience = experience.filter((entry) => "/" + entry.link !== pathname);
 
   return (
-    <div className="w-screen flex flex-col items-center gap-y-16 mt-32 mb-32">
+    <div className="w-screen flex flex-col items-center gap-y-16 mb-56">
       {pathname !== "/" && (
-        <div className="flex w-full h-full gap-x-6 px-4">
-          {experience.map((entry, index) => (
-            <div className="flex-1 flex flex-col" key={index}>
-              <div className="px-2 mb-4">
-                <div>
-                  <div className="flex justify-between">
-                    <h1 className="text-xl font-medium">{entry.product}</h1>
-                    <h2 className="text-slate-400">
-                      {entry.type}, {entry.date}
-                    </h2>
-                  </div>
-                  {/* <h3 className='text-slate-400'>{description} <Link to={link} className='text-sky-600 underline'>Read more.</Link></h3> */}
-                </div>
-              </div>
-
+        <>
+          <h1 className="text-4xl font-semibold pb-10 text-center mt-56 ">
+            Other Selected Work
+          </h1>
+          <div className="flex flex-wrap gap-8 px-9 justify-center mb-36">
+            {experience.map((entry, index) => (
               <Link
                 to={entry.link}
-                className="flex-1 flex justify-center bg-gray-100 rounded-xl border-[1px] border-gray-100 hover:opacity-50 transition-all"
+                className="
+            lg:w-[450px] lg:h-[400px] 
+            md:w-[350px] md:h-[300px]
+            w-[230px] h-[180px]
+            border border-1 bg-white rounded-xl
+            hover:shadow-md
+            hover:cursor-pointer
+            transition-all
+            hover:underline
+            "
+                // flex-1
               >
                 <img
-                  className="rounded-xl"
-                  src={entry.visuals.img}
-                  alt={entry.visuals.alt}
+                  key={index}
+                  src={entry.image}
+                  className="h-3/5 w-full p-8 object-scale-down"
                 />
+                <div className="p-8 border-t">
+                  <h1 className="text-sm font-semibold pb-2 tracking-wider">
+                    {entry.product.toUpperCase()}
+                  </h1>
+                  <h1 className="">{entry.description}</h1>
+                </div>
               </Link>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </>
       )}
+
       <div className="flex gap-x-4 items-center">
         <Link to="/">
           <HomeRoundedIcon
@@ -121,3 +192,35 @@ function Footer() {
 }
 
 export default Footer;
+
+/*
+{pathname !== "/" && (
+        <div className="flex w-full h-full gap-x-6 px-4">
+          {experience.map((entry, index) => (
+            <div className="flex-1 flex flex-col" key={index}>
+              <div className="px-2 mb-4">
+                <div>
+                  <div className="flex justify-between">
+                    <h1 className="text-xl font-medium">{entry.product}</h1>
+                    <h2 className="text-slate-400">
+                      {entry.type}, {entry.date}
+                    </h2>
+                  </div>
+                  </div>
+                  </div>
+    
+                  <Link
+                    to={entry.link}
+                    className="flex-1 flex justify-center bg-gray-100 rounded-xl border-[1px] border-gray-100 hover:opacity-50 transition-all"
+                  >
+                    <img
+                      className="rounded-xl"
+                      src={entry.visuals.img}
+                      alt={entry.visuals.alt}
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
+*/

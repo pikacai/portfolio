@@ -4,9 +4,20 @@ import background from "./metlifeGB.png";
 import club from "./1.gif";
 import blog from "./2.gif";
 import message from "./Group 250.png";
+
+import metlifeIntroVideo from "../../../assets/metlife/metlifeIntroVideo.mp4";
+
 export default function MetLife() {
   return (
     <div>
+      <div className="overflow-hidden">
+        <div className="pb-36">
+          <video autoPlay loop className="">
+            <source src={metlifeIntroVideo} type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
       <img src={background}></img>
 
       <div class="below">

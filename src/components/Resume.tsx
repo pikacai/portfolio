@@ -5,6 +5,7 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PrintIcon from "@mui/icons-material/Print";
 
+import resume from "../assets/Pika_Cai_Resume.png";
 function Resume() {
   const title = ["UX Designer"];
 
@@ -176,148 +177,9 @@ function Resume() {
   };
 
   return (
-    <div className="bg-blue-50 min-h-screen w-screen p-36">
-      <div className="flex flex-col justify-center items-center gap-y-8=">
-        <div
-          className="h-[11in] w-[8.5in] bg-white shadow-lg flex justify-center items-center animate-showTopFadeIn relative
-          overflow-hidden
-          print:shadow-none
-          print:rounded-none
-          print:border-none
-          print:scale-100
-          print:overflow-hidden"
-          ref={ref}
-        >
-          <span
-            className="absolute top-2 right-2 text-xs text-gray-100 bg-slate-500 px-4 py-1 rounded-full hover:bg-slate-400 hover:cursor-pointer transition-all print:hidden"
-            onClick={handlePrint}
-          >
-            Print <PrintIcon fontSize="small" />
-          </span>
-          <div className="p-10 h-full w-full flex flex-col justify-center items-center">
-            {/* Heading */}
-
-            <div className="flex w-full gap-x-8 pb-10">
-              <div className="w-[60%]">
-                <h1 className="text-4xl text-blue-500 font-medium">Pika Cai</h1>
-                <h2>{title.join(", ")}</h2>
-              </div>
-
-              <div className="flex flex-col text-sm w-[40%]">
-                {links.map((entry, index) => (
-                  <a
-                    key={index}
-                    className="underline underline-offset-2"
-                    href={
-                      entry.link.includes("@")
-                        ? "mailto:" + entry.link
-                        : entry.link
-                    }
-                    target="blank"
-                  >
-                    {entry.icon} {entry.text}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="text-sm flex gap-x-8">
-              {/* Experiece */}
-              <div className="w-[60%]">
-                <div className="pb-8">
-                  <p className="text-xl font-medium pb-5">Experience</p>
-                  {experience.map((entry, index) => (
-                    <div key={index} className="pb-4 last:pb-0">
-                      <div className="flex flex-col">
-                        <p className="text-base">
-                          <span className="font-medium">{entry.company}</span>,{" "}
-                          <span className="text-blue-500 font-medium">
-                            {entry.position}
-                          </span>
-                        </p>
-                        <p className="text-gray-500 font-medium">
-                          {entry.dates}
-                        </p>
-                        <p className="text-sm">{entry.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="pb-8">
-                  <p className="text-xl font-medium pb-5">Projects</p>
-                  {projects.map((entry, index) => (
-                    <div key={index} className="pb-4 last:pb-0">
-                      <div className="flex flex-col">
-                        <p className="text-base">
-                          <span className="font-medium">{entry.company}</span>,{" "}
-                          <span className="text-blue-500 font-medium">
-                            {entry.position}
-                          </span>
-                        </p>
-                        <p className="text-gray-500 font-medium">
-                          {entry.dates}
-                        </p>
-                        <p className="">{entry.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* University/Skills/Tools */}
-              <div className="w-[40%]">
-                <div className="pb-8">
-                  <p className="text-xl font-medium pb-5">Education</p>
-                  {education.map((entry, index) => (
-                    <div key={index} className="pb-4 last:pb-0">
-                      <div className="flex flex-col">
-                        <p className="text-base font-medium">{entry.school}</p>
-                        <p className="text-gray-500 font-medium">
-                          {entry.graduation}
-                        </p>
-                        <p>{entry.degree}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="pb-8">
-                  <p className="text-xl font-medium pb-5">Skills</p>
-                  {skills.map((entry, index) => (
-                    <div key={index} className="pb-4 last:pb-0">
-                      <div className="flex flex-col">
-                        <p className="text-base font-medium">{entry.section}</p>
-                        <p>{entry.skills.join(", ")}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="pb-8">
-                  <p className="text-xl font-medium pb-5">Leadership</p>
-                  {leadership.map((entry, index) => (
-                    <div key={index} className="pb-4 last:pb-0">
-                      <div className="flex flex-col">
-                        <p className="text-base">
-                          <span className="font-medium">{entry.company}</span>,{" "}
-                          <span className="text-blue-500 font-medium">
-                            {entry.position}
-                          </span>
-                        </p>
-                        <p className="text-gray-500 font-medium">
-                          {entry.dates}
-                        </p>
-                        <p>{entry.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="bg-blue-50 min-h-screen w-screen p-36 flex justify-center items-center">
+      <div className="border rounded-xl overflow-hidden shadow-lg h-[1200px] w-[923.234375px] bg-white">
+        <img src={resume} alt="Pika Cai resume" className="h-full w-auto" />
       </div>
     </div>
   );

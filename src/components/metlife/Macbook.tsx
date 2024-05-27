@@ -14,7 +14,7 @@ const Macbook = ( {screen}: Props ) => {
                         <div className="bezel">
                             <div className="display-camera" ></div>
                             <div className="display-frame">
-                                <img src={screen} alt="temp" />
+                                <img src={screen} alt="temp" className='' />
                     {/* <iframe src={screen} allowFullScreen></iframe> */}
                             </div>
                             <div className="below-display">

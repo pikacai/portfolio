@@ -35,7 +35,7 @@ function Highlight({ text, highlightColor }: Props) {
   return (
     <span
       ref={ref}
-      className={`font-semibold transition-all ${intersected ? "text-white bg-[left_bottom]" : "text-black bg-[right_bottom]"}`}
+      className={`transition-all ${intersected ? "bg-[left_bottom]" : "text-black bg-[right_bottom]"}`}
       style={{
         backgroundImage: `linear-gradient(to right, ${highlightColor} 50%, white 50%)`,
         backgroundSize: "200% 100%",

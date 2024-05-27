@@ -52,3 +52,31 @@ function Secret() {
 }
  
 export default Secret;
+
+
+
+/*
+let formResponses = [];
+document.querySelectorAll('div[jscontroller="EB1sYd"][class="Aovyg"]').forEach( (entry) => {
+    try {
+        let question = entry.querySelector(".myXFAc.RjsPE").innerText;
+        let responses = entry.querySelector(".bXtdDb").innerText;
+        let svg = entry.querySelector('div[aria-label="A chart."]').innerHTML;
+        formResponses.push({
+            question: question,
+            responses: responses,
+            svg: svg
+        });
+
+    }
+    catch {
+
+    }
+});
+
+JSON.stringify(formResponses);
+
+
+
+
+*/

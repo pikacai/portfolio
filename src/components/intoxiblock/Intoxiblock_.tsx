@@ -102,7 +102,7 @@ function Intoxiblock_() {
       />
 
       <h1 className="text-4xl font-semibold pb-10 text-center">Our Process</h1>
-      <div className="flex flex-wrap justify-center gap-24 text-center pb-36">
+      <div className="flex flex-wrap justify-center gap-16 text-center pb-36">
         <div>
           <div className="p-10 bg-blue-50 rounded-full flex justify-center items-center">
             <ExploreIcon style={{ width: "5rem", height: "5rem" }} />

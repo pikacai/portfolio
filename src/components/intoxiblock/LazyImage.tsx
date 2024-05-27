@@ -7,7 +7,7 @@ interface Props {
   removeFadeIn?: boolean;
 }
 
-function LazyImage({ src, className, alt, removeFadeIn }: Props) {
+function img({ src, className, alt, removeFadeIn }: Props) {
   const [intersected, setIntersected] = useState<boolean>(false);
   const ref = useRef(null);
   let observer: IntersectionObserver;
@@ -80,4 +80,4 @@ function LazyImage({ src, className, alt, removeFadeIn }: Props) {
   );
 }
 
-export default LazyImage;
+export default img;
