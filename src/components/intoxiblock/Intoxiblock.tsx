@@ -177,7 +177,7 @@ function Intoxiblock() {
               <p className="font-semibold pb-4 underline underline-offset-2">
                 Role
               </p>
-              <p>UX Researcher & Designer</p>
+              <p>UX Designer</p>
             </div>
             <div className="flex-1">
               <p className="font-semibold pb-4 underline underline-offset-2">
@@ -189,9 +189,9 @@ function Intoxiblock() {
               <p className="font-semibold pb-4 underline underline-offset-2">
                 Teammates
               </p>
-              <p>Aishwarya Gupta</p>
-              <p>Fiona Gao</p>
-              <p>Jamie Paradis</p>
+              <p>Aishwarya G.-Designer</p>
+              <p>Fiona G.-Researcher</p>
+              <p>Jamie P.-Researcher</p>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <p className="font-semibold pb-4 underline underline-offset-2">
@@ -220,18 +220,19 @@ function Intoxiblock() {
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">Problem Summary</h1>
               <p className="text-xl leading-relaxed">
-                "Every day, about 37 people in the United States die in
-                drunk-driving crashes — that's one person every 39 minutes." (
-                <Link
+                {/* "Every day, about 37 people in the United States die in
+                drunk-driving crashes — that's one person every 39 minutes." ( */}
+                {/* <Link
                   to={"https://www.nhtsa.gov/risky-driving/drunk-driving"}
                   target="blank"
                   className="text-blue-500 underline underline-offset-2"
                 >
                   National Highway Traffic Safety Administration
-                </Link>
-                ). These fatal accidents may have been prevented if a safety net
-                were there to assist impaired drivers to making responsible
-                decisions.
+                </Link> */}
+                {/* ) */}
+                We’re exploring ways to ensure people stay safe at social events involving alcohol. 
+                <br/> Why is this topic important?
+                Every year, around 630,000 people are reported missing, and every day, 37 people die in drunk-driving crashes in the U.S. These tragedies could be avoided with better safety measures. One of our team members knows this all too well, having lost a family member to a drunk-driving accident. This personal loss, coupled with the distress of seeing friends engage in risky behaviors, drives us to find solutions. We aim to create a safety net to <b> help people make responsible decisions when drinking and driving and getting home safely is a concern. </b>
               </p>
               <div className="flex flex-wrap justify-center gap-10 text-center pt-10">
                 <div className="rounded-3xl bg-blue-50 bg-opacity-80 py-12 flex-1">
@@ -275,18 +276,9 @@ function Intoxiblock() {
             </div>
 
             <div>
-              <h1 className="text-2xl font-semibold pb-10">Solution Summary</h1>
+              <h1 className="text-2xl font-semibold pb-10"> What I did! </h1>
               <p className="text-xl leading-relaxed">
-                As a UX Researcher, I conducted interviews, surveys, usability
-                testing, and data analysis to garner insights into our user base
-                (e.g., personas, behaviors, needs, and motivations).
-                <br />
-                <br />
-                Equipped with new insights, I designed two products, a mobile
-                and watch app and a breathalyzer key fob, to make it easier for
-                impaired individuals to ask for a ride home. This process
-                involved designing user interfaces (UI) and interactions that
-                meet the users needs and accomplished business objectives.
+              I conducted <b>interviews and surveys</b> and <b>examined existing solutions</b>. Then, our team brainstormed using <b>affinity mapping</b> based on our research, and each of us created 20 individual storyboards for potential solutions. We designed a <b>prototype</b> using Figma, conducted <b>usability testing</b> with participants, gathered feedback, and iterated on the design for further testing and refinement. I designed both digital (mobile and watch app) and physical (the car key) products to ensure people have multiple ways to safely return home after social events involving alcohol consumption.
               </p>
             </div>
           </>
@@ -301,10 +293,10 @@ function Intoxiblock() {
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">Personas</h1>
               <p className="text-xl leading-relaxed">
-                My team and I spoke with 8 classmates, who often go out to
+                I spoke with 8 participates, who often go out to
                 social events that involve alcohol consumption, to understand
                 their behavior, decision-making process, and experiences with
-                driving under the influence. Here are the 2 personas we came up
+                driving under the influence. Here are the 2 personas I came up
                 with:
                 <div className="border border-gray-200 shadow-xl rounded-xl text-xl overflow-hidden mt-10">
                   <table>
@@ -386,6 +378,10 @@ function Intoxiblock() {
             </div>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">Insights</h1>
+              <p className="text-xl leading-relaxed">
+              Here are some key insights we gathered from our contextual interviews.
+              </p>
+              <br></br>
               <div className="flex flex-wrap justify-between text-center text-base">
                 <div className="flex flex-col justify-center items-center w-[11rem]">
                   <div className="bg-blue-50 rounded-full justify-center items-center w-fit relative p-[4.5rem]">
@@ -434,10 +430,10 @@ function Intoxiblock() {
                 </div>
               </div>
             </div>
-            <div>
+            {/* <div>
               <h1 className="text-2xl font-semibold pb-10">Journey Map</h1>
               <p className="text-xl leading-relaxed">
-                To identify pain points and opportunities for improvement we
+                To identify pain points and opportunities for improvement I
                 conducted a journey mapping exercise. Below is a list of typical
                 steps and touchpoints that our personas go through while
                 attending social events involving alcohol.
@@ -446,12 +442,12 @@ function Intoxiblock() {
                     <strong>Pre-event Preparation:</strong>
                     <ul className="list-inside list-disc pl-8">
                       <li>
-                        Social Sam: Receives invitation to a social event and
+                        Social Sammy: Receives invitation to a social event and
                         prepares for the evening, including planning
                         transportation options.
                       </li>
                       <li>
-                        Cautious Chloe: Reviews event details and confirms
+                        Cautious Cai: Reviews event details and confirms
                         transportation plans to ensure a safe return home.
                       </li>
                     </ul>
@@ -460,11 +456,11 @@ function Intoxiblock() {
                     <strong>Arrival at the Event:</strong>
                     <ul className="list-inside list-disc pl-8">
                       <li>
-                        Social Sam: Arrives at the event location, greets
+                        Social Sammy: Arrives at the event location, greets
                         friends, and begins socializing with drinks.
                       </li>
                       <li>
-                        Cautious Chloe: Arrives at the event location, assesses
+                        Cautious Cai: Arrives at the event location, assesses
                         the atmosphere, and makes responsible choices regarding
                         alcohol consumption.
                       </li>
@@ -474,12 +470,12 @@ function Intoxiblock() {
                     <strong>Socializing and Drinking:</strong>
                     <ul className="list-inside list-disc pl-8">
                       <li>
-                        Social Sam: Engages in conversations with friends,
+                        Social Sammy: Engages in conversations with friends,
                         consuming alcohol at a moderate to heavy pace throughout
                         the evening.
                       </li>
                       <li>
-                        Cautious Chloe: Socializes with friends while monitoring
+                        Cautious Cai: Socializes with friends while monitoring
                         alcohol intake and opting for non-alcoholic alternatives
                         when necessary.
                       </li>
@@ -489,12 +485,12 @@ function Intoxiblock() {
                     <strong>Decision to Leave:</strong>
                     <ul className="list-inside list-disc pl-8">
                       <li>
-                        Social Sam: Makes a spontaneous decision to leave the
+                        Social Sammy: Makes a spontaneous decision to leave the
                         event and considers driving home, influenced by peer
                         pressure or time constraints.
                       </li>
                       <li>
-                        Cautious Chloe: Plans to leave the event at a
+                        Cautious Cai: Plans to leave the event at a
                         predetermined time, ensuring alternative transportation
                         arrangements are in place.
                       </li>
@@ -504,12 +500,12 @@ function Intoxiblock() {
                     <strong>Transportation Choice:</strong>
                     <ul className="list-inside list-disc pl-8">
                       <li>
-                        Social Sam: Decides to drive home despite consuming
+                        Social Sammy: Decides to drive home despite consuming
                         alcohol, rationalizing that they feel capable or that
                         the distance is short.
                       </li>
                       <li>
-                        Cautious Chloe: Opts for alternative transportation
+                        Cautious Cai: Opts for alternative transportation
                         methods such as ridesharing, designated drivers, or
                         public transportation to ensure a safe journey home.
                       </li>
@@ -519,19 +515,19 @@ function Intoxiblock() {
                     <strong>Arrival at Home:</strong>
                     <ul className="list-inside list-disc pl-8">
                       <li>
-                        Social Sam: Arrives home safely but may experience
+                        Social Sammy: Arrives home safely but may experience
                         anxiety or guilt over the decision to drive under the
                         influence.
                       </li>
                       <li>
-                        Cautious Chloe: Returns home safely, feeling confident
+                        Cautious Cai: Returns home safely, feeling confident
                         in the responsible choices made throughout the evening.
                       </li>
                     </ul>
                   </li>
                 </ul>
               </p>
-            </div>
+            </div> */}
           </>
         }
       />
@@ -541,6 +537,12 @@ function Intoxiblock() {
             <h1 className="text-4xl font-semibold pb-10 text-center">
               Design Process
             </h1>
+            <div className="pb-20">
+              <h1 className="text-2xl font-semibold pb-10">
+                Storyboard and Sketch
+              </h1>
+              <img src={solutionSpace} className="p-4 rounded-xl shadow-xl" />
+            </div>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">
                 Low Fidelity Prototype
@@ -554,12 +556,7 @@ function Intoxiblock() {
                 <source src={affinityMapping} type="video/mp4" />
               </video>
             </div>
-            <div className="pb-20">
-              <h1 className="text-2xl font-semibold pb-10">
-                Information Architecture
-              </h1>
-              <img src={solutionSpace} className="p-4 rounded-xl shadow-xl" />
-            </div>
+       
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">
                 Usability Testing
@@ -578,28 +575,36 @@ function Intoxiblock() {
                 <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
                   3. Optional for Locked Car
                 </h1>
+                
                 <img src={lockedCar} className="mb-32 mt-4" />
-
-                <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
-                  3. Optional for Locked Car
-                </h1>
-                <img src={watches} className="mb-32 mt-4" />
-
-                <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
-                  3. Optional for Locked Car
-                </h1>
-                <video className="mt-4" autoPlay loop>
-                  <source src={carKey} type="video/mp4" />
-                </video>
               </div>
             </div>
             <div>
               <h1 className="text-2xl font-semibold pb-10">Final Design</h1>
+              <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
+                  1. Intoxiblock Mobile App
+                </h1>
+                <br/>
               <div className="flex overflow-auto gap-12 pb-4">
                 {screens.map((entry, index) => (
                   <img src={entry} key={index} className="w-1/4 h-auto" />
                 ))}
               </div>
+              <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
+                  2. Use the App Across Multiple Devices: Watch
+                </h1>
+                <img src={watches} className="mb-32 mt-4" />
+
+                <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
+                  3. Use the App Across Multiple Devices: Carkey
+                </h1>
+                <br></br>
+                <p>At this stage of the project, I decided to design a key from scratch which acts as a
+breathalyzer. The key comes with two additional buttons, “Share Live Location” and “Measure
+BAC Levels”</p>
+                <video className="mt-4" autoPlay loop>
+                  <source src={carKey} type="video/mp4" />
+                </video>
             </div>
           </>
         }
@@ -613,27 +618,25 @@ function Intoxiblock() {
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">
                 <Highlight
-                  text="Overcoming Challenges in Discussing Drunk Driving"
+                  text="How can we encourage people to honestly discuss sensitive or ethical topics during contextual interviews?"
                   highlightColor="#c9e2ff"
                 />
               </h1>
               <p className="text-lg leading-relaxed">
-                When addressing the sensitive topic of drunk driving, we focused
-                on building trust with interviewees to truly create a safe space
-                to open up.
+                When addressing the <b>sensitive topic</b> of drunk driving, I focused
+                on <b>building trust</b> with interviewees to truly create a safe space
+                to <b>open up</b>.
               </p>
             </div>
             <div>
               <h1 className="text-2xl font-semibold pb-10">
                 <Highlight
-                  text="Prioritizing Feedback for Maximum Improvement"
+                  text="How to use our limited time to create unlimited impact?"
                   highlightColor="#c9e2ff"
                 />
               </h1>
               <p className="text-lg leading-relaxed">
-                Post-usability testing, we received a lot unstructured feedback.
-                This project saw us prioritizing common painpoints while also
-                enhacing under-represented concerns.
+              <b> Prioritizing Feedback for Maximum Improvement! </b> During usability testing, we've gathered abundant valuable feedback from users regarding our products improvements. Nonetheless, our time is constrained. How can we optimize this limited time for maximum impact? This reflects real-life constraints of time and budget. Hence, discerning how to prioritize features to best address user needs and meet business goals is important skills.
               </p>
             </div>
           </>

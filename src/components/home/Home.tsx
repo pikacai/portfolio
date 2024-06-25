@@ -131,7 +131,7 @@ function Home() {
       product: "IntoxiBlock",
       type: "project",
       description:
-        "Proposing an app to ensure peoples safe return home after social events involving alcohol consumption.",
+        "Designed an app to ensure peoples safe return home after social events involving alcohol consumption.",
       image: intoxiblockGif,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "intoxiblock",
@@ -175,7 +175,7 @@ function Home() {
       product: "Google Maps",
       type: "project",
       description:
-        "Enhancing Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
+        "Redsigned and enhanced Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
       image: googleMapsGif,
       alt: "",
       link: "google",
@@ -197,7 +197,7 @@ function Home() {
       product: "MetConnect",
       type: "internship",
       description:
-        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
+        "Designed a corporate social network prototype for efficient internal communication and collaboration.",
       image: metlifeGif,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "metlife",
@@ -252,12 +252,10 @@ function Home() {
             </div>
           </h1>
           <p className="text-slate-500 text-sm lg:text-xl">
-            Masters in Information Science at Cornell University (Expected May
-            2024)
+            Graduated Masters in Information Science '24 at Cornell University
           </p>
           <p className="text-slate-500 text-sm lg:text-xl">
-            Bachelors in Computer Science at University at Buffalo (Graduated
-            May 2023)
+          Graduated Bachelors in Computer Science '23 at University at Buffalo 
           </p>
           <p className="text-slate-500 text-sm lg:text-xl">
             Previously MetLife, SpeakHire, MemoryFox
@@ -268,7 +266,7 @@ function Home() {
           className="absolute w-auto bottom-20 animate-bounce text-xs lg:text-base hover:cursor-pointer"
           onClick={handleScroll}
         >
-          Selected Work &#8595;
+          Selected Works &#8595;
         </div>
       </div>
 
@@ -276,7 +274,7 @@ function Home() {
 
       <div ref={selectedProjects}>
         <h1 className="text-4xl pt-24 font-semibold text-center bg-slate-100">
-          Selected Work
+          Selected Works
         </h1>
 
         <div className="flex flex-wrap py-24 pb-24 bg-slate-100 justify-center gap-24">

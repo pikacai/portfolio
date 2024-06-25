@@ -38,7 +38,7 @@ function Google() {
           <div className="flex items-start justify-center text-center text-xl leading-relaxed">
             <div className="flex-1">
               <p className="font-semibold pb-4">Role</p>
-              <p>UX Reseacher & Designer</p>
+              <p>UX Designer</p>
             </div>
             <div className="flex-1">
               <p className="font-semibold pb-4">Timeline</p>
@@ -58,61 +58,42 @@ function Google() {
               Project Overview
             </h1>
             <div className="pb-20">
-              <h1 className="text-2xl font-semibold pb-10">Problem Summary</h1>
               <p className="text-xl leading-relaxed">
                 Google Cloud is a leading suite of cloud computing services.
                 Internally, Google uses a customer relationship management (CRM)
                 system to coordinate with existing and potential clients. In the
                 age of generative AI, Google seeks to improve its existing CRM
-                system.
+                system. <b> We designed a modernized CRM platform by leveraging Material UI and Bard AI. </b>
               </p>
             </div>
             <div>
-              <h1 className="text-2xl font-semibold pb-10">Solution Summary</h1>
-              <p className="text-xl leading-relaxed">
-                Leveraging Material UI and Bard AI, we designed a modernized CRM
-                platform.
-              </p>
+            <h1 className="text-4xl font-semibold pb-10 text-center">
+              Experience
+            </h1>
+            <p className="text-xl leading-relaxed">
+            I had the joy of working with truly{" "}
+            <span className="text-[#4285F4] font-semibold">amazing teams</span>{" "}
+            🫶 and our{" "}
+            <span className="text-[#DB4537] font-semibold">
+              caring mentors, Soo{" "}
+            </span>
+            💖. Together, we delved into research and design to bring forth the
+            latest <span className="font-semibold">AI capabilities</span>, with the aim of infusing extra magic 💫 into
+            the <span className="font-semibold">Account Planning journey for Google Cloud</span>. What made this
+            experience even more special for me was the chance to collaborate
+            with such inspiring, talented, and caring people—truly a sweet
+            experience.
+          </p>
             </div>
           </>
         }
       />
 
-      <CenteredContentWider
-        content={
-          <>
-            <h1 className="text-4xl font-semibold pb-10 text-center">
-              Design Process
-            </h1>
-            <p className="text-xl leading-relaxed pb-10">
-              Throughout the project, we utilized Google's Material UI library
-              to power our designs and provide a user-friendly feel.
-            </p>
-            {/* <img src={materialDesign} alt="" className="rounded-xl shadow-xl" /> */}
-          </>
-        }
-      />
+
 
       <CenteredContentWider
         content={
           <>
-            <h1 className="text-4xl font-semibold pb-10 text-center">Photos</h1>
-            <p className="text-xl leading-relaxed pb-10">
-              In my first semester at Cornell, I worked alongside an{" "}
-              <span className="text-[#4285F4] font-semibold">
-                amazing Cornell team
-              </span>{" "}
-              🫶 and our{" "}
-              <span className="text-[#DB4537] font-semibold">
-                caring mentor, Soo{" "}
-              </span>
-              💖. Conducting UX Research with inspiring, talented, and caring
-              people was a great experience.
-              <br />
-              <br />
-              Here are some photos of our time at the Google office in New York
-              City and at Cornell.
-            </p>
             <div className="flex w-full flex-col gap-8">
               <img src={groupImage1} className="w-full rounded-lg shadow-xl" />
               <div className="flex-1 flex overflow-auto gap-8 w-full">

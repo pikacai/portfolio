@@ -310,12 +310,11 @@ const MetlifeContent = () => {
             </h1>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">
-                <Highlight text="User Research" highlightColor="#c9e2ff" />
+                <Highlight text="Good UX design is all about putting the user first" highlightColor="#c9e2ff" />
               </h1>
               <p className="text-lg leading-relaxed">
                 When creating user experiences, we need to center our decisions
-                based on research and what others truly need, not just what we
-                need.
+                based on user research and what users truly need, not just what designers think it is good.
               </p>
             </div>
             <div>
@@ -326,8 +325,7 @@ const MetlifeContent = () => {
                 />
               </h1>
               <p className="text-lg leading-relaxed">
-                It is important to be caring with teammates, so we can be happy
-                to work on the project together as a team.
+              It's important to show care towards teammates so that we can not only work effectively together but also create a positive and enjoyable team environment.
               </p>
             </div>
           </>
