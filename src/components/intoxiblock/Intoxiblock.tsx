@@ -46,6 +46,14 @@ import build from "../../assets/lottieFiles/googleMaps/build.json";
 import wine from "../../assets/lottieFiles/wine.json";
 import car from "../../assets/lottieFiles/car.json";
 
+import persona1 from "../../assets/intoxiblock/persona1.png"
+import persona2 from "../../assets/intoxiblock/persona2.png"
+import designSystem from "../../assets/intoxiblock/designSystem.png";
+import impact from "../../assets/intoxiblock/impact.jpg";
+import wireframe from "../../assets/intoxiblock/wireframe.png";
+
+
+
 import LottieAnimation from "../utilities/LottieAnimation";
 import { Link } from "react-router-dom";
 
@@ -189,9 +197,9 @@ function Intoxiblock() {
               <p className="font-semibold pb-4 underline underline-offset-2">
                 Teammates
               </p>
-              <p>Aishwarya G.-Designer</p>
-              <p>Fiona G.-Researcher</p>
-              <p>Jamie P.-Researcher</p>
+              <p>Aishwarya G.</p>
+              <p>Fiona G.</p>
+              <p>Jamie P.</p>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <p className="font-semibold pb-4 underline underline-offset-2">
@@ -292,89 +300,15 @@ function Intoxiblock() {
             </h1>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">Personas</h1>
-              <p className="text-xl leading-relaxed">
+              <p className="text-xl leading-relaxed pb-10">
                 I spoke with 8 participates, who often go out to
                 social events that involve alcohol consumption, to understand
                 their behavior, decision-making process, and experiences with
                 driving under the influence. Here are the 2 personas I came up
                 with:
-                <div className="border border-gray-200 shadow-xl rounded-xl text-xl overflow-hidden mt-10">
-                  <table>
-                    <tr className="border-b">
-                      <th className="text-left p-4">Persona</th>
-                      <td className="border-l border-r p-4 bg-purple-50">
-                        Social Sammy 🎉
-                      </td>
-                      <td className="p-4 bg-yellow-50">Cautious Cai ⚠️</td>
-                    </tr>
-                    <tr className="border-b">
-                      <th className="text-left p-4">Age</th>
-                      <td className="border-l border-r p-4 bg-purple-50">22</td>
-                      <td className="p-4 bg-yellow-50">21</td>
-                    </tr>
-                    <tr className="border-b">
-                      <th className="text-left p-4">Occupation</th>
-                      <td className="border-l border-r p-4 bg-purple-50">
-                        College student
-                      </td>
-                      <td className="p-4 bg-yellow-50">College student</td>
-                    </tr>
-                    <tr className="border-b">
-                      <th className="text-left p-4">Lifestyle</th>
-                      <td className="border-l border-r p-4 bg-purple-50">
-                        Enjoys attending social events with friends, often
-                        involving alcohol consumption.
-                      </td>
-                      <td className="p-4 bg-yellow-50">
-                        Participates in social events but prioritizes safety and
-                        responsibility.
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <th className="text-left p-4">Behavior</th>
-                      <td className="border-l border-r p-4 bg-purple-50">
-                        Drinks moderately but occasionally engages in heavy
-                        drinking during parties or celebrations.
-                      </td>
-                      <td className="p-4 bg-yellow-50">
-                        Drinks moderately and is mindful of her alcohol
-                        consumption, usually opting for alternative
-                        transportation methods like ridesharing or designated
-                        drivers.
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <th className="text-left p-4">
-                        Attitude towards driving
-                      </th>
-                      <td className="border-l border-r p-4 bg-purple-50">
-                        Has a lax attitude towards driving after consuming
-                        alcohol, believing that they can handle it or that the
-                        distance is short enough to be safe.
-                      </td>
-                      <td className="p-4 bg-yellow-50">
-                        Refrains from driving after consuming any amount of
-                        alcohol, understanding the potential consequences and
-                        prioritizing the safety of herself and others.
-                      </td>
-                    </tr>
-                    <tr className="">
-                      <th className="text-left p-4">Concerns</th>
-                      <td className="border-l border-r p-4 bg-purple-50">
-                        Worries about missing out on social activities if they
-                        refrain from drinking or driving, and may underestimate
-                        the risks associated with driving under the influence.
-                      </td>
-                      <td className="p-4 bg-yellow-50">
-                        Values her safety and the safety of others above all
-                        else, and actively seeks out alternatives to driving
-                        under the influence to mitigate risks and avoid
-                        potential legal consequences.
-                      </td>
-                    </tr>
-                  </table>
-                </div>
               </p>
+              <img src={persona1} className="pb-10"/>
+              <img src={persona2}/>
             </div>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">Insights</h1>
@@ -551,10 +485,11 @@ function Intoxiblock() {
                 autoPlay
                 loop
                 muted
-                className="w-full rounded-xl shadow-xl"
+                className="w-full rounded-xl shadow-xl pb-10"
               >
                 <source src={affinityMapping} type="video/mp4" />
               </video>
+              {/* <img src={wireframe}/> */}
             </div>
        
             <div className="pb-20">
@@ -565,16 +500,19 @@ function Intoxiblock() {
                 <h1 className="text-2xl font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
                   1. Location Sharing
                 </h1>
+                <br></br>
                 <img src={locationSharing} className="mb-32 mt-4" />
 
                 <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
                   2. Multiple Reports of BAC Testing for A Given Day
                 </h1>
+                <br></br>
 
                 <img src={multipleReports} className="mb-32 mt-4" />
                 <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
                   3. Optional for Locked Car
                 </h1>
+                <br></br>
                 
                 <img src={lockedCar} className="mb-32 mt-4" />
               </div>
@@ -584,6 +522,7 @@ function Intoxiblock() {
               <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
                   1. Intoxiblock Mobile App
                 </h1>
+                <br></br>
                 <br/>
               <div className="flex overflow-auto gap-12 pb-4">
                 {screens.map((entry, index) => (
@@ -593,6 +532,7 @@ function Intoxiblock() {
               <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
                   2. Use the App Across Multiple Devices: Watch
                 </h1>
+                <br></br>
                 <img src={watches} className="mb-32 mt-4" />
 
                 <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
@@ -602,9 +542,13 @@ function Intoxiblock() {
                 <p>At this stage of the project, I decided to design a key from scratch which acts as a
 breathalyzer. The key comes with two additional buttons, “Share Live Location” and “Measure
 BAC Levels”</p>
-                <video className="mt-4" autoPlay loop>
+                <video className="mt-4 pb-10" autoPlay loop>
                   <source src={carKey} type="video/mp4" />
                 </video>
+                <h1 className="text-4xl font-semibold pb-10 text-center">
+                Design System
+            </h1>
+                <img src={designSystem}/>
             </div>
           </>
         }
@@ -667,9 +611,25 @@ BAC Levels”</p>
                 <img src={selfie3} alt="" />
               </div>
             </div>
+            <h1 className="text-4xl font-semibold pb-10 text-center">
+                Impacts
+            </h1>
+            <img src={impact}/>
           </>
         }
       />
+
+<CenteredContentWider
+        content={
+          <>
+            <h1 className="text-4xl font-semibold pb-10 text-center">
+                Impacts
+            </h1>
+            <img src={impact}/>
+          </>
+        }
+      />
+      
       <div className="bg-green-500 bg-opacity-[0.12] py-12 px-12 flex justify-center">
         <p className="text-xl leading-relaxed w-[60%]">
           Special thanks to Gilly Leshed and Shu-Jung Han for their guidance and
