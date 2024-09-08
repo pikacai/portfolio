@@ -34,6 +34,7 @@ function NumberIncreaser({ target, duration, textAfter }: Props) {
   useEffect(() => {
     if (number !== 0) {
       // console.log("useEffect, number", number);
+      // @ts-ignore
       timeout = setTimeout(increaseNumber, 1);
     }
 

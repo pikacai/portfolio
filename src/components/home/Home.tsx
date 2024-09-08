@@ -1,44 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import macbook from "../../assets/macbook.png";
-import ipad from "../../assets/ipad.png";
-import iphone from "../../assets/iphone.png";
-import iphone2 from "../../assets/iphone2.png";
-import amazon from "../../assets/amazon.png";
-import googlecrm from "../../assets/googlecrm.png";
 import { Link } from "react-router-dom";
-
-// Hair prank
-import hair from "../../assets/hair.png";
-
-import intoxiblock from "../../assets/intoxiblock/intoxiblock.png";
-// import google from "../../assets/google2/google.png";
 import googleCloudGif from "../../assets/googleCloudGif.gif";
-// import googleCloudGif from "../../assets/googleCloudGif3.gif";
 import googleMapsGif from "../../assets/googleMapsGif.gif";
-
-import metlifeGif from "../../assets/metlifeGif.gif";
 import intoxiblockGif from "../../assets/intoxiblockGif.gif";
+import Section from "../utilities/Section";
+import { SchoolOutlined, WorkOutlineRounded } from "@mui/icons-material";
+import Text from "../utilities/Text";
+import GradientText from "../utilities/GradientText";
+import ScaleIn from "../utilities/ScaleIn";
 
 interface Image {
   img: JSX.Element;
   alt: string;
-}
-
-interface ExperienceType {
-  company: string;
-  product: string;
-  role: string;
-  description: string;
-  visuals: Image[];
-  link: string;
-  results: string[];
-  height: string;
-  classified?: boolean;
-  underConstruction?: boolean;
-  backgroundColor: string;
-  tagColor: string;
-  tags: string[];
-  emoji?: any;
 }
 
 function Home() {
@@ -54,6 +27,7 @@ function Home() {
     const balls = [];
 
     ballsContainer.id = "balls";
+    ballsContainer.style.width = '100vw'
 
     for (let i = 0; i < numBalls; i++) {
       let ball = document.createElement("div");
@@ -109,6 +83,7 @@ function Home() {
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    // @ts-ignore
     intervalId = setInterval(() => {
       setTranslate((translate) => {
         if (
@@ -127,92 +102,34 @@ function Home() {
   // Used to render the projects
   const experience = [
     {
-      company: "Safe and Sober Journey with BAC Testing",
       product: "IntoxiBlock",
       type: "project",
+      tags: ["3D Design"],
       description:
         "Designed an app to ensure peoples safe return home after social events involving alcohol consumption.",
       image: intoxiblockGif,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "intoxiblock",
-      results: [
-        "30% boost in employee engagement.",
-        "20% increase in knowledge sharing.",
-        "35% improvement in project collaboration.",
-      ],
-      height: "min-h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-blue-50",
-      tagColor: "bg-blue-100",
-      tags: ["UX Design", "Internship"],
-      emoji: "📌",
     },
     {
-      company: "Google",
       product: "Google Cloud",
       type: "project",
+      tags: ["Cloud", "CRM", "AI"],
       description:
         "Designed alongside Google UX Designers and Researchers to test and validate design concepts and hypotheses of a Google AI-powered CRM application.",
       image: googleCloudGif,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "google2",
-      results: [
-        "30% boost in employee engagement.",
-        "20% increase in knowledge sharing.",
-        "35% improvement in project collaboration.",
-      ],
-      height: "min-h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-blue-50",
-      tagColor: "bg-blue-100",
-      tags: ["UX Design", "Internship"],
-      emoji: "📌",
     },
     {
-      company: "Google",
       product: "Google Maps",
       type: "project",
+      tags: ["SaaS"],
       description:
         "Redsigned and enhanced Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
       image: googleMapsGif,
       alt: "",
       link: "google",
-      results: [
-        "20% faster route planning and navigation.",
-        "15% increase in user satisfaction ratings.",
-        "30% rise in daily active users.",
-      ],
-      height: "h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-red-50",
-      tagColor: "bg-red-100",
-      tags: ["UX Design"],
-      emoji: "🚀",
-    },
-    {
-      company: "MetLife",
-      product: "MetConnect",
-      type: "internship",
-      description:
-        "Designed a corporate social network prototype for efficient internal communication and collaboration.",
-      image: metlifeGif,
-      alt: "A profile page on MetConnect as viewed on an iPad.",
-      link: "metlife",
-      results: [
-        "30% boost in employee engagement.",
-        "20% increase in knowledge sharing.",
-        "35% improvement in project collaboration.",
-      ],
-      height: "min-h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-blue-50",
-      tagColor: "bg-blue-100",
-      tags: ["UX Design", "Internship"],
-      emoji: "📌",
     },
   ];
 
@@ -228,11 +145,6 @@ function Home() {
 
   return (
     <div>
-      {/* Fake hair prank */}
-      <div className="fixed top-56 right-56 scale-90 opacity-30">
-        <img src={hair} alt="" className="" />
-      </div>
-
       <div className="h-screen w-screen flex justify-center items-center relative">
         <div>
           <h1 className="text-4xl lg:text-6xl font-medium flex gap-5">
@@ -244,7 +156,7 @@ function Home() {
                 className="transition-all leading-[normal] h-[43px] lg:h-[60px]"
                 style={{ transform: `translate(0, -${translate}px)` }}
               >
-                <span className="block text-red-500">UX Designer</span>
+                <span className="block text-red-500">UX Product Designer</span>
                 <span className="block text-green-500">UX Researcher</span>
                 <span className="block text-blue-500">Product Designer</span>
                 <span className="block text-yellow-500">Product Manager</span>
@@ -270,46 +182,58 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-white to-slate-100 h-60"></div>
+      <div className="bg-gradient-to-b from-white to-slate-50 h-60"></div>
 
-      <div ref={selectedProjects}>
-        <h1 className="text-4xl pt-24 font-semibold text-center bg-slate-100">
+      <div ref={selectedProjects} className="bg-slate-50">
+        <Text className="pt-10 text-center font-semibold" parentElement="h1">
           Selected Works
-        </h1>
+        </Text>
 
-        <div className="flex flex-wrap py-24 pb-24 bg-slate-100 justify-center gap-24">
-          {experience.map((entry, index) => (
-            <Link
-              to={entry.link}
-              className="
-          lg:w-[550px] lg:h-[500px] 
-          md:w-[450px] md:h-[400px]
-          w-[330px] h-[280px]
-          border border-1 bg-white rounded-xl
-          hover:shadow-2xl
-          hover:cursor-pointer
-          transition-all
-          hover:underline hover:opacity-50
-          "
-            >
-              <img
-                key={index}
-                src={entry.image}
-                className="h-2/3 w-full p-8 object-scale-down"
-              />
-              <div className="p-8 border-t">
-                <h1 className="text-sm font-semibold pb-2 tracking-wider">
-                  {entry.product.toUpperCase() + " | "}
-                  <span className="text-xs">{entry.type.toUpperCase()}</span>
-                </h1>
-                <h1 className="">{entry.description}</h1>
-              </div>
-            </Link>
-          ))}
+        <div className="pt-10 pb-24 sm:py-24 flex justify-center">
+          <div className="w-[90%] xl:w-5/6 flex flex-wrap justify-center gap-6">
+            {experience.map((entry, index) => (
+              <Link
+                to={entry.link}
+                className="
+                group
+                sm:w-[450px] sm:h-[450px]
+                w-full
+                border border-1 bg-white rounded-xl
+                shadow-md
+                hover:shadow-2xl
+                hover:cursor-pointer
+                transition-all
+                flex flex-col"
+              >
+                <img
+                  key={index}
+                  src={entry.image}
+                  className="h-64 sm:h-2/4 p-8 object-scale-down"
+                />
+                <div className="p-8 border-t flex flex-col gap-y-2">
+                  <h1 className="group-hover:underline text-sm font-semibold tracking-wider">
+                    {entry.product.toUpperCase() + " | "}
+                    <span className="text-xs">{entry.type.toUpperCase()}</span>
+                  </h1>
+                  <div className="flex gap-x-2">
+                    {entry.tags.map((entry_, index_) => (
+                      <span
+                        className="no-underline text-sm py-1 px-3 bg-blue-500 text-slate-50 rounded-full w-fit"
+                        key={index_}
+                      >
+                        {entry_}
+                      </span>
+                    ))}
+                  </div>
+                  <h1 className="group-hover:underline">{entry.description}</h1>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-slate-100 to-white h-36"></div>
+      <div className="bg-gradient-to-b from-slate-50 to-white h-56"></div>
     </div>
   );
 }

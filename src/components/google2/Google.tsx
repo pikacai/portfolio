@@ -10,6 +10,7 @@ import materialDesign from "../../assets/google2/materialDesign.png";
 
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { Link } from "react-router-dom";
+import Video from "../utilities/Video";
 
 function Google() {
   return (
@@ -17,9 +18,7 @@ function Google() {
       <CenteredContentWider
         content={
           <div className="relative mt-36 border rounded-3xl overflow-hidden shadow-2xl">
-            <video autoPlay loop className="">
-              <source src={googleCloudIntroVideo} type="video/mp4" />
-            </video>
+            <Video src={googleCloudIntroVideo} className="h-[575px]"/>
             <Link
               to="https://www.youtube.com/watch?v=jjLgA3UAaCQ"
               className="text-sm text-gray-400 right-5 bottom-3 absolute"
@@ -162,8 +161,8 @@ function Google() {
           Unfortunately, I can't get into any more detail about the work with
           Google, as it is under NDA. If you would like to learn more, feel free
           to reach out to me at{" "}
-          <a className="text-[#0D8BFF]" href="mailto:sc3322@cornell.edu">
-            sc3322@cornell.edu
+          <a className="text-[#0D8BFF]" href="mailto:senhuang.cai9h@gmail.com">
+            senhuang.cai9h@gmail.com
           </a>
           .
         </p>

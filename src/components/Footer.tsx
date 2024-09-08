@@ -21,105 +21,41 @@ import googleMapsGif from "../assets/googleMapsGif.gif";
 import metlifeGif from "../assets/metlifeGif.gif";
 import intoxiblockGif from "../assets/intoxiblockGif.gif";
 
-interface ExperienceType {
-  product: string;
-  type: string;
-  date: string;
-  description: string;
-  visuals: Record<string, string>;
-  link: string;
-}
-
 function Footer() {
   // Used to render the projects
 
   let experience = [
     {
-      company: "Google",
-      product: "Google Cloud",
-      description:
-        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
-      image: googleCloudGif,
-      alt: "A profile page on MetConnect as viewed on an iPad.",
-      link: "google2",
-      results: [
-        "30% boost in employee engagement.",
-        "20% increase in knowledge sharing.",
-        "35% improvement in project collaboration.",
-      ],
-      height: "min-h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-blue-50",
-      tagColor: "bg-blue-100",
-      tags: ["UX Design", "Internship"],
-      emoji: "📌",
-    },
-    {
-      company: "Safe and Sober Journey with BAC Testing",
       product: "IntoxiBlock",
+      type: "project",
+      tags: ["3D Design"],
       description:
-        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
+        "Designed an app to ensure peoples safe return home after social events involving alcohol consumption.",
       image: intoxiblockGif,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "intoxiblock",
-      results: [
-        "30% boost in employee engagement.",
-        "20% increase in knowledge sharing.",
-        "35% improvement in project collaboration.",
-      ],
-      height: "min-h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-blue-50",
-      tagColor: "bg-blue-100",
-      tags: ["UX Design", "Internship"],
-      emoji: "📌",
     },
     {
-      company: "Google",
-      product: "Google Maps",
+      product: "Google Cloud",
+      type: "project",
+      tags: ["Cloud", "CRM", "AI"],
       description:
-        "Enhancing Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
+        "Designed alongside Google UX Designers and Researchers to test and validate design concepts and hypotheses of a Google AI-powered CRM application.",
+      image: googleCloudGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
+      link: "google2",
+    },
+    {
+      product: "Google Maps",
+      type: "project",
+      tags: ["SaaS"],
+      description:
+        "Redsigned and enhanced Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
       image: googleMapsGif,
       alt: "",
       link: "google",
-      results: [
-        "20% faster route planning and navigation.",
-        "15% increase in user satisfaction ratings.",
-        "30% rise in daily active users.",
-      ],
-      height: "h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-red-50",
-      tagColor: "bg-red-100",
-      tags: ["UX Design"],
-      emoji: "🚀",
-    },
-    {
-      company: "MetLife",
-      product: "MetConnect",
-      description:
-        "Designing a corporate social network prototype for efficient internal communication and collaboration.",
-      image: metlifeGif,
-      alt: "A profile page on MetConnect as viewed on an iPad.",
-      link: "metlife",
-      results: [
-        "30% boost in employee engagement.",
-        "20% increase in knowledge sharing.",
-        "35% improvement in project collaboration.",
-      ],
-      height: "min-h-[80vh]",
-      role: "UX Designer",
-      underConstruction: true,
-      backgroundColor: "bg-blue-50",
-      tagColor: "bg-blue-100",
-      tags: ["UX Design", "Internship"],
-      emoji: "📌",
     },
   ];
-
   const { pathname } = useLocation();
   experience = experience.filter((entry) => "/" + entry.link !== pathname);
 
@@ -130,35 +66,51 @@ function Footer() {
           <h1 className="text-4xl font-semibold pb-10 text-center mt-56 ">
             Other Selected Work
           </h1>
-          <div className="flex flex-wrap gap-8 px-9 justify-center mb-36">
-            {experience.map((entry, index) => (
-              <Link
-                to={entry.link}
-                className="
-            lg:w-[450px] lg:h-[400px] 
-            md:w-[350px] md:h-[300px]
-            w-[230px] h-[180px]
-            border border-1 bg-white rounded-xl
-            hover:shadow-md
-            hover:cursor-pointer
-            transition-all
-            hover:underline
-            "
-                // flex-1
-              >
-                <img
-                  key={index}
-                  src={entry.image}
-                  className="h-3/5 w-full p-8 object-scale-down"
-                />
-                <div className="p-8 border-t">
-                  <h1 className="text-sm font-semibold pb-2 tracking-wider">
-                    {entry.product.toUpperCase()}
-                  </h1>
-                  <h1 className="">{entry.description}</h1>
-                </div>
-              </Link>
-            ))}
+          <div className="pt-10 pb-24 sm:py-24 flex justify-center w-full mb-56">
+            <div className="w-[90%] xl:w-5/6 flex flex-wrap justify-center gap-6">
+              {experience.map((entry, index) => (
+                <Link
+                  to={entry.link}
+                  className="
+                group
+                sm:w-[450px] sm:h-[450px]
+                w-full
+                border border-1 bg-white rounded-xl
+                shadow-md
+                hover:shadow-2xl
+                hover:cursor-pointer
+                transition-all
+                flex flex-col"
+                >
+                  <img
+                    key={index}
+                    src={entry.image}
+                    className="h-64 sm:h-2/4 p-8 object-scale-down"
+                  />
+                  <div className="p-8 border-t flex flex-col gap-y-2">
+                    <h1 className="group-hover:underline text-sm font-semibold tracking-wider">
+                      {entry.product.toUpperCase() + " | "}
+                      <span className="text-xs">
+                        {entry.type.toUpperCase()}
+                      </span>
+                    </h1>
+                    <div className="flex gap-x-2">
+                      {entry.tags.map((entry_, index_) => (
+                        <span
+                          className="no-underline text-sm py-1 px-3 bg-blue-500 text-slate-50 rounded-full w-fit"
+                          key={index_}
+                        >
+                          {entry_}
+                        </span>
+                      ))}
+                    </div>
+                    <h1 className="group-hover:underline">
+                      {entry.description}
+                    </h1>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </>
       )}
@@ -174,12 +126,6 @@ function Footer() {
           <LinkedInIcon
             fontSize="large"
             className="text-slate-400 hover:text-blue-600 transition duration-500 ease-in-out"
-          />
-        </a>
-        <a href="https://github.com/B-o-s-s-e-s">
-          <GitHubIcon
-            fontSize="large"
-            className="text-slate-400 hover:text-black transition duration-500 ease-in-out"
           />
         </a>
       </div>

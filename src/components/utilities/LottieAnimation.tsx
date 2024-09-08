@@ -33,7 +33,7 @@ function LottieAnimation({ className, startingFrame, src }: Props) {
   }, []);
 
   useEffect(() => {
-    animation?.goToAndStop(startingFrame ? startingFrame : 0, true);
+    // animation?.goToAndStop(startingFrame ? startingFrame : 0, true);
   }, [animation]);
 
   const handleMouseOver = () => {

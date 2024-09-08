@@ -38,6 +38,7 @@ import { dividerClasses } from "@mui/material";
 
 // JSON from Google Form survey
 import surveyResponses from "./surveyResponses.json";
+import Video from "../utilities/Video";
 
 const GoogleContent = () => {
   // Phone sections
@@ -78,9 +79,7 @@ const GoogleContent = () => {
         content={
           <div>
             <div className="relative mt-36 border rounded-3xl overflow-hidden shadow-2xl">
-              <video autoPlay loop>
-                <source src={googleMapIntroVideo} type="video/mp4" />
-              </video>
+              <Video src={googleMapIntroVideo} className="h-[575px]" />
               <Link
                 to="https://www.youtube.com/watch?v=brSdUNadZmM"
                 className="text-sm text-gray-400 right-5 bottom-3 absolute"
@@ -176,7 +175,7 @@ const GoogleContent = () => {
                 >
                   <div className="relative flex flex-1 justify-center items-center p-6">
                     <div
-                      className={`absolute -z-10 m-[0_auto] left-0 right-0 top-[50%] -translate-y-[50%] w-full h-1/2 animate-blob ${entry.color}`}
+                      className={`absolute -z-10 m-[0_auto] left-0 right-0 top-[50%] -translate-y-[50%] w-full h-1/2 animate-blob rounded-full ${entry.color}`}
                     ></div>
                     <img
                       loading="lazy"
@@ -265,7 +264,10 @@ const GoogleContent = () => {
                 Competitive Analysis
               </h1>
               <div>
-                <img src={competitiveAnalysis} className="shadow-xl rounded-xl" />
+                <img
+                  src={competitiveAnalysis}
+                  className="shadow-xl rounded-xl"
+                />
               </div>
             </div>
           </>
@@ -317,7 +319,7 @@ const GoogleContent = () => {
             </h1>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">Wireframes</h1>
-              <img src={sketches} className="rounded-xl shadow-xl"/>
+              <img src={sketches} className="rounded-xl shadow-xl" />
             </div>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">Prototype Demo</h1>
@@ -326,44 +328,12 @@ const GoogleContent = () => {
                 src="https://www.youtube.com/embed/7gJlpUt7pMo"
               ></iframe>
             </div>
-            <div>
-              <h1 className="text-2xl font-semibold pb-10">Final Design</h1>
-              <div>
-                {phone.map((entry, index) => (
-                  <div
-                    className={
-                      "flex flex-col justify-between items-center gap-32" +
-                      (index % 2 == 1 ? " md:flex-row-reverse" : " md:flex-row")
-                    }
-                    key={index}
-                  >
-                    <div className="relative flex flex-1 justify-center items-center p-6">
-                      <div
-                        className={`absolute -z-10 m-[0_auto] left-0 right-0 top-[50%] -translate-y-[50%] w-full h-1/2 animate-blob ${entry.color}`}
-                      ></div>
-                      <img
-                        loading="lazy"
-                        className="h-[650px] w-auto"
-                        src={entry.img}
-                        alt=""
-                      />
-                    </div>
-
-                    <div className="flex flex-1 flex-col gap-y-4">
-                      <h1>{entry.section}</h1>
-                      <h1 className="text-5xl">{entry.title}</h1>
-                      <h1 className="text-xl text-slate-500">{entry.text}</h1>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </>
         }
       />
 
       <CenteredContentWider
-      removePadding
+        removePadding
         content={
           <>
             <h1 className="text-4xl font-semibold pb-10 text-center">

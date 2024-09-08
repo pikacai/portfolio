@@ -11,7 +11,7 @@ function NavigationBar() {
       <Link to='/'><h1 className='text-3xl font-medium'>Pika Cai</h1></Link>
       <ul className='flex gap-10 items-center'>
         <li><Link to='/'>Projects</Link></li>
-        <li><Link to='/resume'>Resume</Link></li>
+        {/* <li><Link to='/resume'>Resume</Link></li> */}
         <li><Link to='/about'>About</Link></li>
       </ul>
     </div>

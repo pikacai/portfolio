@@ -7,13 +7,30 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Praise&display=swap"
+      rel="stylesheet"
+    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pika's Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y7MNFH8R9F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Y7MNFH8R9F");
+    </script>
     <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>

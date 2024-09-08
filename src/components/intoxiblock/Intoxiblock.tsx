@@ -1,3 +1,5 @@
+import confetti from '../../assets/intoxiblock/confetti.json';
+import impact_ from '../../assets/intoxiblock/impact.png';
 import phone1 from "../../assets/intoxiblock/phone1.mp4";
 import phone2 from "../../assets/intoxiblock/phone2.mp4";
 import phone3 from "../../assets/intoxiblock/phone3.mp4";
@@ -109,6 +111,7 @@ function Intoxiblock() {
       const div = ref.current;
       div.style.opacity = "0";
 
+      // @ts-ignore
       bufferInterval = setInterval(() => {
         //@ts-ignore
         div.style.transition = "all 1s ease-in";
@@ -475,20 +478,22 @@ function Intoxiblock() {
               <h1 className="text-2xl font-semibold pb-10">
                 Storyboard and Sketch
               </h1>
-              <img src={solutionSpace} className="p-4 rounded-xl shadow-xl" />
+              <img src={solutionSpace} className="p-4 rounded-xl border" />
             </div>
             <div className="pb-20">
               <h1 className="text-2xl font-semibold pb-10">
                 Low Fidelity Prototype
               </h1>
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full rounded-xl shadow-xl pb-10"
-              >
-                <source src={affinityMapping} type="video/mp4" />
-              </video>
+              <div className="w-full rounded-xl overflow-hidden">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className='object-fill w-full'
+                >
+                  <source src={affinityMapping} type="video/mp4" />
+                </video>
+              </div>
               {/* <img src={wireframe}/> */}
             </div>
        
@@ -524,9 +529,9 @@ function Intoxiblock() {
                 </h1>
                 <br></br>
                 <br/>
-              <div className="flex overflow-auto gap-12 pb-4">
+              <div className="flex flex-wrap justify-center gap-12 pb-4">
                 {screens.map((entry, index) => (
-                  <img src={entry} key={index} className="w-1/4 h-auto" />
+                  <img src={entry} key={index} className="flex-1 w-1/4" />
                 ))}
               </div>
               <h1 className="text-2xl mt-10 font-semibold underline-offset-8 decoration-4 underline decoration-blue-600">
@@ -548,7 +553,7 @@ BAC Levels”</p>
                 <h1 className="text-4xl font-semibold pb-10 text-center">
                 Design System
             </h1>
-                <img src={designSystem}/>
+                <img className="rounded-xl" src={designSystem}/>
             </div>
           </>
         }
@@ -611,10 +616,6 @@ BAC Levels”</p>
                 <img src={selfie3} alt="" />
               </div>
             </div>
-            <h1 className="text-4xl font-semibold pb-10 text-center">
-                Impacts
-            </h1>
-            <img src={impact}/>
           </>
         }
       />
@@ -623,9 +624,20 @@ BAC Levels”</p>
         content={
           <>
             <h1 className="text-4xl font-semibold pb-10 text-center">
-                Impacts
+                Reward
             </h1>
-            <img src={impact}/>
+            {/* <img src={impact}/> */}
+            <div className="rounded-xl border relative overflow-hidden">
+              <img src={impact_}/>
+              <div className="absolute z-10 m-[0_auto] left-0 right-0 top-[50%] -translate-y-[50%] flex justify-center">
+                <LottieAnimation src={confetti} className="w-[40rem] h-[40rem] transition-all"/>
+              </div>
+            </div>
+            {/* <div className="mt-10 flex flex-wrap gap-8 text-xl justify-center bg-blue-500 p-12 rounded-xl">
+              <div className="w-[400px] flex flex-col justify-between px-8 py-12 bg-white rounded-xl shadow-lg">"The concept of integrating real-time BAC estimation is innovative and addresses a real need."<span className="text-sm text-slate-600 italic mt-6">Usability Testing Participant Testimonial</span></div>
+              <div className="w-[400px] flex flex-col justify-between px-8 py-12 bg-white rounded-xl shadow-lg">"I do not need to hide my dad's car key anymore."<span className="text-sm text-slate-600 italic mt-6">Usability Testing Participant Testimonial</span></div>
+              <div className="w-[400px] flex flex-col justify-between px-8 py-12 bg-white rounded-xl shadow-lg">"I'm excited to see this prototype developed into a fully functional app, as it shows great promise in promoting responsible drinking."<span className="text-sm text-slate-600 italic mt-6">Usability Testing Participant Testimonial</span></div>
+            </div> */}
           </>
         }
       />

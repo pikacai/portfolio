@@ -26,6 +26,7 @@ function Intoxiblock_() {
 
   let intervalId: number;
   useEffect(() => {
+    // @ts-ignore
     intervalId = setInterval(() => {
       // setTranslate((translate) => {
       //   if (
