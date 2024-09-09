@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import googleCloudGif from "../../assets/googleCloudGif.gif";
 import googleMapsGif from "../../assets/googleMapsGif.gif";
 import intoxiblockGif from "../../assets/intoxiblockGif.gif";
+import restocksGif from "../../assets/restocks/restocksGif.gif";
 import Section from "../utilities/Section";
 import { SchoolOutlined, WorkOutlineRounded } from "@mui/icons-material";
 import Text from "../utilities/Text";
@@ -101,6 +102,16 @@ function Home() {
 
   // Used to render the projects
   const experience = [
+    {
+      product: "Restocks",
+      type: "project",
+      tags: ["E-Commerce"],
+      description:
+        "Leading design for e-commerce platform identifying deals for 300K+ users.",
+      image: restocksGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
+      link: "restocks",
+    },
     {
       product: "IntoxiBlock",
       type: "project",
