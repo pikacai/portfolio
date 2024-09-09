@@ -67,7 +67,7 @@ function Footer() {
             Other Selected Work
           </h1>
           <div className="pt-10 pb-24 sm:py-24 flex justify-center w-full mb-56">
-            <div className="w-[90%] xl:w-5/6 flex flex-wrap justify-center gap-6">
+            <div className="w-[90%] xl:w-5/6 flex flex-wrap justify-center gap-12">
               {experience.map((entry, index) => (
                 <Link
                   to={entry.link}

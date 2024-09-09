@@ -19,7 +19,7 @@ function About_() {
               <GradientText
                 className="font-medium text-2xl sm:text-3xl"
                 gradient="linear-gradient(to right, #00c6ff, #0072ff)"
-                text="_UX Product Designer_"
+                text="_UX Designer_"
                 parentElement="span"
               />
               <Text className="italic" parentElement="h2">

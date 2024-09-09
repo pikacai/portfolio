@@ -165,12 +165,12 @@ function Home() {
             <div className="overflow-hidden">
               <div
                 className="transition-all leading-[normal] h-[43px] lg:h-[60px]"
-                style={{ transform: `translate(0, -${translate}px)` }}
+                // style={{ transform: `translate(0, -${translate}px)` }}
               >
-                <span className="block text-red-500">UX Product Designer</span>
-                <span className="block text-green-500">UX Researcher</span>
+                <span className="block text-blue-500">UX Designer</span>
+                {/* <span className="block text-green-500">UX Researcher</span>
                 <span className="block text-blue-500">Product Designer</span>
-                <span className="block text-yellow-500">Product Manager</span>
+                <span className="block text-yellow-500">Product Manager</span> */}
               </div>
             </div>
           </h1>
@@ -201,7 +201,7 @@ function Home() {
         </Text>
 
         <div className="pt-10 pb-24 sm:py-24 flex justify-center">
-          <div className="w-[90%] xl:w-5/6 flex flex-wrap justify-center gap-6">
+          <div className="w-[90%] xl:w-5/6 flex flex-wrap justify-center gap-12">
             {experience.map((entry, index) => (
               <Link
                 to={entry.link}

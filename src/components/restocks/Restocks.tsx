@@ -108,18 +108,18 @@ function Restocks() {
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />
-            <div className="pb-20 flex flex-wrap sm:flex-nowrap gap-10">
-              <div className="flex-1 flex flex-col gap-y-10">
+            <div className="flex flex-wrap sm:flex-nowrap gap-10">
+              <div className="flex-1 flex flex-col gap-y-10 text-lg">
                 <BoldText
                   text="_Lord of Savings is community-driven_ website focused on _sharing and 
             finding_ the best _deals_ and discounts on a wide range of products and services."
-                  className="text-xl leading-relaxed"
+                  className="leading-relaxed"
                   parentElement="p"
                 />
                 <BoldText
                   text="Users post and share deals they find _online or in stores_, and 
             the _community votes_ on the quality and value of these deals."
-                  className="text-xl leading-relaxed"
+                  className="leading-relaxed"
                   parentElement="p"
                 />
                 <BoldText
@@ -127,11 +127,11 @@ function Restocks() {
             improvement in both UX and UI. I started by redesigning the entire _end-to-end_ 
             experience across _mobile, tablet, and website platforms_. This included conducting 
             usability testing and adding new features. Our product is now in its third iteration."
-                  className="text-xl leading-relaxed"
+                  className="leading-relaxed"
                   parentElement="p"
                 />
               </div>
-              <div className="w-full sm:w-2/5 relative">
+              <div className="w-full sm:w-[25%] relative">
                 <img src={backgroundBefore} className="object-contain" />
               </div>
             </div>
@@ -162,7 +162,7 @@ function Restocks() {
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Persona_"
               className="text-4xl font-semibold pb-10 text-center pt-36"
@@ -234,12 +234,12 @@ function Restocks() {
                 />
               </div>
             </div>
-          </>
+          </div>
         }
       />
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Competitive Analysis_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -293,12 +293,12 @@ function Restocks() {
                 />
               </div>
             </div>
-          </>
+          </div>
         }
       />
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Flowchart_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -313,13 +313,13 @@ function Restocks() {
               </p>
             </div>
             <img src={flowchart} />
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Making Design Decision Based on Data_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -332,13 +332,13 @@ function Restocks() {
               usability testing and surveys.
             </p>
             <img src={decisioning} />
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Low Fidelity_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -346,13 +346,13 @@ function Restocks() {
               parentElement="h1"
             />
             <img src={lowFidelity} />
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_High Fidelity_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -360,21 +360,21 @@ function Restocks() {
               parentElement="h1"
             />
             <img src={highFidelity} />
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <div>
+          <div className="pb-16">
             <GradientText
               text="_AI_ Parsing Information"
               className="text-4xl font-semibold pb-10 text-center"
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />
-            <img src={aiParsing} className="pb-20" />
-            <p className="text-xl leading-relaxed pb-20">
+            <img src={aiParsing} className="pb-10" />
+            <p className="text-xl leading-relaxed pb-10">
               Leveraged AI to gather data from retailer deal pages and
               automatically parse the information into our deal post page.
             </p>
@@ -385,7 +385,7 @@ function Restocks() {
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Space Efficiency_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -398,13 +398,13 @@ function Restocks() {
               parentElement="p"
             />
             <img src={spaceEfficiency} />
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Find the Perfect Balance for Everything_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -417,13 +417,13 @@ function Restocks() {
               content.
             </p>
             <img src={perfectBalance} />
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Branding Design_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -437,28 +437,30 @@ function Restocks() {
               parentElement="h1"
             />
             <img src={font} className="pb-20" />
-            <div>
-              <GradientText
-                text="Building Trust with _Colors_"
-                className="text-2xl font-semibold pb-10"
-                gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-                parentElement="h1"
-              />
-              <p className="text-xl leading-relaxed pb-10">
-                Based on user feedback, I selected blue as the primary color to
-                convey a sense of reliability and trust in our deals.
-                Additionally, transition colors are incorporated to enhance the
-                visual appeal of the UI.
-              </p>
+            <div className="flex flex-wrap sm:flex-nowrap gap-x-12">
+              <div className="w-full sm:w-1/2">
+                <GradientText
+                  text="Building Trust with _Colors_"
+                  className="text-2xl font-semibold pb-10"
+                  gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
+                  parentElement="h1"
+                />
+                <p className="text-xl leading-relaxed pb-10">
+                  Based on user feedback, I selected blue as the primary color to
+                  convey a sense of reliability and trust in our deals.
+                  Additionally, transition colors are incorporated to enhance the
+                  visual appeal of the UI.
+                </p>
+              </div>
+            <img src={colors} className="w-full sm:w-1/2 object-contain" />
             </div>
-            <img src={colors} />
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Impact_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -483,7 +485,9 @@ function Restocks() {
                   gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                   parentElement="p"
                 />
-                <BoldText text="_Reduce average time spending on filling a deal" className="text-xl" parentElement="p"/>
+                <div className="flex justify-center">
+                  <BoldText text="_Reduce average time spending on filling a deal" className="text-xl w-2/3" parentElement="p"/>
+                </div>
               </div>
 
               <div className="text-center">
@@ -496,13 +500,13 @@ function Restocks() {
                 <BoldText text="_Potential Users" className="text-xl" parentElement="p"/>
               </div>
             </div>
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Lessons Learned_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -526,13 +530,13 @@ function Restocks() {
                 />
               </ul>
             </div>
-          </>
+          </div>
         }
       />
 
       <CenteredContentWider
         content={
-          <>
+          <div className="pb-16">
             <GradientText
               text="_Next Steps_"
               className="text-4xl font-semibold pb-10 text-center"
@@ -550,7 +554,7 @@ function Restocks() {
                 parentElement="li"
               />
             </ul>
-          </>
+          </div>
         }
       />
     </div>
