@@ -10,6 +10,13 @@ import Text from "../utilities/Text";
 import GradientText from "../utilities/GradientText";
 import ScaleIn from "../utilities/ScaleIn";
 
+import map from "../../assets/home/map.svg";
+import crm from "../../assets/home/crm.svg";
+import car from "../../assets/home/car.svg";
+import bag from "../../assets/home/bag.svg";
+import apple from "../../assets/home/apple.svg";
+import ai from "../../assets/home/ai.svg";
+
 interface Image {
   img: JSX.Element;
   alt: string;
@@ -28,7 +35,7 @@ function Home() {
     const balls = [];
 
     ballsContainer.id = "balls";
-    ballsContainer.style.width = '100vw'
+    ballsContainer.style.width = "100vw";
 
     for (let i = 0; i < numBalls; i++) {
       let ball = document.createElement("div");
@@ -105,7 +112,16 @@ function Home() {
     {
       product: "Restocks",
       type: "project",
-      tags: ["E-Commerce"],
+      tags: [
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit">
+          <img src={bag} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
+          E-Commerce
+        </span>,
+        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit">
+          <img style={{background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)'}} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
+          <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Parsing_' parentElement="span"/>
+        </span>,
+      ],
       description:
         "Leading design for e-commerce platform identifying deals for 300K+ users.",
       image: restocksGif,
@@ -115,7 +131,16 @@ function Home() {
     {
       product: "IntoxiBlock",
       type: "project",
-      tags: ["3D Design"],
+      tags: [
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#0D6EFD] bg-opacity-20 text-[#0D6EFD] font-semibold rounded-full w-fit">
+          <img src={car} className="h-6 w-6 bg-[#0D6EFD] rounded-full p-1" />
+          Vehicle Safety
+        </span>,
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#2E2E2E] bg-opacity-20 text-[#2E2E2E] font-semibold rounded-full w-fit">
+          <img src={apple} className="h-6 w-6 bg-[#2E2E2E] rounded-full p-[5px]" />
+          IOS
+        </span>,
+      ],
       description:
         "Designed an app to ensure peoples safe return home after social events involving alcohol consumption.",
       image: intoxiblockGif,
@@ -125,7 +150,16 @@ function Home() {
     {
       product: "Google Cloud",
       type: "project",
-      tags: ["Cloud", "CRM", "AI"],
+      tags: [
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] pr-2 bg-[#E94236] bg-opacity-20 text-[#E94236] font-semibold rounded-full w-fit">
+          <img src={crm} className="h-6 w-6 bg-[#E94236] rounded-full p-1" />
+          CRM
+        </span>,
+        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit">
+          <img style={{background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)'}} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
+          <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Recommendation_' parentElement="span"/>
+        </span>,
+      ],
       description:
         "Designed alongside Google UX Designers and Researchers to test and validate design concepts and hypotheses of a Google AI-powered CRM application.",
       image: googleCloudGif,
@@ -135,7 +169,12 @@ function Home() {
     {
       product: "Google Maps",
       type: "project",
-      tags: ["SaaS"],
+      tags: [
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#9747FF] bg-opacity-20 text-[#9747FF] font-semibold rounded-full w-fit">
+          <img src={map} className="h-6 w-6 bg-[#9747FF] rounded-full p-1" />
+          Navigation
+        </span>,
+      ],
       description:
         "Redsigned and enhanced Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
       image: googleMapsGif,
@@ -178,7 +217,7 @@ function Home() {
             Graduated Masters in Information Science '24 at Cornell University
           </p>
           <p className="text-slate-500 text-sm lg:text-xl">
-          Graduated Bachelors in Computer Science '23 at University at Buffalo 
+            Graduated Bachelors in Computer Science '23 at University at Buffalo
           </p>
           <p className="text-slate-500 text-sm lg:text-xl">
             Previously MetLife, SpeakHire, MemoryFox
@@ -226,15 +265,8 @@ function Home() {
                     {entry.product.toUpperCase() + " | "}
                     <span className="text-xs">{entry.type.toUpperCase()}</span>
                   </h1>
-                  <div className="flex gap-x-2">
-                    {entry.tags.map((entry_, index_) => (
-                      <span
-                        className="no-underline text-sm py-1 px-3 bg-blue-500 text-slate-50 rounded-full w-fit"
-                        key={index_}
-                      >
-                        {entry_}
-                      </span>
-                    ))}
+                  <div className="flex gap-x-4">
+                    {entry.tags.map((entry_, index_) => entry_)}
                   </div>
                   <h1 className="group-hover:underline">{entry.description}</h1>
                 </div>
