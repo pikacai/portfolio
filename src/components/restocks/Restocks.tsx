@@ -108,7 +108,7 @@ function Restocks() {
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />
-            <div className="flex flex-wrap sm:flex-nowrap gap-10">
+            <div className="flex flex-wrap items-center sm:flex-nowrap gap-10">
               <div className="flex-1 flex flex-col gap-y-10 text-lg">
                 <BoldText
                   text="_Lord of Savings is community-driven_ website focused on _sharing and 
@@ -131,8 +131,8 @@ function Restocks() {
                   parentElement="p"
                 />
               </div>
-              <div className="w-full sm:w-[25%] relative">
-                <img src={backgroundBefore} className="object-contain" />
+              <div className="w-full flex justify-center sm:w-[50%] relative">
+                <img src={backgroundBefore} className="object-contain w-1/2 sm:w-full" />
               </div>
             </div>
 
@@ -169,15 +169,15 @@ function Restocks() {
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />
-            <div className="pb-10 flex flex-col md:flex-row items-center justify-start gap-10 transition-all">
-              <div className="flex flex-col gap-y-2 items-center w-full md:w-[30%]">
-                <img src={personaMother} className="w-[200px] object-contain" />
+            <div className="pb-10 flex flex-col md:flex-row items-center gap-16 transition-all">
+              <div className="flex flex-col gap-y-2 items-center w-full sm:w-[20%]">
+                <img src={personaMother} className="w-[150px] object-contain" />
                 <BoldText text="_Emily Thompson_" parentElement="p" />
-                <p className="px-4 py-2 rounded-xl bg-blue-500 text-white whitespace-nowrap">
+                <p className="px-4 py-2 text-sm rounded-xl bg-blue-500 text-white whitespace-nowrap">
                   32-year-old Working Mother
                 </p>
               </div>
-              <div className="w-full md:w-[70%]">
+              <div className="w-full sm:w-[80%]">
                 <GradientText
                   text="_Background_"
                   className="text-2xl font-semibold pb-10"
@@ -203,7 +203,7 @@ function Restocks() {
                 gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                 parentElement="h1"
               />
-              <ul className="list-disc list-inside pb-10">
+              <ul className="list-disc list-inside pb-10 pl-8">
                 <BoldText
                   text="_Limited time to search_ for deals due to work and family responsibilities."
                   className="text-xl leading-relaxed"
@@ -224,8 +224,8 @@ function Restocks() {
                   />
                 </li>
               </ul>
-              <div className="flex gap-x-1">
-                <img src={quote} className="h-16" />
+              <div className="flex gap-x-1 relative">
+                <img src={quote} className="h-16 absolute -top-12 -left-12" />
                 <BoldText
                   text="The community is so helpful! It's like having a group of friends who always know 
                         where to find the best prices."
