@@ -262,7 +262,7 @@ function Restocks() {
                 </div>
                 <BoldText
                   text="_Groupon_ focuses on location-based deals but lacks community features like user interactions, forums, or social sharing."
-                  className="text-xl leading-relaxed"
+                  className="text-xl leading-relaxed text-center"
                   parentElement="p"
                 />
               </div>
@@ -275,7 +275,7 @@ function Restocks() {
                 </div>
                 <BoldText
                   text="_Slickdeals_ has well-developed features but could benefit from an improved UI."
-                  className="text-xl leading-relaxed"
+                  className="text-xl leading-relaxed text-center"
                   parentElement="p"
                 />
               </div>
@@ -288,7 +288,7 @@ function Restocks() {
                 </div>
                 <BoldText
                   text="_Moondeal's_ UI is well-designed, resembling Xiaohongshu with a social media-inspired layout, enhanced community features, and varied deal formats."
-                  className="text-xl leading-relaxed"
+                  className="text-xl leading-relaxed text-center"
                   parentElement="p"
                 />
               </div>
