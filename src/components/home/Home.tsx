@@ -113,11 +113,11 @@ function Home() {
       product: "Restocks",
       type: "project",
       tags: [
-        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit">
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit pr-2">
           <img src={bag} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
           E-Commerce
         </span>,
-        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit">
+        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit pr-2">
           <img style={{background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)'}} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
           <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Parsing_' parentElement="span"/>
         </span>,
@@ -132,11 +132,11 @@ function Home() {
       product: "IntoxiBlock",
       type: "project",
       tags: [
-        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#0D6EFD] bg-opacity-20 text-[#0D6EFD] font-semibold rounded-full w-fit">
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#0D6EFD] bg-opacity-20 text-[#0D6EFD] font-semibold rounded-full w-fit pr-2">
           <img src={car} className="h-6 w-6 bg-[#0D6EFD] rounded-full p-1" />
           Vehicle Safety
         </span>,
-        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#2E2E2E] bg-opacity-20 text-[#2E2E2E] font-semibold rounded-full w-fit">
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#2E2E2E] bg-opacity-20 text-[#2E2E2E] font-semibold rounded-full w-fit pr-2">
           <img src={apple} className="h-6 w-6 bg-[#2E2E2E] rounded-full p-[5px]" />
           IOS
         </span>,
@@ -151,11 +151,11 @@ function Home() {
       product: "Google Cloud",
       type: "project",
       tags: [
-        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] pr-2 bg-[#E94236] bg-opacity-20 text-[#E94236] font-semibold rounded-full w-fit">
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#E94236] bg-opacity-20 text-[#E94236] font-semibold rounded-full w-fit pr-2">
           <img src={crm} className="h-6 w-6 bg-[#E94236] rounded-full p-1" />
           CRM
         </span>,
-        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit">
+        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit pr-2">
           <img style={{background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)'}} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
           <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Recommendation_' parentElement="span"/>
         </span>,
@@ -170,7 +170,7 @@ function Home() {
       product: "Google Maps",
       type: "project",
       tags: [
-        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#9747FF] bg-opacity-20 text-[#9747FF] font-semibold rounded-full w-fit">
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#9747FF] bg-opacity-20 text-[#9747FF] font-semibold rounded-full w-fit pr-2">
           <img src={map} className="h-6 w-6 bg-[#9747FF] rounded-full p-1" />
           Navigation
         </span>,
