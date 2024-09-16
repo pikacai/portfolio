@@ -467,8 +467,8 @@ function Restocks() {
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />
-            <div className="flex gap-4 sm:gap-10 justify-center">
-              <div className="text-center">
+            <div className="flex flex-wrap gap-8 justify-between">
+              <div className="flex-1 text-center">
                 <GradientText
                   text="_136_"
                   className="text-2xl font-semibold pb-2"
@@ -478,7 +478,7 @@ function Restocks() {
                 <BoldText text="_Partner Companies" className="text-xl" parentElement="p"/>
               </div>
 
-              <div className="text-center">
+              <div className="flex-1 text-center">
                 <GradientText
                   text="_83.33%_"
                   className="text-2xl font-semibold pb-2"
@@ -486,11 +486,11 @@ function Restocks() {
                   parentElement="p"
                 />
                 <div className="flex justify-center">
-                  <BoldText text="_Reduce average time spending on filling a deal" className="text-xl w-2/3" parentElement="p"/>
+                  <BoldText text="_Reduced average time spending on filling a deal" className="text-xl" parentElement="p"/>
                 </div>
               </div>
 
-              <div className="text-center">
+              <div className="flex-1 text-center">
                 <GradientText
                   text="_300k_"
                   className="text-2xl font-semibold pb-2"
