@@ -672,6 +672,26 @@ video {
   top: 90%;
 }
 
+.-right-12 {
+  right: -3rem;
+}
+
+.-right-0 {
+  right: -0px;
+}
+
+.right-12 {
+  right: 3rem;
+}
+
+.right-8 {
+  right: 2rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -970,10 +990,6 @@ video {
   width: 0.5rem;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
-}
-
 .w-2\/5 {
   width: 40%;
 }
@@ -1124,10 +1140,6 @@ video {
   flex: 1 1 auto;
 }
 
-.flex-grow {
-  flex-grow: 1;
-}
-
 .-translate-x-\[50\%\] {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1184,6 +1196,22 @@ video {
 .scale-150 {
   --tw-scale-x: 1.5;
   --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-\[\(-1\2c -1\)\] {
+  --tw-scale-x: (-1,-1);
+  --tw-scale-y: (-1,-1);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-y-\[-1\] {
+  --tw-scale-y: -1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-x-\[-1\] {
+  --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1978,6 +2006,10 @@ video {
   padding-top: 2rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2639,10 +2671,6 @@ button:focus-visible {
 
   .sm\:justify-start {
     justify-content: flex-start;
-  }
-
-  .sm\:gap-10 {
-    gap: 2.5rem;
   }
 
   .sm\:gap-2 {

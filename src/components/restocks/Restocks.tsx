@@ -108,7 +108,7 @@ function Restocks() {
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />
-            <div className="flex flex-wrap items-center sm:flex-nowrap gap-10">
+            <div className="flex flex-wrap items-center sm:flex-nowrap gap-10 pb-12z">
               <div className="flex-1 flex flex-col gap-y-10 text-lg">
                 <BoldText
                   text="_Lord of Savings is community-driven_ website focused on _sharing and 
@@ -132,7 +132,10 @@ function Restocks() {
                 />
               </div>
               <div className="w-full flex justify-center sm:w-[50%] relative">
-                <img src={backgroundBefore} className="object-contain w-1/2 sm:w-full" />
+                <img
+                  src={backgroundBefore}
+                  className="object-contain w-1/2 sm:w-full"
+                />
               </div>
             </div>
 
@@ -224,13 +227,16 @@ function Restocks() {
                   />
                 </li>
               </ul>
-              <div className="flex gap-x-1 relative">
+              <div className="flex gap-x-1 relative mt-10">
                 <img src={quote} className="h-16 absolute -top-12 -left-12" />
                 <BoldText
-                  text="The community is so helpful! It's like having a group of friends who always know 
-                        where to find the best prices."
+                  text="The community is so helpful! It's like having a group of friends who always know where to find the best prices. However, there are a few features that could be improved to make the experience even better."
                   className="text-xl leading-relaxed italic"
                   parentElement="p"
+                />
+                <img
+                  src={quote}
+                  className="h-16 absolute -top-12 right-2 transform scale-x-[-1]"
                 />
               </div>
             </div>
@@ -307,12 +313,63 @@ function Restocks() {
             />
             <div className="pb-20">
               <p className="text-xl leading-relaxed">
-                Managed the product framework and logic helps developers better
+                Created the product framework and logic helps developers better
                 understand the product architecture, clarify page hierarchies,
                 and assess interaction logic.
               </p>
             </div>
             <img src={flowchart} />
+          </div>
+        }
+      />
+
+      <CenteredContentWider
+        content={
+          <div className="pb-16">
+            <GradientText
+              text="_Low Fidelity_"
+              className="text-4xl font-semibold pb-10 text-center"
+              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
+              parentElement="h1"
+            />
+            <img src={lowFidelity} />
+          </div>
+        }
+      />
+
+      <CenteredContentWider
+        content={
+          <div className="pb-16">
+            <GradientText
+              text="_Branding Design_"
+              className="text-4xl font-semibold pb-10 text-center"
+              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
+              parentElement="h1"
+            />
+            <GradientText
+              text="Building Trust with _Font_"
+              className="text-2xl font-semibold pb-10"
+              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
+              parentElement="h1"
+            />
+            <img src={font} className="pb-20" />
+            <div className="flex flex-wrap sm:flex-nowrap gap-x-12">
+              <div className="w-full sm:w-1/2">
+                <GradientText
+                  text="Building Trust with _Colors_"
+                  className="text-2xl font-semibold pb-10"
+                  gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
+                  parentElement="h1"
+                />
+                <p className="text-xl leading-relaxed pb-10">
+                  Based on user feedback, I selected blue as the primary color
+                  to convey a sense of reliability and trust in our deals.
+                  Additionally, transition colors are incorporated to enhance
+                  the visual appeal of the UI.
+                </p>
+              </div>
+              <img src={colors} className="w-full sm:w-1/2 object-contain" />
+            </div>
           </div>
         }
       />
@@ -336,35 +393,7 @@ function Restocks() {
         }
       />
 
-      <CenteredContentWider
-        content={
-          <div className="pb-16">
-            <GradientText
-              text="_Low Fidelity_"
-              className="text-4xl font-semibold pb-10 text-center"
-              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-              parentElement="h1"
-            />
-            <img src={lowFidelity} />
-          </div>
-        }
-      />
-
-      <CenteredContentWider
-        content={
-          <div className="pb-16">
-            <GradientText
-              text="_High Fidelity_"
-              className="text-4xl font-semibold pb-10 text-center"
-              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-              parentElement="h1"
-            />
-            <img src={highFidelity} />
-          </div>
-        }
-      />
-
-      <CenteredContentWider
+<CenteredContentWider
         content={
           <div className="pb-16">
             <GradientText
@@ -425,43 +454,6 @@ function Restocks() {
         content={
           <div className="pb-16">
             <GradientText
-              text="_Branding Design_"
-              className="text-4xl font-semibold pb-10 text-center"
-              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-              parentElement="h1"
-            />
-            <GradientText
-              text="Building Trust with _Font_"
-              className="text-2xl font-semibold pb-10"
-              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-              parentElement="h1"
-            />
-            <img src={font} className="pb-20" />
-            <div className="flex flex-wrap sm:flex-nowrap gap-x-12">
-              <div className="w-full sm:w-1/2">
-                <GradientText
-                  text="Building Trust with _Colors_"
-                  className="text-2xl font-semibold pb-10"
-                  gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-                  parentElement="h1"
-                />
-                <p className="text-xl leading-relaxed pb-10">
-                  Based on user feedback, I selected blue as the primary color to
-                  convey a sense of reliability and trust in our deals.
-                  Additionally, transition colors are incorporated to enhance the
-                  visual appeal of the UI.
-                </p>
-              </div>
-            <img src={colors} className="w-full sm:w-1/2 object-contain" />
-            </div>
-          </div>
-        }
-      />
-
-      <CenteredContentWider
-        content={
-          <div className="pb-16">
-            <GradientText
               text="_Impact_"
               className="text-4xl font-semibold pb-10 text-center"
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
@@ -475,7 +467,11 @@ function Restocks() {
                   gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                   parentElement="p"
                 />
-                <BoldText text="_Partner Companies" className="text-xl" parentElement="p"/>
+                <BoldText
+                  text="_Partner Companies"
+                  className="text-xl"
+                  parentElement="p"
+                />
               </div>
 
               <div className="flex-1 text-center">
@@ -486,7 +482,11 @@ function Restocks() {
                   parentElement="p"
                 />
                 <div className="flex justify-center">
-                  <BoldText text="_Reduced average time spending on filling a deal" className="text-xl" parentElement="p"/>
+                  <BoldText
+                    text="_Reduced average time spending on filling a deal"
+                    className="text-xl"
+                    parentElement="p"
+                  />
                 </div>
               </div>
 
@@ -497,9 +497,27 @@ function Restocks() {
                   gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                   parentElement="p"
                 />
-                <BoldText text="_Potential Users" className="text-xl" parentElement="p"/>
+                <BoldText
+                  text="_Potential Users"
+                  className="text-xl"
+                  parentElement="p"
+                />
               </div>
             </div>
+          </div>
+        }
+      />
+
+      <CenteredContentWider
+        content={
+          <div className="pb-16">
+            <GradientText
+              text="_Final Design_"
+              className="text-4xl font-semibold pb-10 text-center"
+              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
+              parentElement="h1"
+            />
+            <img src={highFidelity} />
           </div>
         }
       />
