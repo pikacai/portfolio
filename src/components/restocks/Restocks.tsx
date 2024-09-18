@@ -11,6 +11,7 @@ import dealmoon from "../../assets/restocks/competitive-analysis-dealmoon.png";
 import flowchart from "../../assets/restocks/flowchart.png";
 import decisioning from "../../assets/restocks/data-based-decisioning.png";
 import lowFidelity from "../../assets/restocks/low-fidelity.png";
+import affinityMapping from "../../assets/restocks/affinity-mapping.png";
 import highFidelity from "../../assets/restocks/high-fidelity.png";
 import aiParsing from "../../assets/restocks/ai-parsing.png";
 import fasterDealFilling from "../../assets/restocks/faster-deal-filling.png";
@@ -29,6 +30,7 @@ import { Link } from "react-router-dom";
 import GradientText from "../utilities/GradientText";
 import BoldText from "../utilities/BoldText";
 import Section from "../utilities/Section";
+import NumberIncreaser from "../intoxiblock/IntersectionObserver/NumberIncreaser";
 
 function Restocks() {
   const [active, setActive] = useState<number>(1);
@@ -384,16 +386,26 @@ function Restocks() {
               parentElement="h1"
             />
             <p className="pb-10 text-xl leading-relaxed">
-              I based many design decisions on data from Google Analytics, along
-              with user feedback analysis through Affinity Mapping from
-              usability testing and surveys.
+              I based many design decisions on insights from Google Analytics.
+              For example, after discovering that we had more mobile users than
+              web users, I shifted the design focus from the website to the
+              mobile app. I also prioritized quick links based on the most
+              viewed pages, such as the brands and lightning deals pages.
+              Additionally, I conducted A/B testing on two button designs to
+              determine which had a higher click-through rate.
             </p>
             <img src={decisioning} />
+            <p className="text-xl leading-relaxed pt-28 pb-10">
+              In addition to making design decisions based on user feedback and
+              needs, I utilized Affinity Mapping to analyze feedback from
+              usability testing and surveys.
+            </p>
+            <img src={affinityMapping} />
           </div>
         }
       />
 
-<CenteredContentWider
+      <CenteredContentWider
         content={
           <div className="pb-16">
             <GradientText
@@ -461,12 +473,15 @@ function Restocks() {
             />
             <div className="flex flex-wrap gap-8 justify-between">
               <div className="flex-1 text-center">
-                <GradientText
+                {/* <GradientText
                   text="_136_"
                   className="text-2xl font-semibold pb-2"
                   gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                   parentElement="p"
-                />
+                /> */}
+                <p className="text-2xl font-semibold pb-2 text-blue-500">
+                  <NumberIncreaser target={136} duration={900} textAfter="" />
+                </p>
                 <BoldText
                   text="_Partner Companies"
                   className="text-xl"
@@ -475,12 +490,19 @@ function Restocks() {
               </div>
 
               <div className="flex-1 text-center">
-                <GradientText
+                {/* <GradientText
                   text="_83.33%_"
                   className="text-2xl font-semibold pb-2"
                   gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                   parentElement="p"
-                />
+                /> */}
+                <p className="text-2xl font-semibold pb-2 text-blue-500">
+                  <NumberIncreaser
+                    target={83.33}
+                    duration={900}
+                    textAfter="%"
+                  />
+                </p>
                 <div className="flex justify-center">
                   <BoldText
                     text="_Reduced average time spending on filling a deal"
@@ -491,12 +513,16 @@ function Restocks() {
               </div>
 
               <div className="flex-1 text-center">
-                <GradientText
+                {/* <GradientText
                   text="_300k_"
                   className="text-2xl font-semibold pb-2"
                   gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                   parentElement="p"
-                />
+                /> */}
+                <p className="text-2xl font-semibold pb-2 text-blue-500">
+                <NumberIncreaser target={300000} duration={750} textAfter="k" />
+
+                </p>
                 <BoldText
                   text="_Potential Users"
                   className="text-xl"

@@ -241,7 +241,7 @@ function Intoxiblock() {
                   National Highway Traffic Safety Administration
                 </Link> */}
                 {/* ) */}
-                We’re exploring ways to ensure people stay safe at social events involving alcohol. 
+                We're exploring ways to ensure people stay safe at social events involving alcohol. 
                 <br/> Why is this topic important?
                 Every year, around 630,000 people are reported missing, and every day, 37 people die in drunk-driving crashes in the U.S. These tragedies could be avoided with better safety measures. One of our team members knows this all too well, having lost a family member to a drunk-driving accident. This personal loss, coupled with the distress of seeing friends engage in risky behaviors, drives us to find solutions. We aim to create a safety net to <b> help people make responsible decisions when drinking and driving and getting home safely is a concern. </b>
               </p>
