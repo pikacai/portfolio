@@ -174,7 +174,7 @@ function Restocks() {
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />
-            <div className="pb-10 flex flex-col md:flex-row items-center gap-16 transition-all">
+            <div className="pb-8 flex flex-col md:flex-row items-center gap-16 transition-all">
               <div className="flex flex-col gap-y-2 items-center w-full sm:w-[20%]">
                 <img src={personaMother} className="w-[150px] object-contain" />
                 <BoldText text="_Emily Thompson_" parentElement="p" />
@@ -185,7 +185,7 @@ function Restocks() {
               <div className="w-full sm:w-[80%]">
                 <GradientText
                   text="_Background_"
-                  className="text-2xl font-semibold pb-10"
+                  className="text-2xl font-semibold pb-5"
                   gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                   parentElement="h1"
                 />
@@ -204,7 +204,7 @@ function Restocks() {
             <div className="pb-10">
               <GradientText
                 text="_Challenges_"
-                className="text-2xl font-semibold pb-10"
+                className="text-2xl font-semibold pb-5"
                 gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
                 parentElement="h1"
               />

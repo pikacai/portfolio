@@ -129,25 +129,6 @@ function Home() {
       link: "restocks",
     },
     {
-      product: "IntoxiBlock",
-      type: "project",
-      tags: [
-        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#0D6EFD] bg-opacity-20 text-[#0D6EFD] font-semibold rounded-full w-fit pr-2">
-          <img src={car} className="h-6 w-6 bg-[#0D6EFD] rounded-full p-1" />
-          Vehicle Safety
-        </span>,
-        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#2E2E2E] bg-opacity-20 text-[#2E2E2E] font-semibold rounded-full w-fit pr-2">
-          <img src={apple} className="h-6 w-6 bg-[#2E2E2E] rounded-full p-[5px]" />
-          IOS
-        </span>,
-      ],
-      description:
-        "Designed an app to ensure peoples safe return home after social events involving alcohol consumption.",
-      image: intoxiblockGif,
-      alt: "A profile page on MetConnect as viewed on an iPad.",
-      link: "intoxiblock",
-    },
-    {
       product: "Google Cloud",
       type: "project",
       tags: [
@@ -165,6 +146,25 @@ function Home() {
       image: googleCloudGif,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "google2",
+    },
+    {
+      product: "IntoxiBlock",
+      type: "project",
+      tags: [
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#0D6EFD] bg-opacity-20 text-[#0D6EFD] font-semibold rounded-full w-fit pr-2">
+          <img src={car} className="h-6 w-6 bg-[#0D6EFD] rounded-full p-1" />
+          Vehicle Safety
+        </span>,
+        <span className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#2E2E2E] bg-opacity-20 text-[#2E2E2E] font-semibold rounded-full w-fit pr-2">
+          <img src={apple} className="h-6 w-6 bg-[#2E2E2E] rounded-full p-[5px]" />
+          IOS
+        </span>,
+      ],
+      description:
+        "Designed an app to ensure peoples safe return home after social events involving alcohol consumption.",
+      image: intoxiblockGif,
+      alt: "A profile page on MetConnect as viewed on an iPad.",
+      link: "intoxiblock",
     },
     {
       product: "Google Maps",
