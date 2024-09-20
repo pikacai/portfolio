@@ -20,6 +20,10 @@ import perfectBalance from "../../assets/restocks/perfect-balance.png";
 import font from "../../assets/restocks/branding-design-font.png";
 import colors from "../../assets/restocks/branding-design-colors.png";
 import lessonsLearned from "../../assets/restocks/lessons-learned.png";
+import FastClock from "../../assets/restocks/fast-clock.svg";
+import Buildings from "../../assets/restocks/buildings.svg";
+import People from "../../assets/restocks/people.svg";
+
 
 // Brand Icons
 import figma from "../../assets/brandIcons/figma.svg";
@@ -472,31 +476,25 @@ function Restocks() {
               parentElement="h1"
             />
             <div className="flex flex-wrap gap-8 justify-between">
-              <div className="flex-1 text-center">
-                {/* <GradientText
-                  text="_136_"
-                  className="text-2xl font-semibold pb-2"
-                  gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-                  parentElement="p"
-                /> */}
-                <p className="text-2xl font-semibold pb-2 text-blue-500">
+              <div className="flex-1 bg-[#027DFF] bg-opacity-[0.08] rounded-xl relative p-8 py-10 pr-20">
+                <div className="bg-white p-2 rounded-bl-xl absolute h-16 w-16 right-0 top-0">
+                  <img src={Buildings} className="object-contain p-2 rounded-xl" style={{background: 'linear-gradient(172.04deg, #05AAFF 28.95%, #2567FF 93.3%)'}}/>
+                </div>
+                <p className="text-4xl font-semibold pb-2 text-blue-500">
                   <NumberIncreaser target={136} duration={900} textAfter="" />
                 </p>
                 <BoldText
-                  text="_Partner Companies"
-                  className="text-xl"
+                  text="Partner Companies"
+                  className="text-lg"
                   parentElement="p"
                 />
               </div>
 
-              <div className="flex-1 text-center">
-                {/* <GradientText
-                  text="_83.33%_"
-                  className="text-2xl font-semibold pb-2"
-                  gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-                  parentElement="p"
-                /> */}
-                <p className="text-2xl font-semibold pb-2 text-blue-500">
+              <div className="flex-1 bg-[#027DFF] bg-opacity-[0.08] rounded-xl relative p-8 py-10">
+                <div className="bg-white p-2 rounded-bl-xl absolute h-16 w-16 right-0 top-0">
+                  <img src={FastClock} className="object-contain p-2 rounded-xl" style={{background: 'linear-gradient(172.04deg, #05AAFF 28.95%, #2567FF 93.3%)'}}/>
+                </div>
+                <p className="text-4xl font-semibold pb-2 text-blue-500 pr-20">
                   <NumberIncreaser
                     target={83.33}
                     duration={900}
@@ -505,27 +503,24 @@ function Restocks() {
                 </p>
                 <div className="flex justify-center">
                   <BoldText
-                    text="_Reduced average time spending on filling a deal"
-                    className="text-xl"
+                    text="Reduced average time spending on filling a deal"
+                    className="text-lg"
                     parentElement="p"
                   />
                 </div>
               </div>
 
-              <div className="flex-1 text-center">
-                {/* <GradientText
-                  text="_300k_"
-                  className="text-2xl font-semibold pb-2"
-                  gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-                  parentElement="p"
-                /> */}
-                <p className="text-2xl font-semibold pb-2 text-blue-500">
-                <NumberIncreaser target={300000} duration={750} textAfter="k" />
+              <div className="flex-1 bg-[#027DFF] bg-opacity-[0.08] rounded-xl relative p-8 py-10 pr-20">
+                <div className="bg-white p-2 rounded-bl-xl absolute h-16 w-16 right-0 top-0">
+                  <img src={People} className="object-contain p-2 rounded-xl" style={{background: 'linear-gradient(172.04deg, #05AAFF 28.95%, #2567FF 93.3%)'}}/>
+                </div>
+                <p className="text-4xl font-semibold pb-2 text-blue-500">
+                <NumberIncreaser target={300000} duration={750} textAfter="" />
 
                 </p>
                 <BoldText
-                  text="_Potential Users"
-                  className="text-xl"
+                  text="Potential Users"
+                  className="text-lg"
                   parentElement="p"
                 />
               </div>
