@@ -233,8 +233,8 @@ function Restocks() {
                   />
                 </li>
               </ul>
-              <div className="flex gap-x-1 relative mt-10">
-                <img src={quote} className="h-16 absolute -top-12 -left-12" />
+              <div className="flex gap-x-1 relative mt-10 px-12">
+                <img src={quote} className="h-16 absolute -top-12 -left-2" />
                 <BoldText
                   text="The community is so helpful! It's like having a group of friends who always know where to find the best prices. However, there are a few features that could be improved to make the experience even better."
                   className="text-xl leading-relaxed italic"
@@ -242,7 +242,7 @@ function Restocks() {
                 />
                 <img
                   src={quote}
-                  className="h-16 absolute -top-12 right-2 transform scale-x-[-1]"
+                  className="h-16 absolute -top-12 -right-0 transform scale-x-[-1]"
                 />
               </div>
             </div>
