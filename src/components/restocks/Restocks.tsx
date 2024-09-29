@@ -515,7 +515,7 @@ function Restocks() {
                   <img src={People} className="object-contain p-2 rounded-xl" style={{background: 'linear-gradient(172.04deg, #05AAFF 28.95%, #2567FF 93.3%)'}}/>
                 </div>
                 <p className="text-4xl font-semibold pb-2 text-blue-500">
-                <NumberIncreaser target={300000} duration={750} textAfter="" />
+                <NumberIncreaser target={365000} duration={750} textAfter="+" />
 
                 </p>
                 <BoldText
