@@ -3,6 +3,7 @@ import backgroundBefore from "../../assets/restocks/background-before.png";
 import backgroundFlow from "../../assets/restocks/background-flow.png";
 import resultBefore from "../../assets/restocks/result-before.png";
 import resultAfter from "../../assets/restocks/result-after.png";
+import resultBeforeAfter from '../../assets/restocks/before-after.png';
 import personaMother from "../../assets/restocks/persona-mother.png";
 import quote from "../../assets/restocks/quote.png";
 import groupon from "../../assets/restocks/competitive-analysis-groupon.png";
@@ -85,7 +86,7 @@ function Restocks() {
               <p className="font-semibold pb-4 underline underline-offset-2">
                 Duration
               </p>
-              <p>9 months</p>
+              <p>10 months</p>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <p className="font-semibold pb-4 underline underline-offset-2">
@@ -150,7 +151,13 @@ function Restocks() {
         }
       />
 
-      <Section
+      {/* <Section */}
+        {/* content={ */}
+          <img src={resultBeforeAfter} />
+        {/* } */}
+      {/* /> */}
+
+      {/* <Section
         background="linear-gradient(90deg, #05AAFF 0%, #2567FF 100%)"
         content={
           <div className="flex justify-center gap-x-4 sm:gap-x-10 xl:gap-x-16 items-center transition-all">
@@ -167,7 +174,7 @@ function Restocks() {
             />
           </div>
         }
-      />
+      /> */}
 
       <CenteredContentWider
         content={
