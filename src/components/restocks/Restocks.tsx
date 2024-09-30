@@ -134,11 +134,13 @@ function Restocks() {
             improvement in both UX and UI. I started by redesigning the entire _end-to-end_ 
             experience across _mobile, tablet, and website platforms_. This included conducting 
             usability testing and adding new features. Our product is now in its third iteration."
-                  className="leading-relaxed"
+                  className="leading-relaxed mb-4"
                   parentElement="p"
                 />
               </div>
               <div className="w-full flex justify-center sm:w-[50%] relative">
+                
+               
                 <img
                   src={backgroundBefore}
                   className="object-contain w-1/2 sm:w-full"
@@ -202,7 +204,7 @@ function Restocks() {
                 />
                 <GradientText
                   text="Emily is a busy working mom who manages her household on a budget. 
-                        She loves finding great deals on products to _save money_ for her 
+                        She loves finding great deals on products to save money for her 
                         family's needs and occasional splurges. With her two kids growing fast, 
                         Emily is always on the lookout for discounts on clothing, school supplies, 
                         and entertainment activities for her family."
@@ -231,19 +233,13 @@ function Restocks() {
                   parentElement="li"
                 />
                 <li className="text-xl leading-relaxed">
-                  <BoldText text="Needs to ensure the deals she finds are actually _good quality and _" />
-                  <GradientText
-                    gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-                    className="font-semibold"
-                    text="_trustworthy_"
-                    parentElement="span"
-                  />
+                  <BoldText text="Needs to ensure the deals she finds are actually _good quality and trustworthy." />
                 </li>
               </ul>
               <div className="flex gap-x-1 relative mt-10 px-12">
                 <img src={quote} className="h-16 absolute -top-12 -left-2" />
                 <BoldText
-                  text="The community is so helpful! It's like having a group of friends who always know where to find the best prices. However, there are a few features that could be improved to make the experience even better."
+                  text="I want to find great deals without feeling like it’s a full-time job. With so many options available, it’s frustrating to figure out if something is truly a good deal or just a waste of time. I also want to receive immediate notifications when a deal arises so I don’t miss out on savings."
                   className="text-xl leading-relaxed italic"
                   parentElement="p"
                 />
@@ -473,6 +469,20 @@ function Restocks() {
         }
       />
 
+<CenteredContentWider
+        content={
+          <div className="pb-16">
+            <GradientText
+              text="_Final Design_"
+              className="text-4xl font-semibold pb-10 text-center"
+              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
+              parentElement="h1"
+            />
+            <img src={highFidelity} />
+          </div>
+        }
+      />
+
       <CenteredContentWider
         content={
           <div className="pb-16">
@@ -526,7 +536,7 @@ function Restocks() {
 
                 </p>
                 <BoldText
-                  text="Potential Users"
+                  text="Users"
                   className="text-lg"
                   parentElement="p"
                 />
@@ -536,19 +546,7 @@ function Restocks() {
         }
       />
 
-      <CenteredContentWider
-        content={
-          <div className="pb-16">
-            <GradientText
-              text="_Final Design_"
-              className="text-4xl font-semibold pb-10 text-center"
-              gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
-              parentElement="h1"
-            />
-            <img src={highFidelity} />
-          </div>
-        }
-      />
+
 
       <CenteredContentWider
         content={
@@ -563,7 +561,7 @@ function Restocks() {
               <img src={lessonsLearned} className="h-[200px]" />
               <ul className="list-disc list-inside text-xl leading-loose">
                 <BoldText
-                  text="_We are NOT the users_, especially when I'm the sole designer."
+                  text="_We are not the users_, it's crucial to rely on usability testing to gather real feedback and understand how real users interact with the design, ensuring it meets their needs—not just our assumptions."
                   parentElement="li"
                 />
                 <BoldText
