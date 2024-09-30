@@ -41,7 +41,7 @@ function Google() {
             </div>
             <div className="flex-1">
               <p className="font-semibold pb-4">Timeline</p>
-              <p>8 weeks</p>
+              <p>14 weeks</p>
             </div>
             <div className="flex-1">
               <p className="font-semibold pb-4">Teammates</p>
