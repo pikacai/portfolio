@@ -7,171 +7,164 @@ import BoldText from "../utilities/BoldText";
 
 import vangogh from '../../assets/about/vangogh.png';
 import vote from '../../assets/about/vote.png';
-
-interface BallProps {
-  size: string;
-  color: string;
-  flip: boolean;
-  start: boolean;
-}
-
-function Ball({ size, color, flip, start }: BallProps) {
-  const sizeInt = parseInt(size.replace(/\D/g, ''));
-
-  const ballStyle = {
-    borderColor: color,
-    borderWidth: sizeInt / 10,
-    width: sizeInt,
-    height: sizeInt,
-  };
-
-  const innerBallStyle = {
-    backgroundColor: color,
-    width: sizeInt / 2,
-    height: sizeInt / 2,
-  };
-
-  const outerLineStyle = {
-    height: sizeInt / 12,
-    width: 50,
-  };
-
-  const outerBallStyle = {
-    width: sizeInt / 4,
-    height: sizeInt / 4,
-  };
-
-  const positionLine = flip
-    ? { right: `calc(100% + ${sizeInt / 10}px)` }
-    : { left: `calc(100% + ${sizeInt / 10}px)` };
-
-  const yearTextPosition = flip
-    ? { left: `calc(200% + ${sizeInt / 10}px)` }
-    : { right: `calc(200% + ${sizeInt / 10}px)` };
-
-  return start ? (
-    <div style={ballStyle} className="bg-white rounded-full absolute left-1/2 transform -translate-x-1/2">
-      <span style={innerBallStyle} className="absolute rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
-      {!flip && (
-        <span style={{ ...outerLineStyle, ...positionLine }} className="bg-[#DCDCDC] absolute top-1/2 -translate-y-1/2">
-          <span style={outerBallStyle} className="absolute bg-[#DCDCDC] rounded-full top-1/2 right-0 transform -translate-y-1/2"></span>
-        </span>
-      )}
-      {!flip && <p style={yearTextPosition} className="text-3xl absolute top-1/2 -translate-y-1/2 text-right">2024</p>}
-      {flip && <p style={yearTextPosition} className="text-3xl absolute top-1/2 -translate-y-1/2">2024</p>}
-      {flip && (
-        <span style={{ ...outerLineStyle, ...positionLine }} className="bg-[#DCDCDC] absolute top-1/2 -translate-y-1/2 rotate-180">
-          <span style={outerBallStyle} className="absolute bg-[#DCDCDC] rounded-full top-1/2 right-0 transform -translate-y-1/2"></span>
-        </span>
-      )}
-    </div>
-  ) : (
-    <div className="absolute left-1/2 transform -translate-x-1/2">
-      {!flip && (
-        <span style={{ ...outerLineStyle, left: `calc(100% + 1px)` }} className="bg-[#DCDCDC] absolute top-1/2 -translate-y-1/2">
-          <span style={outerBallStyle} className="absolute bg-[#DCDCDC] rounded-full top-1/2 right-0 transform -translate-y-1/2"></span>
-        </span>
-      )}
-      {/* {!flip && <p style={{ right: `calc(200% + ${sizeInt / 10}px)` }} className="text-3xl absolute top-1/2 -translate-y-1/2 text-right">2024</p>} */}
-      {/* {flip && <p style={{ left: `calc(200% + ${sizeInt / 10}px)` }} className="text-3xl absolute top-1/2 -translate-y-1/2">2024</p>} */}
-      {flip && (
-        <span style={{ ...outerLineStyle, right: `calc(100% + 1px)` }} className="bg-[#DCDCDC] absolute top-1/2 -translate-y-1/2 rotate-180">
-          <span style={outerBallStyle} className="absolute bg-[#DCDCDC] rounded-full top-1/2 right-0 transform -translate-y-1/2"></span>
-        </span>
-      )}
-    </div>
-  );
-}
+import notes from '../../assets/about/notes.png';
+import nycPlanning from '../../assets/about/nyc-planning.png';
+import nycPlanningLogo from '../../assets/about/nyc-planning-logo.png';
+import ub from '../../assets/about/ub.png';
+import bull from '../../assets/about/bull.png';
+import codePathFlyer from '../../assets/about/codepath-flyer.png';
+import speakhireLogo from '../../assets/about/speakhire-logo.png';
+import metlife from '../../assets/about/metlife.png';
+import metlifeLogo from '../../assets/about/metlife-logo.svg';
+import dec from '../../assets/about/dec.png';
+import google from '../../assets/about/google.png';
+import googleLogo from '../../assets/about/google-logo.svg';
+import ar from '../../assets/about/ar.png';
+import cornellGraduation from '../../assets/about/cornell-graduation.png';
+import cornellLogo from '../../assets/about/cornell-logo.svg';
+import cornellEvent from '../../assets/about/cornell-event.png';
+import { Timeline } from "../ui/timeline";
 
 
 function About_() {
-  const timeline = [{}, {}, {}, {}];
+  const data = [
+    {
+      title: "2018",
+      content: (
+        <div>
+          <BoldText
+            text="Since I was young, I've had a _passion for art and leadership_. Here's a photo of me emulating Van Gogh and a poster from when I was elected Student Body President."
+            className="text-base font-normal mb-8"
+            parentElement="p"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={vangogh}></img>
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={vote}></img>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2019",
+      content: (
+        <div>
+          <BoldText
+            text="I began my undergraduate journey studying pre-med. Here's a photo from my time as a pre-med _content creator_."
+            className="text-base font-normal mb-8"
+            parentElement="p"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={notes}></img>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2020",
+      content: (
+        <div>
+          <BoldText
+            text="My very first internship was at the New York City Department of City Planning where I was a _Quality Assurance Engineer_ improving an internal application to handle building permits."
+            className="text-base font-normal mb-8"
+            parentElement="p"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={nycPlanning}></img>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2021",
+      content: (
+        <div>
+          <BoldText
+            text="This year was a roller coaster. I transferred to the University at Buffalo to begin a new chapter studying _Computer Science_."
+            className="text-base font-normal mb-4"
+            parentElement="p"
+          />
+          <BoldText
+            text="Not long after joining, I _launched University at Buffalo's very first CodePath.org iOS development course_ which I lead for 2 semesters."
+            className="text-base font-normal mb-4"
+            parentElement="p"
+          />
+          <BoldText
+            text="I also completed a second internship at _SpeakHire_. It was my first experience being a Frontend Software Engineer focusing on _User Experience Design_."
+            className="text-base font-normal mb-8"
+            parentElement="p"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={ub}></img>
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={codePathFlyer}></img>
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={speakhireLogo}></img>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2022",
+      content: (
+        <div>
+          <BoldText
+            text="I continued my UX product design journey at MetLife where I _launched a prototype for an internal social media platform_ to better connect 45,000+ associates."
+            className="text-base font-normal mb-8"
+            parentElement="p"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={metlife}></img>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2023",
+      content: (
+        <div>
+          <BoldText
+            text="Upon graduating, I experienced something new! I became a _Summer Camp Counselor_ for the New York State Department of Environmental Conservation."
+            className="text-base font-normal mb-4"
+            parentElement="p"
+          />
+          <BoldText
+            text="Following that experience, I was accepted into _Cornell University to study Information Science with a concentration in Human-Computer Interaction (HCI)_. I immediately enrolled into a joint Cornell x Google venture to explore creating an internal CRM tool for Google Cloud."
+            className="text-base font-normal mb-4"
+            parentElement="p"
+          />
+          <BoldText
+            text="Just before the New Year, I completed an _augmented reality course, where I won the competition with my capstone project_."
+            className="text-base font-normal mb-8"
+            parentElement="p"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={dec}></img>
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={google}></img>
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={ar}></img>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2024",
+      content: (
+        <div>
+          <BoldText
+            text="As I concluded my time at Cornell University, I'm proud to have hosted events to strengthen our community and taken the lead in creating a yearbook to capture our shared experiences."
+            className="text-base font-normal mb-8"
+            parentElement="p"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={cornellGraduation}></img>
+            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={cornellEvent}></img>
+          </div>
+        </div>
+      ),
+    },
+  ];
+
   return (
     <Section
-      className="min-h-screen bg-blue-50"
       content={
-        <div className="mt-[500px]">
-          {
-            timeline.map((entry, index) => (<div className="flex">
-              {/* <div className="w-[300px] h-[300px] shadow-md"></div> */}
-              <div className="w-full"></div>
-              <div className="w-[3px] min-h-[300px] shadow-md bg-blue-500 relative">
-                {/* <span className="w-[20px] h-[20px] bg-red-500 rounded-full absolute -left-[50%]"> */}
-                <Ball size="28px" color="#22D1EE" flip={index % 2 !== 0} start={index % 2 === 0} />
-                {/* </span> */}
-                {/* <Year className="text-2xl text-blue-500" flip={false}>2019</Year> */}
-              </div>
-              <div className="w-full flex mb-[90px] ml-[90px] -gap-x-8">
-                <div className="w-[200px] h-[300px] p-3 shadow-md rounded-sm bg-white flex flex-col -rotate-6">
-                  <img className="bg-gray-400 h-[80%] object-contain" src={vangogh}></img>
-                  <BoldText text="Passionate about _drawing_ since childhood" parentElement="p"></BoldText>
-                </div>
-                <div className="w-[200px] h-[300px] p-3 shadow-md rounded-sm bg-white flex flex-col rotate-6">
-                  <img className="bg-gray-400 h-[80%] object-contain" src={vote}></img>
-                  <BoldText text="Passionate about _drawing_ since childhood" parentElement="p"></BoldText>
-                </div>
-              </div>
-              {/* <div className="w-[300px] h-[300px] shadow-md"></div> */}
-            </div>
-
-            ))
-          }
-        </div>
-        // <div>
-        //   <div className="mb-4 sm:mb-12">
-        //     <Text
-        //       className="flex flex-col gap-y-2 sm:gap-y-4 text-center !text-5xl sm:!text-7xl animate-fadeIn animate-slideInUp"
-        //       parentElement="h1"
-        //     >
-        //       Pika Cai
-        //       <GradientText
-        //         className="font-medium text-2xl sm:text-3xl"
-        //         gradient="linear-gradient(to right, #00c6ff, #0072ff)"
-        //         text="_UX Designer_"
-        //         parentElement="span"
-        //       />
-        //       <Text className="italic" parentElement="h2">
-        //         Currently Lead Product Designer @ Restocks LLC
-        //       </Text>
-        //     </Text>
-        //   </div>
-
-        //   <div className="flex justify-center">
-        //     <div className="flex flex-col gap-y-4 md:gap-y-6 w-full lg:w-4/5 xl:w-3/5">
-        //       <ScaleIn delay={500}>
-        //         <div className="bg-white rounded-xl shadow-md border p-4">
-        //           <Text
-        //             className="flex flex-col gap-1 sm:gap-2 mb-2"
-        //             parentElement="h3"
-        //           >
-        //             <div className="flex items-center justify-between sm:justify-start gap-x-2 font-medium">
-        //               Prior Work Experience
-        //               <WorkOutlineRounded />
-        //             </div>
-        //             Previously Google, MetLife, MemoryFox, SpeakHire, NYC
-        //             Department of City Planning
-        //           </Text>
-        //         </div>
-        //       </ScaleIn>
-        //       <ScaleIn delay={1000}>
-        //         <div className="bg-white rounded-xl shadow-md border p-4">
-        //           <Text
-        //             className="flex flex-col gap-1 sm:gap-2 mb-2"
-        //             parentElement="h3"
-        //           >
-        //             <div className="flex items-center justify-between sm:justify-start gap-x-2 font-medium">
-        //               Education
-        //               <SchoolOutlined />
-        //             </div>
-        //             M.P.S., Information Science @ Cornell University '24
-        //             <br />
-        //             B.S., Computer Science @ University at Buffalo '23
-        //           </Text>
-        //         </div>
-        //       </ScaleIn>
-        //     </div>
-        //   </div>
-        // </div>
+        <Timeline data={data} />
       }
     />
   );
