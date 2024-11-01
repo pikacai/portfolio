@@ -16,6 +16,7 @@ import car from "../../assets/home/car.svg";
 import bag from "../../assets/home/bag.svg";
 import apple from "../../assets/home/apple.svg";
 import ai from "../../assets/home/ai.svg";
+import { FlipWords } from "../ui/flip-words";
 
 interface Image {
   img: JSX.Element;
@@ -117,9 +118,9 @@ function Home() {
           <img src={bag} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
           E-Commerce
         </span>,
-        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit pr-2">
-          <img style={{background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)'}} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
-          <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Parsing_' parentElement="span"/>
+        <span style={{ background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)' }} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit pr-2">
+          <img style={{ background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)' }} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
+          <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Parsing_' parentElement="span" />
         </span>,
       ],
       description:
@@ -136,9 +137,9 @@ function Home() {
           <img src={crm} className="h-6 w-6 bg-[#E94236] rounded-full p-1" />
           CRM
         </span>,
-        <span style={{background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)'}} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit pr-2">
-          <img style={{background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)'}} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
-          <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Recommendation_' parentElement="span"/>
+        <span style={{ background: 'linear-gradient(89.19deg, rgba(13, 140, 255, 0.2) 0.7%, rgba(80, 216, 253, 0.2) 33.24%, rgba(212, 154, 238, 0.2) 62.33%, rgba(252, 150, 103, 0.2) 99.31%)' }} className="flex items-center gap-x-2 no-underline text-sm p-[6px] bg-[#CEFFD8] text-[#00B852] font-semibold rounded-full w-fit pr-2">
+          <img style={{ background: 'linear-gradient(89.19deg, #0D8CFF 0.7%, #50D8FD 33.24%, #D49AEE 62.33%, #FC9667 99.31%)' }} src={ai} className="h-6 w-6 bg-[#00B852] rounded-full p-1" />
+          <GradientText gradient="linear-gradient(89.19deg, #0D8CFF 0.7%, #00B3E4 31.51%, #AF16F4 62.33%, #FF7535 99.31%)" text='_AI Recommendation_' parentElement="span" />
         </span>,
       ],
       description:
@@ -196,31 +197,16 @@ function Home() {
   return (
     <div>
       <div className="h-screen w-screen flex justify-center items-center relative">
-        <div>
+        <div className='w-[370px] lg:w-[470px]'>
           <h1 className="text-4xl lg:text-6xl font-medium flex gap-5">
             <span ref={ref} className="h-fit leading-[normal]">
               Pika Cai
             </span>
-            <div className="overflow-hidden">
-              <div
-                className="transition-all leading-[normal] h-[43px] lg:h-[60px]"
-                // style={{ transform: `translate(0, -${translate}px)` }}
-              >
-                <span className="block text-blue-500">UX Designer</span>
-                {/* <span className="block text-green-500">UX Researcher</span>
-                <span className="block text-blue-500">Product Designer</span>
-                <span className="block text-yellow-500">Product Manager</span> */}
-              </div>
-            </div>
           </h1>
-          <p className="text-slate-500 text-sm lg:text-xl">
-            Graduated Masters in Information Science '24 at Cornell University
-          </p>
-          <p className="text-slate-500 text-sm lg:text-xl">
-            Graduated Bachelors in Computer Science '23 at University at Buffalo
-          </p>
-          <p className="text-slate-500 text-sm lg:text-xl">
-            Previously MetLife, SpeakHire, MemoryFox
+          <p className="text-slate-500 text-xl lg:text-3xl flex">
+            <span>Building</span>
+            <FlipWords className="pr-[2px] text-slate-500" duration={1000} words={['elegant', 'sleek', 'minimalist', 'vibrant']} />
+            <FlipWords className="pl-0 text-slate-500" duration={1000} words={['interfaces', 'applications', 'UI components', 'designs']} />
           </p>
         </div>
 
@@ -228,17 +214,14 @@ function Home() {
           className="absolute w-auto bottom-20 animate-bounce text-xs lg:text-base hover:cursor-pointer"
           onClick={handleScroll}
         >
-          Selected Works &#8595;
+          {/* Selected Works &#8595; */}
+          <GradientText gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)" text="_Selected Works &#8595;_" className="pt-10 text-center font-semibold" parentElement="h1" />
         </div>
       </div>
 
       <div className="bg-gradient-to-b from-white to-slate-50 h-60"></div>
 
       <div ref={selectedProjects} className="bg-slate-50">
-        <Text className="pt-10 text-center font-semibold" parentElement="h1">
-          Selected Works
-        </Text>
-
         <div className="pt-10 pb-24 sm:py-24 flex justify-center">
           <div className="w-[90%] xl:w-5/6 flex flex-wrap justify-center gap-12">
             {experience.map((entry, index) => (

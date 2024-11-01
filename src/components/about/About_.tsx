@@ -38,8 +38,8 @@ function About_() {
             parentElement="p"
           />
           <div className="grid grid-cols-2 gap-4">
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={vangogh}></img>
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={vote}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={vangogh}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={vote}></img>
           </div>
         </div>
       ),
@@ -54,7 +54,7 @@ function About_() {
             parentElement="p"
           />
           <div className="grid grid-cols-2 gap-4">
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={notes}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={notes}></img>
           </div>
         </div>
       ),
@@ -69,7 +69,7 @@ function About_() {
             parentElement="p"
           />
           <div className="grid grid-cols-2 gap-4">
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={nycPlanning}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={nycPlanning}></img>
           </div>
         </div>
       ),
@@ -94,9 +94,9 @@ function About_() {
             parentElement="p"
           />
           <div className="grid grid-cols-2 gap-4">
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={ub}></img>
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={codePathFlyer}></img>
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={speakhireLogo}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={ub}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={codePathFlyer}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={speakhireLogo}></img>
           </div>
         </div>
       ),
@@ -111,7 +111,7 @@ function About_() {
             parentElement="p"
           />
           <div className="grid grid-cols-2 gap-4">
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={metlife}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={metlife}></img>
           </div>
         </div>
       ),
@@ -136,9 +136,9 @@ function About_() {
             parentElement="p"
           />
           <div className="grid grid-cols-2 gap-4">
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={dec}></img>
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={google}></img>
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={ar}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={dec}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={google}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={ar}></img>
           </div>
         </div>
       ),
@@ -153,8 +153,8 @@ function About_() {
             parentElement="p"
           />
           <div className="grid grid-cols-2 gap-4">
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={cornellGraduation}></img>
-            <img className="shadow-lg border bg-white h-[80%] object-contain rounded-md p-2" src={cornellEvent}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={cornellGraduation}></img>
+            <img className="shadow-lg border bg-white object-contain rounded-md p-2" src={cornellEvent}></img>
           </div>
         </div>
       ),
