@@ -33,7 +33,7 @@ function About_() {
       content: (
         <div>
           <BoldText
-            text="Since I was young, I've had a _passion for art and leadership_. Here's a photo of me emulating Van Gogh and a poster from when I was elected Student Body President."
+            text="Since I was young, I've had a _passion for visual art and serving the community_. Here's a photo of me emulating Van Gogh and a poster from when I was elected Student Body President."
             className="text-base font-normal mb-8"
             parentElement="p"
           />
@@ -162,11 +162,11 @@ function About_() {
   ];
 
   return (
-    <Section
-      content={
+    // <Section
+    //   content={
         <Timeline data={data} />
-      }
-    />
+    //   }
+    // />
   );
 }
 
