@@ -4,6 +4,10 @@ import googleCloudGif from "../../assets/googleCloudGif.gif";
 import googleMapsGif from "../../assets/googleMapsGif.gif";
 import intoxiblockGif from "../../assets/intoxiblockGif.gif";
 import restocksGif from "../../assets/restocks/restocksGif.gif";
+import googleCloudGifStatic from "../../assets/googleCloudGifStatic.png";
+import googleMapsGifStatic from "../../assets/googleMapsGifStatic.png";
+import intoxiblockGifStatic from "../../assets/intoxiblockGifStatic.png";
+import restocksGifStatic from "../../assets/restocksGifStatic.png";
 import Section from "../utilities/Section";
 import { SchoolOutlined, WorkOutlineRounded } from "@mui/icons-material";
 import Text from "../utilities/Text";
@@ -19,6 +23,7 @@ import apple from "../../assets/home/apple.svg";
 import ai from "../../assets/home/ai.svg";
 import { FlipWords } from "../ui/flip-words";
 import LottieAnimation from "../utilities/LottieAnimation";
+import HoverImage from "../HoverImage";
 
 interface Image {
   img: JSX.Element;
@@ -146,6 +151,7 @@ function Home() {
       description:
         "Leading design for e-commerce platform identifying deals for 300K+ users.",
       image: restocksGif,
+      image_: restocksGifStatic,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "restocks",
     },
@@ -182,6 +188,7 @@ function Home() {
       description:
         "Designed alongside Google UX Designers and Researchers to test and validate design concepts and hypotheses of a Google AI-powered CRM application.",
       image: googleCloudGif,
+      image_: googleCloudGifStatic,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "google2",
     },
@@ -204,6 +211,7 @@ function Home() {
       description:
         "Designed an app to ensure peoples safe return home after social events involving alcohol consumption.",
       image: intoxiblockGif,
+      image_: intoxiblockGifStatic,
       alt: "A profile page on MetConnect as viewed on an iPad.",
       link: "intoxiblock",
     },
@@ -219,6 +227,7 @@ function Home() {
       description:
         "Redsigned and enhanced Google Maps for streamlined navigation and user-friendly features, optimizing the mapping experience.",
       image: googleMapsGif,
+      image_: googleMapsGifStatic,
       alt: "",
       link: "google",
     },
@@ -323,10 +332,11 @@ function Home() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <img
+                {/* <img
                   src={entry.image}
                   className="h-64 sm:h-2/4 p-8 object-scale-down"
-                />
+                /> */}
+                <HoverImage gifImage={entry.image} staticImage={entry.image_}/>
                 <div className="p-8 border-t flex flex-col gap-y-2">
                   <h1 className="group-hover:underline text-lg lg:text-xl flex items-center gap-x-1 font-semibold tracking-wider">
                     {entry.product.toUpperCase() + " | "}

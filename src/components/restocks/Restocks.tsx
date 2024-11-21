@@ -39,6 +39,8 @@ import NumberIncreaser from "../intoxiblock/IntersectionObserver/NumberIncreaser
 
 function Restocks() {
   const [active, setActive] = useState<number>(1);
+  const [imagesLoaded, setImagesLoaded] = useState(0); // Track loaded images
+  const [isLoaded, setIsLoaded] = useState(false); // Track if all images are loaded
 
   useEffect(() => {
     console.log(active);
@@ -46,33 +48,33 @@ function Restocks() {
 
   const ref = useRef<HTMLDivElement>(null);
 
-  // On first render, fade in.
-  let bufferInterval = 0;
+  // Fade in only when all images have loaded
   useEffect(() => {
-    if (ref && ref.current) {
+    if (isLoaded && ref.current) {
       const div = ref.current;
-      div.style.opacity = "0";
-
-      // @ts-ignore
-      bufferInterval = setInterval(() => {
-        //@ts-ignore
-        div.style.transition = "all 1s ease-in";
-        //@ts-ignore
-        div.style.opacity = "100";
-      }, 50);
+      div.style.opacity = "1";
+      div.style.transition = "opacity 1s ease-in";
     }
+  }, [isLoaded]);
 
-    return () => {
-      if (ref && ref.current) {
-        const div = ref.current;
-        div.removeAttribute("style");
-      }
-    };
-  }, []);
+  // Callback to update loaded image count
+  const handleImageLoad = () => {
+    setImagesLoaded((prevCount) => prevCount + 1);
+  };
+
+  // Check if all images are loaded
+  useEffect(() => {
+    if (imagesLoaded === totalImages) {
+      setIsLoaded(true);
+    }
+  }, [imagesLoaded]);
+
+  const totalImages = 10;
 
   return (
     <div ref={ref}>
-      <img src={intro} />
+      {/* <img src={intro} /> */}
+      <img src={intro} onLoad={handleImageLoad} />
       <CenteredContentWider
         content={
           <div className="flex items-start justify-center text-center text-xl leading-relaxed">
