@@ -10,14 +10,14 @@ function HoverImage({ staticImage, gifImage }: Props) {
 
   return (
     <div
-      className="relative h-64 sm:h-2/4 p-8"
+      className="relative h-64 sm:h-[50%] p-8"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Static Image */}
       <img
         src={staticImage}
-        className={`absolute top-0 left-0 w-full h-full object-scale-down transition-opacity duration-500 ${
+        className={`p-8 absolute top-0 left-0 w-full h-full object-scale-down transition-opacity duration-500 ${
           isHovered ? "opacity-0" : "opacity-100"
         }`}
         alt="Static"
@@ -26,7 +26,7 @@ function HoverImage({ staticImage, gifImage }: Props) {
       {/* GIF Image */}
       <img
         src={gifImage}
-        className={`absolute top-0 left-0 w-full h-full object-scale-down transition-opacity duration-500 ${
+        className={`p-8 absolute top-0 left-0 w-full h-full object-scale-down transition-opacity duration-500 ${
           isHovered ? "opacity-100" : "opacity-0"
         }`}
         alt="GIF"
