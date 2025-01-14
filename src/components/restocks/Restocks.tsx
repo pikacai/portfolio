@@ -88,7 +88,7 @@ function Restocks() {
               <p className="font-semibold pb-4 underline underline-offset-2">
                 Duration
               </p>
-              <p>10 months</p>
+              <p>12 months</p>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <p className="font-semibold pb-4 underline underline-offset-2">
