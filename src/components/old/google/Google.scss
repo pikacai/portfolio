@@ -1,0 +1,139 @@
+.googleSectionContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.googleSection {
+    margin-top: 50px;
+    margin-bottom: 300px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.googleSectionInner {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.googleTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.googleHeadingCircle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 33px;
+    opacity: 0.4;
+}
+
+.googleHeadingTitle {
+    margin: 0;
+    z-index: 1000;
+}
+
+.googleTextCenter {
+    text-align: center;
+}
+
+.googleDivider {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.googleLeft {
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.googleRight {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.googlePhoneContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.googlePhoneCircle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.googlePhone {
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.03), 0px 24px 34px rgba(0, 0, 0, 0.09), 0px 3px 34px rgba(0, 0, 0, 0.15);    border-radius: 30px;
+    max-width: 230px;
+    height: 480px;
+    padding: 5px;
+    background-color: white;
+    z-index: 2000;
+}
+
+.googlePhoneDivider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.googlePhoneDividerArrow {
+    width: 10%;
+    align-self: flex-end;
+
+}
+
+.googlePhoneDividerText {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.googleOutComeContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.googleOutComeContainerInner {
+    width: 70%;
+}
+
+.googleYoutubeVideo {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.googleGreen {
+    color: '#2DA94E';
+}
+
+.googleBlue {
+    color: '#4285F3'; 
+}
+
+.googleRed {
+    color: '#EA4435';
+}
+
+.googleYellow {
+    color: '#FABD03';
+}
+
+

@@ -1,0 +1,47 @@
+.cover {
+    height: 70%;
+    padding: 30px;
+}
+
+.coverHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.coverCompanyLogo {
+    width: 60px;
+}
+
+.coverBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 40px 0px 40px;
+}
+
+.coverBodyLeft {
+    padding: 60px 0px 60px 0px;
+    flex: 40%;
+}
+
+.coverTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.coverDescription {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.coverBodyRight {
+    // max-height: 400px;
+    max-width: 490px;
+    flex: 50%;
+}
