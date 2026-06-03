@@ -1,6 +1,6 @@
-import iphone from "./assets/video1.gif";
-import wallpaper from './assets/wallpaper.jpg';
-import report from './assets/report.gif';
+import iphone from "./assets/video1.mp4";
+import wallpaper from "./assets/wallpaper.jpg";
+import report from "./assets/report.mp4";
 
 function Iphone() {
   return (
@@ -10,16 +10,15 @@ function Iphone() {
         src={wallpaper}
         alt=""
       />
-      <img
-        className="z-10 aspect-[9/19.5] bg-cover rounded-3xl border-black border-8 shadow-[0_0_0_5px_#6B7280] h-[50vh] w-auto"
+      <video
+        className="z-10 aspect-[9/19.5] bg-cover rounded-3xl border-black border-8 shadow-[0_0_0_5px_#6B7280] h-[50vh] w-auto object-cover"
         src={iphone}
-        alt=""
+        autoPlay
+        loop
+        muted
+        playsInline
       />
-      <img
-        className="h-[61vh]"
-        src={report}
-        alt=""
-      />
+      <video className="h-[61vh]" src={report} autoPlay loop muted playsInline />
     </div>
   );
 }

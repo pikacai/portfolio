@@ -27,15 +27,14 @@ import People from "../../assets/restocks/people.svg";
 
 
 // Brand Icons
-import figma from "../../assets/brandIcons/figma.svg";
 
 import { useEffect, useRef, useState } from "react";
 import CenteredContentWider from "../intoxiblock/CenteredContentWider";
-import { Link } from "react-router-dom";
 import GradientText from "../utilities/GradientText";
 import BoldText from "../utilities/BoldText";
 import Section from "../utilities/Section";
 import NumberIncreaser from "../intoxiblock/IntersectionObserver/NumberIncreaser";
+import RestocksHero from "./RestocksHero";
 
 function Restocks() {
   const [active, setActive] = useState<number>(1);
@@ -73,47 +72,14 @@ function Restocks() {
 
   return (
     <div ref={ref}>
-      {/* <img src={intro} /> */}
-      <img src={intro} onLoad={handleImageLoad} />
-      <CenteredContentWider
-        content={
-          <div className="flex items-start justify-center text-center text-xl leading-relaxed">
-            <div className="flex-1">
-              <p className="font-semibold pb-4 underline underline-offset-2">
-                Role
-              </p>
-              <p>UX Designer</p>
-            </div>
-            <div className="flex-1">
-              <p className="font-semibold pb-4 underline underline-offset-2">
-                Duration
-              </p>
-              <p>12 months</p>
-            </div>
-            <div className="flex-1 flex flex-col items-center">
-              <p className="font-semibold pb-4 underline underline-offset-2">
-                Slides
-              </p>
-              <Link
-                target="_blank"
-                to={
-                  "https://www.figma.com/slides/kuwxK5D4aaFYnAvI03ZXYm/Lord-Of-Savings-Slides?node-id=33-1771&t=7LRYmsN1AsFQoSN8-1"
-                }
-                className="hover:opacity-80 transition-all py-2 px-6 mb-1 text-lg bg-black rounded-xl text-white whitespace-nowrap flex justify-center items-center"
-              >
-                <img src={figma} alt="" className="h-6" />
-                Figma Slides
-              </Link>
-            </div>
-          </div>
-        }
-      />
+      <RestocksHero />
+      <img src={intro} onLoad={handleImageLoad} className="hidden" />
       <CenteredContentWider
         content={
           <>
             <GradientText
               text="_Background_"
-              className="text-4xl font-semibold pb-10 text-center"
+              className="text-4xl font-semibold pb-10 pt-24 text-center"
               gradient="linear-gradient(90deg, #016FFF 0%, #01A2FF 100%)"
               parentElement="h1"
             />

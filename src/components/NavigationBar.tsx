@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import BrandMark from "./BrandMark";
 
 const links = [
   { label: "Projects", to: "/" },
@@ -41,9 +42,7 @@ function NavigationBar() {
         } ${baseText}`}
       >
         <Link to="/" className="group flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-gradient text-sm font-bold text-white shadow-[0_8px_20px_-8px_rgba(175,22,244,0.6)] transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105">
-            PC
-          </span>
+          <BrandMark size={36} />
           <span className="text-xl font-semibold tracking-tight">
             Pika&nbsp;Cai
           </span>
@@ -67,11 +66,6 @@ function NavigationBar() {
               </li>
             );
           })}
-          <li>
-            <Link to="/about" className="btn-gradient text-sm">
-              Let&apos;s talk
-            </Link>
-          </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -120,12 +114,6 @@ function NavigationBar() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/about"
-              className="btn-gradient mt-1 justify-center text-base"
-            >
-              Let&apos;s talk
-            </Link>
           </motion.div>
         )}
       </AnimatePresence>

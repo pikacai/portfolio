@@ -183,6 +183,71 @@
   }
 }
 
+/* ============ Playful home (scoped via .pika-play) ============ */
+.font-play-display {
+  font-family: "Bricolage Grotesque", "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+.font-play-body {
+  font-family: "Hanken Grotesk", "Inter", system-ui, sans-serif;
+}
+
+.pika-play {
+  --cobalt: #2f6bff;
+  --coral: #ff6b5c;
+  --sun: #ffc93c;
+  --mint: #19c37d;
+  --grape: #8b5cf6;
+  --cream: #fffbf2;
+}
+
+/* hand-drawn marker highlight behind a word */
+.marker-hi {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+.marker-hi > span {
+  position: relative;
+  z-index: 1;
+}
+.marker-hi svg {
+  position: absolute;
+  left: -6%;
+  bottom: -0.18em;
+  width: 112%;
+  height: 0.5em;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* grain overlay */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+@keyframes pika-float {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-14px) rotate(calc(var(--r, 0deg) + 4deg)); }
+}
+.pika-float { animation: pika-float 6s ease-in-out infinite; }
+
+@keyframes pika-wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.group:hover .pika-wiggle { animation: pika-wiggle 0.4s ease-in-out; }
+
+@keyframes pika-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.pika-marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: pika-marquee 26s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;

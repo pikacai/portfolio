@@ -7,17 +7,16 @@ import Home from "./components/home/Home";
 import GoogleContent from "./components/google/GoogleContent";
 import Footer from "./components/Footer";
 import About from "./components/about/About";
-import HamocContent from "./components/hamoc/HamocContent";
-import MetlifeContent from "./components/metlife/MetlifeContent";
 import Secret from "./components/secret/Secret";
 import Iphone from "./Iphone";
 import Resume from "./components/Resume";
-import HomeOld from "./components/Homeold";
 import smoothscroll from "smoothscroll-polyfill";
 import Intoxiblock from "./components/intoxiblock/Intoxiblock";
 import Google from "./components/google2/Google";
 import SocialMedia from "./components/socialMedia/SocialMedia";
 import Jukebox from "./components/jukebox/Jukebox";
+import EquipGo from "./components/equipgo/EquipGo";
+import Reframe from "./components/reframe/Reframe";
 import ReactGA from "react-ga4";
 import { useCallback, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -34,10 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Pages />}>
           <Route path="/" element={<Home />} />
-          <Route path="/old" element={<HomeOld />} />
           <Route path="/google" element={<GoogleContent />} />
-          <Route path="/hamoc" element={<HamocContent />} />
-          <Route path="/metlife" element={<MetlifeContent />} />
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="/secret" element={<Secret />} />
           <Route path="/iphone" element={<Iphone />} />
@@ -46,6 +42,8 @@ function App() {
           <Route path="/google2" element={<Google />} />
           <Route path="/social-media" element={<SocialMedia />} />
           <Route path="/jukebox" element={<Jukebox />} />
+          <Route path="/equipgo" element={<EquipGo />} />
+          <Route path="/reframe" element={<Reframe />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/restocks" element={<Restocks/>}/>
           <Route path="/about" element={<About_/>}/>

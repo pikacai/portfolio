@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import JukeboxHero from "./JukeboxHero";
 import Reveal from "../fx/Reveal";
+import SectionExport from "./sections/SectionExport";
 import Context from "./sections/Context";
 import Persona from "./sections/Persona";
 import Branding from "./sections/Branding";
-import Competitive from "./sections/Competitive";
-import Positioning from "./sections/Positioning";
 import Flow from "./sections/Flow";
+import Comparison from "./sections/Comparison";
 import Closing from "./sections/Closing";
 
 function Jukebox() {
@@ -22,8 +22,15 @@ function Jukebox() {
         Projects
       </Link>
 
-      {/* Recreated hero — pixel-faithful to the export */}
-      <JukeboxHero />
+      {/* Hero — your export if present, else the coded recreation */}
+      <SectionExport
+        file="hero.png"
+        alt="Jukebox hero"
+        bgClass="bg-[#3b6ef5] pt-16"
+        imgClass="mx-auto block w-full max-w-6xl"
+      >
+        <JukeboxHero />
+      </SectionExport>
 
       {/* What is Jukebox? */}
       <section className="bg-white px-6 py-20 sm:py-28">
@@ -50,27 +57,9 @@ function Jukebox() {
       <Context />
       <Persona />
       <Branding />
-      <Competitive />
-      <Positioning />
+      <Comparison />
       <Flow />
       <Closing />
-
-      {/* Back CTA */}
-      <section className="px-6 py-16">
-        <Reveal className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 rounded-3xl border border-ink/10 bg-white p-7 shadow-soft">
-          <p className="text-lg font-medium">Turning music into an investable asset class.</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/" className="btn-ghost text-base">
-              <ArrowLeft className="h-4 w-4" />
-              All projects
-            </Link>
-            <Link to="/about" className="btn-gradient text-base">
-              About me
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </Reveal>
-      </section>
     </div>
   );
 }

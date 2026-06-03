@@ -1,4 +1,3 @@
-import video1 from "../../assets/google/video1.gif";
 import photo1 from "../../assets/google/photo1.svg";
 import photo2 from "../../assets/google/photo2.svg";
 import video2 from "../../assets/google/video2.gif";

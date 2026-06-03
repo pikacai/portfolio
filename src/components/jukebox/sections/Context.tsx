@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Reveal from "../../fx/Reveal";
 import { Logo } from "../JukeboxHero";
+import SectionExport from "./SectionExport";
 
 const platforms = [
   { name: "Jukebox", color: "#3b6ef5", active: true },
@@ -23,36 +24,31 @@ const platforms = [
 
 const eqBars = [0, 0.15, 0.3, 0.45, 0.2, 0.35];
 
-const cardHover =
-  "transition-transform duration-300 hover:-translate-y-1";
+const cardHover = "transition-transform duration-300 hover:-translate-y-1";
 
-export default function Context() {
+function ContextCoded() {
   return (
-    <section className="relative overflow-hidden bg-[#06060a] px-4 py-20 sm:px-6 sm:py-28">
-      {/* ambient glow */}
+    <section className="relative overflow-hidden bg-[#eef2fb] px-4 py-20 sm:px-6 sm:py-28">
+      {/* ambient tint */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-[#3b6ef5]/20 blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-violet-600/15 blur-[100px]"
+        className="pointer-events-none absolute -top-32 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-[#3b6ef5]/10 blur-[120px]"
       />
 
-      <Reveal className="relative mx-auto mb-14 max-w-3xl text-center text-white">
-        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-white/40">
+      <Reveal className="relative mx-auto mb-14 max-w-3xl text-center">
+        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-ink-muted">
           The context
         </span>
-        <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-[2.6rem]">
+        <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink sm:text-[2.6rem]">
           A culture obsessed with music — and the people who want to{" "}
-          <span className="text-[#6b9bff]">own a piece of it</span>
+          <span className="text-[#3b6ef5]">own a piece of it</span>
         </h2>
       </Reveal>
 
       <div className="relative mx-auto grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2">
         {/* Trading platform selector */}
         <Reveal className="md:row-span-2">
-          <div className={`rounded-3xl bg-white p-5 shadow-[0_30px_70px_-25px_rgba(0,0,0,0.6)] ${cardHover}`}>
+          <div className={`rounded-3xl border border-ink/10 bg-white p-5 shadow-soft ${cardHover}`}>
             <div className="mb-4 flex items-center gap-3">
               <ChevronLeft className="h-5 w-5 text-neutral-500" />
               <span className="text-lg font-semibold text-neutral-900">
@@ -64,7 +60,7 @@ export default function Context() {
                 <div
                   key={p.name}
                   className={`flex items-center gap-3 rounded-2xl px-3 py-3 transition-colors ${
-                    p.active ? "bg-blue-50" : "hover:bg-neutral-50"
+                    p.active ? "bg-blue-50" : "hover:bg-[#eef2fb]"
                   }`}
                 >
                   <span
@@ -87,9 +83,9 @@ export default function Context() {
           </div>
         </Reveal>
 
-        {/* Now playing */}
+        {/* Now playing (colour accent) */}
         <Reveal>
-          <div className={`relative flex h-full min-h-[260px] flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#27486f] via-[#1a2c44] to-[#0f1726] p-6 ${cardHover}`}>
+          <div className={`relative flex h-full min-h-[260px] flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-[#27486f] via-[#1a2c44] to-[#0f1726] p-6 ${cardHover}`}>
             <div
               aria-hidden
               className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-sky-400/20 blur-3xl"
@@ -104,7 +100,6 @@ export default function Context() {
             </div>
 
             <div className="relative flex items-center gap-4">
-              {/* album + equalizer */}
               <div className="relative grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-600">
                 <span className="flex items-end gap-[3px]">
                   {eqBars.map((d, i) => (
@@ -127,7 +122,6 @@ export default function Context() {
               </div>
             </div>
 
-            {/* progress */}
             <div className="relative">
               <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
                 <div className="h-full w-[42%] rounded-full bg-white/80" />
@@ -141,39 +135,38 @@ export default function Context() {
 
         {/* Asset card */}
         <Reveal>
-          <div className={`flex h-full items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.04] p-5 ${cardHover} hover:border-white/20`}>
-            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br from-violet-400 to-fuchsia-500 ring-1 ring-white/20">
+          <div className={`flex h-full items-center gap-4 rounded-3xl border border-ink/10 bg-white p-5 shadow-soft ${cardHover}`}>
+            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br from-violet-400 to-fuchsia-500">
               <span className="absolute bottom-2 left-2 flex items-end gap-[2px]">
                 {[0, 0.2, 0.1].map((d, i) => (
                   <span
                     key={i}
-                    className="h-4 w-[3px] origin-bottom rounded-full bg-white/70 animate-eq"
+                    className="h-4 w-[3px] origin-bottom rounded-full bg-white/80 animate-eq"
                     style={{ animationDelay: `${d}s` }}
                   />
                 ))}
               </span>
             </div>
             <div className="flex-1">
-              <span className="inline-block rounded-md bg-white/10 px-2 py-0.5 text-[11px] font-medium text-white/70">
+              <span className="inline-block rounded-md bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-600">
                 Yield · 12%
               </span>
-              <p className="mt-2 text-[11px] text-white/40">
+              <p className="mt-2 text-[11px] text-neutral-400">
                 Song Recording · Production
               </p>
-              <p className="text-base font-semibold text-white">SOUR</p>
-              <p className="text-xs text-white/50">Olivia Rodrigo</p>
+              <p className="text-base font-semibold text-neutral-900">SOUR</p>
+              <p className="text-xs text-neutral-500">Olivia Rodrigo</p>
               <div className="mt-2 flex items-center gap-3">
-                <span className="text-sm font-semibold text-white">890K</span>
-                <span className="flex items-center text-xs text-emerald-400">
+                <span className="text-sm font-semibold text-neutral-900">890K</span>
+                <span className="flex items-center text-xs text-emerald-500">
                   <ArrowUp className="h-3 w-3" />
                   6.43%
                 </span>
-                {/* sparkline */}
                 <svg viewBox="0 0 80 24" className="h-5 w-20">
                   <polyline
                     points="0,18 12,16 24,19 36,10 48,13 60,6 72,9 80,4"
                     fill="none"
-                    stroke="#34d399"
+                    stroke="#10b981"
                     strokeWidth="2"
                     strokeLinejoin="round"
                     strokeLinecap="round"
@@ -186,7 +179,7 @@ export default function Context() {
 
         {/* Research doc */}
         <Reveal className="md:col-span-2">
-          <div className={`flex items-start gap-5 rounded-3xl bg-white p-6 shadow-[0_30px_70px_-25px_rgba(0,0,0,0.6)] ${cardHover}`}>
+          <div className={`flex items-start gap-5 rounded-3xl border border-ink/10 bg-white p-6 shadow-soft ${cardHover}`}>
             <div className="relative grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-2xl bg-neutral-900 text-white">
               <FileText className="relative z-10 h-7 w-7" />
               <svg viewBox="0 0 96 96" className="absolute inset-0 opacity-60">
@@ -226,5 +219,13 @@ export default function Context() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+export default function Context() {
+  return (
+    <SectionExport file="project_overview.png" alt="Jukebox context" bgClass="bg-[#eef2fb]">
+      <ContextCoded />
+    </SectionExport>
   );
 }

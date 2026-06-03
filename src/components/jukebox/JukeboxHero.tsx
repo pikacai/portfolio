@@ -90,12 +90,6 @@ export default function JukeboxHero() {
         </motion.h1>
       </div>
 
-      {/* Decorative stacked cards on the right */}
-      <div className="pointer-events-none absolute bottom-0 right-0 z-0 hidden h-[70%] w-[40%] lg:block">
-        <div className="absolute bottom-0 right-10 h-full w-[58%] rounded-t-2xl bg-white/10" />
-        <div className="absolute bottom-0 right-24 h-[94%] w-[58%] rounded-t-2xl bg-white/[0.07]" />
-      </div>
-
       {/* Browser mockup */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -103,7 +97,12 @@ export default function JukeboxHero() {
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 mx-auto mt-12 max-w-5xl"
       >
-        <div className="overflow-x-auto rounded-t-2xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
+        {/* faint stacked "screens" fanned behind the window's right edge */}
+        <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
+          <div className="absolute right-[-5%] top-[12%] h-[92%] w-[38%] rounded-2xl bg-white/[0.10]" />
+          <div className="absolute right-[-11%] top-[20%] h-[92%] w-[38%] rounded-2xl bg-white/[0.06]" />
+        </div>
+        <div className="relative z-10 overflow-x-auto rounded-t-2xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]">
           <div className="min-w-[820px] rounded-t-2xl bg-white">
             {/* Tab row */}
             <div className="flex items-center gap-2 rounded-t-2xl bg-[#dfe1e5] px-3 py-2">

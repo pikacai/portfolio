@@ -7,6 +7,10 @@ interface Props {
   /** Slight resting tilt for a scrapbook feel, in degrees. */
   tilt?: number;
   className?: string;
+  /** How the image fills its frame. Defaults to "contain". */
+  fit?: "cover" | "contain";
+  /** Optional fixed aspect ratio (Tailwind class, e.g. "aspect-[4/5]"). */
+  ratio?: string;
 }
 
 /**
@@ -19,6 +23,8 @@ export default function PhotoCard({
   caption,
   tilt = 0,
   className = "",
+  fit = "contain",
+  ratio = "",
 }: Props) {
   return (
     <motion.div
@@ -27,12 +33,14 @@ export default function PhotoCard({
       transition={{ type: "spring", stiffness: 260, damping: 18 }}
       className={`group relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-2 shadow-soft hover:shadow-lift ${className}`}
     >
-      <div className="overflow-hidden rounded-xl">
+      <div className={`overflow-hidden rounded-xl ${ratio}`}>
         <img
           src={src}
           alt={alt}
           loading="lazy"
-          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${
+            fit === "cover" ? "object-cover" : "object-contain"
+          }`}
         />
       </div>
       {/* gradient sheen on hover */}

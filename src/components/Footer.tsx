@@ -6,10 +6,12 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { ArrowUpRight } from "lucide-react";
 
 import googleCloudGif from "../assets/googleCloudGif.gif";
-import googleMapsGif from "../assets/googleMapsGif.gif";
 import intoxiblockGif from "../assets/intoxiblockGif.gif";
 
 import Reveal from "./fx/Reveal";
+import EquipGoCover from "./equipgo/EquipGoCover";
+import ReframeCover from "./reframe/ReframeCover";
+import JukeboxCover from "./jukebox/JukeboxCover";
 
 const jukeboxThumb = `${import.meta.env.BASE_URL}jukebox/thumbnail.png`;
 
@@ -23,6 +25,24 @@ function Footer() {
         "Turning music royalties into an investable asset class.",
       image: jukeboxThumb,
       link: "jukebox",
+    },
+    {
+      product: "EquipGo",
+      type: "internal tool",
+      tags: ["FDNY", "Asset Tracking"],
+      description:
+        "An internal FDNY app to track & manage equipment — saving $1M+ in lost gear.",
+      image: jukeboxThumb,
+      link: "equipgo",
+    },
+    {
+      product: "Reframe",
+      type: "concept",
+      tags: ["Health", "Onboarding"],
+      description:
+        "Redesigned onboarding for a behavior-change app — cutting drop-off and speeding sign-up.",
+      image: jukeboxThumb,
+      link: "reframe",
     },
     {
       product: "IntoxiBlock",
@@ -41,15 +61,6 @@ function Footer() {
         "Validated design concepts for a Google AI-powered CRM application.",
       image: googleCloudGif,
       link: "google2",
-    },
-    {
-      product: "Google Maps",
-      type: "project",
-      tags: ["SaaS"],
-      description:
-        "Redesigned and enhanced Google Maps for streamlined, user-friendly navigation.",
-      image: googleMapsGif,
-      link: "google",
     },
   ];
   const { pathname } = useLocation();
@@ -76,11 +87,23 @@ function Footer() {
                   className="group flex h-full flex-col overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft transition-shadow duration-300 hover:shadow-lift"
                 >
                   <div className="relative h-56 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
-                    <img
-                      src={entry.image}
-                      className="h-full w-full p-8 object-scale-down transition-transform duration-500 group-hover:scale-105"
-                      alt={entry.product}
-                    />
+                    {entry.link === "jukebox" ? (
+                      <JukeboxCover className="h-56" />
+                    ) : entry.link === "equipgo" ? (
+                      <EquipGoCover className="h-56" />
+                    ) : entry.link === "reframe" ? (
+                      <ReframeCover className="h-56" />
+                    ) : (
+                      <img
+                        src={entry.image}
+                        className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${
+                          entry.link === "jukebox"
+                            ? "object-cover"
+                            : "p-8 object-scale-down"
+                        }`}
+                        alt={entry.product}
+                      />
+                    )}
                   </div>
                   <div className="flex flex-1 flex-col gap-2 border-t border-ink/5 p-6">
                     <h3 className="flex items-center justify-between text-sm font-semibold tracking-wider">
@@ -110,47 +133,6 @@ function Footer() {
           </div>
         </div>
       )}
-
-      {/* CTA band */}
-      <div className="w-full px-6 py-28">
-        <Reveal className="mx-auto max-w-5xl">
-          <div className="relative overflow-hidden rounded-[2rem] bg-ink px-8 py-16 text-center text-white sm:px-16">
-            <div
-              aria-hidden
-              className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-brand-violet/40 blur-3xl"
-            />
-            <div
-              aria-hidden
-              className="absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-brand-blue/40 blur-3xl"
-            />
-            <div className="relative">
-              <h2 className="text-3xl font-semibold sm:text-5xl">
-                Let&apos;s build something{" "}
-                <span className="text-gradient-animate">delightful</span>
-              </h2>
-              <p className="mx-auto mt-4 max-w-md text-white/70">
-                Have a product that needs a designer&apos;s eye? I&apos;d love
-                to hear about it.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <a
-                  href="mailto:senhuangcai@gmail.com"
-                  className="btn-gradient text-base"
-                >
-                  Get in touch
-                  <ArrowUpRight className="h-4 w-4" />
-                </a>
-                <Link
-                  to="/about"
-                  className="rounded-full border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
-                >
-                  More about me
-                </Link>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </div>
 
       {/* Social + copyright */}
       <div className="flex flex-col items-center gap-6 pb-20">

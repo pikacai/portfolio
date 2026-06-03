@@ -1,8 +1,10 @@
 import { Star, Frown } from "lucide-react";
 import Reveal from "../../fx/Reveal";
+import SectionExport from "./SectionExport";
 
-// Drop a photo at public/jukebox/persona.png to replace the "S" placeholder.
-const personaImg = `${import.meta.env.BASE_URL}jukebox/persona.png`;
+// Drop a headshot at public/jukebox/headshot.png to replace the illustrated avatar.
+// ?v cache-buster avoids a stale 404 from before the file existed.
+const personaImg = `${import.meta.env.BASE_URL}jukebox/headshot.png?v=3`;
 
 const demographics = [
   ["Gender", "Female"],
@@ -45,18 +47,18 @@ function Stars({ filled }: { filled: number }) {
   );
 }
 
-export default function Persona() {
+function PersonaCoded() {
   return (
-    <section className="bg-[#0a0a0f] px-4 py-20 sm:px-6 sm:py-28">
-      <Reveal className="mx-auto mb-12 max-w-3xl text-center text-white">
-        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-white/40">
+    <section className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+      <Reveal className="mx-auto mb-12 max-w-3xl text-center">
+        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-ink-muted">
           Who we&apos;re designing for
         </span>
-        <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">The persona</h2>
+        <h2 className="mt-3 text-3xl font-semibold text-ink sm:text-4xl">The persona</h2>
       </Reveal>
 
       <Reveal className="mx-auto max-w-2xl">
-        <div className="overflow-hidden rounded-3xl bg-white shadow-lift">
+        <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-lift">
           {/* header */}
           <div className="relative">
             <div
@@ -67,17 +69,15 @@ export default function Persona() {
               }}
             />
             <div className="absolute left-1/2 top-10 -translate-x-1/2">
-              <div className="relative h-28 w-28">
-                <div className="absolute inset-0 grid place-items-center rounded-full border-4 border-white bg-gradient-to-br from-sky-200 to-blue-400 text-3xl font-bold text-white shadow-md">
+              <div className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-white shadow-md">
+                {/* minimal fallback behind the photo */}
+                <div className="absolute inset-0 z-0 grid place-items-center bg-gradient-to-br from-sky-200 to-blue-400 text-3xl font-bold text-white">
                   S
                 </div>
                 <img
                   src={personaImg}
                   alt="Sarah T"
-                  className="absolute inset-0 h-28 w-28 rounded-full border-4 border-white object-cover shadow-md"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                  }}
+                  className="absolute inset-0 z-10 h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -171,5 +171,17 @@ export default function Persona() {
         </div>
       </Reveal>
     </section>
+  );
+}
+
+export default function Persona() {
+  return (
+    <SectionExport
+      file="persona.png"
+      alt="Jukebox persona — Sarah T"
+      bgClass="bg-white"
+    >
+      <PersonaCoded />
+    </SectionExport>
   );
 }

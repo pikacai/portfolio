@@ -1,6 +1,7 @@
 import Reveal from "../../fx/Reveal";
+import SectionExport from "./SectionExport";
 
-export default function Branding() {
+function BrandingCoded() {
   return (
     <section className="bg-white px-4 py-20 sm:px-6 sm:py-28">
       <Reveal className="mx-auto mb-12 max-w-3xl text-center">
@@ -44,10 +45,10 @@ export default function Branding() {
 
         {/* Color swatches */}
         <Reveal className="grid grid-cols-2 gap-5">
-          <div className="col-span-2 flex min-h-[120px] items-center justify-center rounded-3xl bg-[#EBF2FE] text-sm font-medium text-neutral-500">
+          <div className="col-span-2 flex min-h-[120px] items-center justify-center rounded-3xl bg-[#EBF2FE] text-sm font-medium text-neutral-500 ring-1 ring-ink/10">
             #EBF2FE
           </div>
-          <div className="flex min-h-[120px] items-center justify-center rounded-3xl bg-[#E4E4E7] text-sm font-medium text-neutral-500">
+          <div className="flex min-h-[120px] items-center justify-center rounded-3xl bg-[#E4E4E7] text-sm font-medium text-neutral-500 ring-1 ring-ink/10">
             #E4E4E7
           </div>
           <div className="flex min-h-[120px] items-center justify-center rounded-3xl bg-[#3b6ef5] text-sm font-medium text-white/90">
@@ -56,5 +57,13 @@ export default function Branding() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+export default function Branding() {
+  return (
+    <SectionExport file="branding.png" alt="Jukebox branding" bgClass="bg-white">
+      <BrandingCoded />
+    </SectionExport>
   );
 }
