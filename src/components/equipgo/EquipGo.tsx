@@ -64,13 +64,6 @@ const personas = [
 ];
 
 
-const storyboard = [
-  { icon: Flame, text: "Worried about losing a pricey radio" },
-  { icon: Nfc, text: "Tap an NFC tag to assign & track" },
-  { icon: ScanLine, text: "Scan a barcode to track assignment" },
-  { icon: BadgeCheck, text: "No more lost radios!" },
-];
-
 const takeaways = [
   { n: "01", title: "Watch the real world", icon: Eye, text: "Observe users in their real environment — stations behave nothing like a clean prototype." },
   { n: "02", title: "Edge cases first", icon: TriangleAlert, text: "Design for edge cases early; the messy scenarios are where adoption is won or lost." },
@@ -291,26 +284,19 @@ export default function EquipGo() {
       </section>
 
       {/* STORYBOARD */}
-      <SectionExport file="storyboard.png" alt="EquipGo storyboard" bgClass="bg-neutral-50">
-        <section className="bg-neutral-50 px-6 py-20 sm:py-24">
-          <Reveal className="mx-auto mb-10 max-w-3xl text-center">
-            <h2 className="text-3xl font-semibold text-ink sm:text-4xl">🧠 Brainstorm + Storyboard = Magic</h2>
-          </Reveal>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {storyboard.map((s, i) => {
-              const Icon = s.icon;
-              return (
-                <Reveal key={i} delay={(i % 4) * 0.06}>
-                  <div className="flex h-full flex-col gap-3 rounded-2xl border border-ink/10 bg-white p-6 shadow-soft">
-                    <span className="grid h-11 w-11 place-items-center rounded-xl text-white" style={{ background: i % 2 ? BLUE : RED }}><Icon className="h-5 w-5" /></span>
-                    <p className="text-sm font-medium text-ink">{s.text}</p>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
-        </section>
-      </SectionExport>
+      <section className="bg-neutral-50 px-6 py-20 sm:py-24">
+        <Reveal className="mx-auto mb-10 max-w-3xl text-center">
+          <h2 className="text-3xl font-semibold text-ink sm:text-4xl">🧠 Brainstorm + Storyboard = Magic</h2>
+        </Reveal>
+        <Reveal className="mx-auto max-w-5xl">
+          <img
+            src="/equipgo/equipGo_storyboard.png"
+            alt="EquipGo storyboard — from worrying about lost radios to tap-and-scan tracking"
+            loading="lazy"
+            className="w-full"
+          />
+        </Reveal>
+      </section>
 
       {/* BRANDING */}
       <SectionExport file="branding.png" alt="EquipGo branding" bgClass="bg-white">
