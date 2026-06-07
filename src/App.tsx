@@ -4,32 +4,41 @@ import PageTransition from "./components/fx/PageTransition";
 import ScrollProgress from "./components/fx/ScrollProgress";
 import NavigationBar from "./components/NavigationBar";
 import Home from "./components/home/Home";
-import GoogleContent from "./components/google/GoogleContent";
 import Footer from "./components/Footer";
-import About from "./components/about/About";
-import Secret from "./components/secret/Secret";
-import Iphone from "./Iphone";
-import Resume from "./components/Resume";
 import smoothscroll from "smoothscroll-polyfill";
-import Intoxiblock from "./components/intoxiblock/Intoxiblock";
-import Google from "./components/google2/Google";
-import SocialMedia from "./components/socialMedia/SocialMedia";
-import Jukebox from "./components/jukebox/Jukebox";
-import EquipGo from "./components/equipgo/EquipGo";
-import Reframe from "./components/reframe/Reframe";
 import ReactGA from "react-ga4";
-import { useCallback, useEffect, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Roles from "./components/roleHunter/Roles";
-import Restocks from "./components/restocks/Restocks";
-import About_ from "./components/about/About_";
+
+// Lazy-loaded routes — each downloads only when first visited.
+const GoogleContent = lazy(() => import("./components/google/GoogleContent"));
+const Secret = lazy(() => import("./components/secret/Secret"));
+const Iphone = lazy(() => import("./Iphone"));
+const Resume = lazy(() => import("./components/Resume"));
+const Intoxiblock = lazy(() => import("./components/intoxiblock/Intoxiblock"));
+const Google = lazy(() => import("./components/google2/Google"));
+const SocialMedia = lazy(() => import("./components/socialMedia/SocialMedia"));
+const Jukebox = lazy(() => import("./components/jukebox/Jukebox"));
+const EquipGo = lazy(() => import("./components/equipgo/EquipGo"));
+const Reframe = lazy(() => import("./components/reframe/Reframe"));
+const Roles = lazy(() => import("./components/roleHunter/Roles"));
+const Restocks = lazy(() => import("./components/restocks/Restocks"));
+const About_ = lazy(() => import("./components/about/About_"));
+
+function Loader() {
+  return (
+    <div className="grid min-h-[70vh] place-items-center">
+      <span className="h-8 w-8 animate-spin rounded-full border-2 border-ink/15 border-t-ink/70" />
+    </div>
+  );
+}
 
 smoothscroll.polyfill();
 ReactGA.initialize("G-Y7MNFH8R9F");
 
 function App() {
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Pages />}>
           <Route path="/" element={<Home />} />
@@ -52,7 +61,7 @@ function App() {
           <Route path="/roles" element={<Roles />} />
         </Route>
       </Routes>
-    </>
+    </Suspense>
   );
 }
 

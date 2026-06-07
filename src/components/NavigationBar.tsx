@@ -8,7 +8,7 @@ const links = [
   { label: "About", to: "/about" },
   // Static photographer site lives in public/photographer/ — served verbatim.
   // Full-page link (external) so it bypasses the SPA router.
-  { label: "Photographer", to: `${import.meta.env.BASE_URL}photographer/index.html`, external: true },
+  { label: "Photographer", to: `${import.meta.env.BASE_URL}photographer.html`, external: true },
 ];
 
 function NavigationBar() {
