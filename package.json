@@ -9,6 +9,8 @@
     "build": "tsc && vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "deploy:github": "npm run build && gh-pages -d dist",
+    "deploy:custom": "VITE_BASE_URL=/ npm run build && gh-pages -d dist",
     "preview": "vite preview",
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch"
   },

@@ -6,6 +6,9 @@ import BrandMark from "./BrandMark";
 const links = [
   { label: "Projects", to: "/" },
   { label: "About", to: "/about" },
+  // Static photographer site lives in public/photographer/ — served verbatim.
+  // Full-page link (external) so it bypasses the SPA router.
+  { label: "Photographer", to: `${import.meta.env.BASE_URL}photographer/pika-photography.html`, external: true },
 ];
 
 function NavigationBar() {
@@ -52,17 +55,22 @@ function NavigationBar() {
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((l) => {
             const active =
-              l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+              !l.external &&
+              (l.to === "/" ? pathname === "/" : pathname.startsWith(l.to));
+            const cls = `link-underline text-[15px] font-medium transition-colors hover:text-brand-violet ${
+              active ? "text-brand-violet" : ""
+            }`;
             return (
               <li key={l.label}>
-                <Link
-                  to={l.to}
-                  className={`link-underline text-[15px] font-medium transition-colors hover:text-brand-violet ${
-                    active ? "text-brand-violet" : ""
-                  }`}
-                >
-                  {l.label}
-                </Link>
+                {l.external ? (
+                  <a href={l.to} target="_blank" rel="noopener noreferrer" className={cls}>
+                    {l.label}
+                  </a>
+                ) : (
+                  <Link to={l.to} className={cls}>
+                    {l.label}
+                  </Link>
+                )}
               </li>
             );
           })}
@@ -105,15 +113,27 @@ function NavigationBar() {
             transition={{ duration: 0.25 }}
             className="glass absolute left-3 right-3 top-[4.5rem] z-50 flex flex-col gap-1 rounded-2xl p-3 shadow-soft md:hidden"
           >
-            {links.map((l) => (
-              <Link
-                key={l.label}
-                to={l.to}
-                className="rounded-xl px-4 py-3 text-lg font-medium text-ink hover:bg-ink/5"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {links.map((l) =>
+              l.external ? (
+                <a
+                  key={l.label}
+                  href={l.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl px-4 py-3 text-lg font-medium text-ink hover:bg-ink/5"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link
+                  key={l.label}
+                  to={l.to}
+                  className="rounded-xl px-4 py-3 text-lg font-medium text-ink hover:bg-ink/5"
+                >
+                  {l.label}
+                </Link>
+              )
+            )}
           </motion.div>
         )}
       </AnimatePresence>
