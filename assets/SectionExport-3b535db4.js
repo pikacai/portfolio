@@ -1,0 +1,1 @@
+import{r as i,a as r,F as m}from"./index-b4550b26.js";function x({file:a,alt:t,children:e,bgClass:s="",imgClass:o="mx-auto block w-full max-w-6xl",dir:c="jukebox"}){const[l,n]=i.useState(!1);return l?r(m,{children:e}):r("section",{className:s,children:r("img",{src:`/${c}/${a}`,alt:t,className:o,onError:()=>n(!0)})})}export{x as S};

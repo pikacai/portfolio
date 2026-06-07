@@ -130,7 +130,8 @@
   .svc-top .name{font-family:var(--display);font-weight:400;font-size:clamp(26px,7vw,40px);line-height:1;flex:1}
   .svc-top .chev{color:var(--muted);transition:transform .4s;font-size:20px}
   .svc.open .svc-top .chev{transform:rotate(45deg);color:var(--accent)}
-  .svc .price{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink-soft);margin-top:10px}
+  .svc .price{font-family:var(--body);font-size:14px;letter-spacing:.02em;color:var(--ink-soft);margin-top:8px}
+  .svc .price b{color:var(--accent);font-weight:600}
   .svc-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .55s cubic-bezier(.16,1,.3,1),opacity .5s,margin .4s}
   .svc.open .svc-body{max-height:320px;opacity:1;margin-top:16px}
   .svc-body p{color:var(--ink-soft);font-size:15px;margin-bottom:14px}
@@ -177,9 +178,9 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a class="brand" href="../">PIKA</a>
+  <a class="brand" href="/">PIKA</a>
   <div class="nav-right">
-    <a class="navlink" href="../">← Portfolio</a>
+    <a class="navlink" href="/">← Portfolio</a>
     <a class="book" href="mailto:senhuang.cai9h@gmail.com">Book</a>
   </div>
 </nav>
@@ -231,7 +232,7 @@
   <div id="svcList">
     <div class="svc open" data-svc>
       <div class="svc-top"><span class="idx">01</span><span class="name">Photography</span><span class="chev">+</span></div>
-      <div class="price">First hour $85 · then $40/hr</div>
+      <div class="price"><b>$85</b> first hour · <b>$40</b>/hr after</div>
       <div class="svc-body">
         <p>Coverage for social events, guest portraits, and pitch rooms. Simple hourly rate — pay only for the time you need.</p>
         <ul>
@@ -243,7 +244,7 @@
     </div>
     <div class="svc" data-svc>
       <div class="svc-top"><span class="idx">02</span><span class="name">Photo &amp; Video</span><span class="chev">+</span></div>
-      <div class="price">First hour $90 · then $45/hr</div>
+      <div class="price"><b>$90</b> first hour · <b>$45</b>/hr after</div>
       <div class="svc-body">
         <p>Everything in Photography, plus video coverage — ideal for recap reels, social clips, and highlights from the night.</p>
         <ul>
@@ -287,19 +288,19 @@
 
   /* ---- PHOTOS (edit filenames/titles here) ---- */
   const PHOTOS = [
-    { src:"work-1.jpg",  cat:"social", title:"Founder Draft" },
-    { src:"work-2.jpg",  cat:"guest",  title:"At the desk" },
-    { src:"work-4.jpg",  cat:"pitch",  title:"Meet the judges" },
-    { src:"work-7.jpg",  cat:"social", title:"The afterparty" },
-    { src:"work-8.jpg",  cat:"pitch",  title:"The talk" },
-    { src:"work-3.jpg",  cat:"guest",  title:"The founders" },
-    { src:"work-5.jpg",  cat:"social", title:"The celebration" },
-    { src:"work-11.jpg", cat:"pitch",  title:"Leadership panel" },
-    { src:"work-9.jpg",  cat:"guest",  title:"The lounge" },
-    { src:"work-10.jpg", cat:"social", title:"Good company" },
-    { src:"work-6.jpg",  cat:"pitch",  title:"The winner" },
-    { src:"work-12.jpg", cat:"social", title:"Caught laughing" },
-    { src:"work-13.jpg", cat:"guest",  title:"Networking" },
+    { src:"photographer/work-1.jpg",  cat:"social", title:"Founder Draft" },
+    { src:"photographer/work-2.jpg",  cat:"guest",  title:"At the desk" },
+    { src:"photographer/work-4.jpg",  cat:"pitch",  title:"Meet the judges" },
+    { src:"photographer/work-7.jpg",  cat:"social", title:"The afterparty" },
+    { src:"photographer/work-8.jpg",  cat:"pitch",  title:"The talk" },
+    { src:"photographer/work-3.jpg",  cat:"guest",  title:"The founders" },
+    { src:"photographer/work-5.jpg",  cat:"social", title:"The celebration" },
+    { src:"photographer/work-11.jpg", cat:"pitch",  title:"Leadership panel" },
+    { src:"photographer/work-9.jpg",  cat:"guest",  title:"The lounge" },
+    { src:"photographer/work-10.jpg", cat:"social", title:"Good company" },
+    { src:"photographer/work-6.jpg",  cat:"pitch",  title:"The winner" },
+    { src:"photographer/work-12.jpg", cat:"social", title:"Caught laughing" },
+    { src:"photographer/work-13.jpg", cat:"guest",  title:"Networking" },
   ];
 
   function placeholder(){
@@ -310,7 +311,7 @@
 
   /* hero thumb */
   (function(){const el=document.getElementById('heroThumb');el.style.backgroundImage=`url('${FB}')`;
-    const t=new Image();t.onload=()=>el.style.backgroundImage="url('previews/XT5Y2497.jpg')";t.src='previews/XT5Y2497.jpg';})();
+    const t=new Image();t.onload=()=>el.style.backgroundImage="url('photographer/previews/XT5Y2497.jpg')";t.src='photographer/previews/XT5Y2497.jpg';})();
 
   /* marquee */
   const words=['Events','Portraits','Nights','Launches','Demo Days','Galas','Pitches','Openings'];
