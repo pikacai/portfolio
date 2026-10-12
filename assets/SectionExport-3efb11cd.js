@@ -1,0 +1,1 @@
+import{r as n,a as r,F as m}from"./index-bdb9215d.js";function x({file:t,alt:a,children:o,bgClass:e="",imgClass:s="mx-auto block w-full max-w-6xl",dir:l="jukebox"}){const[c,i]=n.useState(!1);return c?r(m,{children:o}):r("section",{className:e,children:r("img",{src:`/portfolio/${l}/${t}`,alt:a,className:s,onError:()=>i(!0)})})}export{x as S};
