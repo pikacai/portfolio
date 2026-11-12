@@ -1,0 +1,1 @@
+import{a as r,T as l}from"./index-b4550b26.js";function m({text:o,className:c,parentElement:s}){const t=o.split("_"),e=t.map((n,a)=>a%2!==0?r("span",{className:"font-semibold",children:n},a):n);return t.length%2===0&&e.push(r("span",{className:"font-semibold",children:e.pop()},"last")),l.createElement(s||l.Fragment,s?{className:c}:null,e)}export{m as B};

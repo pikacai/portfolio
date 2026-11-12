@@ -1,0 +1,1 @@
+import{a as e}from"./index-b4550b26.js";function i({content:r,removePadding:n}){return e("div",{className:`flex justify-center ${n?"":"pb-36"}`,children:e("div",{className:"w-[90%] md:w-5/6 lg:w-4/6 xl:w-[60%]",children:r})})}export{i as C};
